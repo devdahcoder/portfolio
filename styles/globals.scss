@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Vollkorn&family=Work+Sans&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Vollkorn, Inter, Work Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.dev {
+  background: hsl(158, 100%, 23%);
+  filter: blur(300px);
+  transform: matrix(0.62, -0.78, 0.78, 0.62, 0, 0);
+}
+.deve {
+  background: hsl(158, 75%, 47%);
+  filter: blur(300px);
+  transform: matrix(-0.36, -0.93, 0.93, -0.36, 0, 0);
+}
