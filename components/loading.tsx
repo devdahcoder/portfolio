@@ -12,7 +12,7 @@ type Props = {}
 
 const Loading = (props: Props) => {
     return (
-        <div className="flex items-center justify-center w-screen h-screen bg-white-bg relative">
+        <div className="flex items-center justify-center w-full h-screen bg-white-bg relative">
 
             {/* <TextCircle text={"design is life - design is life - design is life - "} className={""} /> */}
             {/* <LoadingText /> */}

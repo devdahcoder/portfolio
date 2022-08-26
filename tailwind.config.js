@@ -4,12 +4,16 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./context/**/*.{js,ts,jsx,tsx}",
+    "./styles/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
         'white-bg': "hsl(0, 0%, 90%)",
-        'dark-green-text': "hsl(158, 100%, 23%)",
+        'green': {
+          100: "hsl(158, 75%, 47%)",
+          200: "hsl(158, 100%, 23%)"
+        },
       },
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],

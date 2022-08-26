@@ -1,12 +1,14 @@
 import { NAVIGATION_TYPE } from './../types/enums';
 import { HeaderNavigation } from "../types";
+import { HeaderNavigationStyle } from '../styles/global-style';
+
 
 export const headerNavigation: HeaderNavigation[] = [
     {
         id: 1,
-        name: "works",
+        name: "Works",
         href: "#",
-        className: '',
+        className: `${HeaderNavigationStyle}`,
         style: {},
         type: NAVIGATION_TYPE.LINK,
     },
@@ -14,7 +16,7 @@ export const headerNavigation: HeaderNavigation[] = [
         id: 2,
         name: "Contributions",
         href: "#",
-        className: '',
+        className: `${HeaderNavigationStyle}`,
         style: {},
         type: NAVIGATION_TYPE.LINK,
     },
@@ -22,7 +24,7 @@ export const headerNavigation: HeaderNavigation[] = [
         id: 3,
         name: "Talks",
         href: "#",
-        className: '',
+        className: `${HeaderNavigationStyle}`,
         style: {},
         type: NAVIGATION_TYPE.LINK,
     },
@@ -30,7 +32,7 @@ export const headerNavigation: HeaderNavigation[] = [
         id: 4,
         name: "Community",
         href: "#",
-        className: '',
+        className: `${HeaderNavigationStyle}`,
         style: {},
         type: NAVIGATION_TYPE.LINK,
     },
@@ -38,7 +40,15 @@ export const headerNavigation: HeaderNavigation[] = [
         id: 5,
         name: "Contact me",
         href: "#",
-        className: '',
+        className: `${HeaderNavigationStyle}`,
+        style: {},
+        type: NAVIGATION_TYPE.LINK,
+    },
+    {
+        id: 5,
+        name: "My Resume",
+        href: "#",
+        className: `border border-black transition-all delay-100 ease-linear hover:bg-white`,
         style: {},
         type: NAVIGATION_TYPE.LINK,
     },
