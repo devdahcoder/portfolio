@@ -13,7 +13,7 @@ const Home = () => {
   )
 }
 
-// Home.getLayout = getAppLayout;
+Home.getLayout = getAppLayout;
 
 export default Home
 

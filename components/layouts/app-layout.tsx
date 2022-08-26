@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../header';
 import { getMainLayout } from './main-layout';
 
 
@@ -9,7 +10,7 @@ type Props = {
 const AppLayout = (props: Props) => {
     return (
         <div>
-            helllllllll boy
+            <Header />
             <div>
                 {props?.children}
             </div>

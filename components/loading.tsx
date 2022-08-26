@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css';
 import BackgroundIcon from '../components/background-icon';
 import TextCircle from '../components/text-circle';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
-import LoadingText from './loading-name';
+import LoadingText from './loading-text';
 
 
 type Props = {}
@@ -15,7 +15,7 @@ const Loading = (props: Props) => {
         <div className="flex items-center justify-center w-screen h-screen bg-white-bg relative">
 
             {/* <TextCircle text={"design is life - design is life - design is life - "} className={""} /> */}
-            <LoadingText />
+            {/* <LoadingText /> */}
             <div className="">
                 <BackgroundIcon 
                     className="w-[70rem] h-full absolute top-0 right-0 z-10" 

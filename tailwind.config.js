@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./context/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -17,11 +18,15 @@ module.exports = {
       },
       animation: {
         'spin-slow': 'spin 15s linear infinite',
+        'blinker': 'blinker 600ms linear infinite'
       },
       keyframes: {
         'spin-slow': {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
+        },
+        'blinker': {
+          '50%': {opacity: '0.6'},
         }
       },
     },

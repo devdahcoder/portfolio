@@ -7,12 +7,6 @@ type Props = {
 
 const TextCircle = (props: Props) => {
 
-        // map through the text and create a span for each letter
-        // then add a class to each span that will animate the letter
-        // then add a class to the parent div that will animate the span
-        // then add a class to the parent div that will animate the parent div
-
-
     const { text, className } = props;
 
     const splitText = text?.split('');
@@ -26,7 +20,7 @@ const TextCircle = (props: Props) => {
                             transform: `rotate(${index * 7.1}deg)`,
                             transformOrigin: '0 90px',
                         }} 
-                        className={`text-xs absolute left-1/2 text-dark-green-text`} key={index}>{letter}</span>
+                        className={`text-[0.60rem] absolute left-1/2 text-dark-green-text font-work-sans`} key={index}>{letter}</span>
                     )
                 })}
             </p>
