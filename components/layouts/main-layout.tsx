@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode } from 'react';
+import React, { ReactElement, ReactNode, useEffect } from 'react';
 import Head from 'next/head';
 
 type Props = {
@@ -7,6 +7,7 @@ type Props = {
 };
 
 const MainLayout = ({title = 'This is the default title', children}: Props) => {
+
     return (
         <div>
             <Head>

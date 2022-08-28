@@ -6,7 +6,7 @@ type Props = {
     style?: React.CSSProperties;
     containerClassName?: string;
     containerStyle?: React.CSSProperties;
-    handleClick?: () => void
+    handleClick?: () => void;
 }
 
 const IconButton = (props: Props) => {
