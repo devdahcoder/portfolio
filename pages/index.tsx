@@ -1,14 +1,40 @@
+/* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { useEffect } from 'react';
 import {getAppLayout} from '../components/layouts/app-layout';
 import Loading from '../components/loading';
+import SocialMediaLink from '../components/social-media-link';
+import MeMoji from '../public/icons/memoji';
+
 
 
 const Home = () => {
+
   return (
-    <div>
-      <Loading />
+    <div className="flex flex-row pt-40 border relative w-[90%] my-0 mx-auto space-x-32">
+      {/* <Loading /> */}
+      <div className="flex flex-col space-y-8 w-full max-w-[60%]">
+        <div className="text-8xl font-medium">
+          <p>Hi, I am Olamide</p>
+        </div>
+        <div className="font-work-sans text-xl font-medium -tracking-wide pr-32">
+          <p>I’m a Senior Product Designer (UI, UX), and a Design mentor. I am passionate about creating a user-centered design, gathering and translating user data into design decisions and products.</p>
+        </div>
+        <div className="flex flex-row items-center space-x-5">
+          <SocialMediaLink text={"Resume"} />
+          <SocialMediaLink text={"GitHub"} />
+          <SocialMediaLink text={"Linkedin"} />
+        </div>
+      </div>
+
+      <div className="!relative border-black bg-black w-full max-w-[18rem] h-[22rem] items-center justify-center rounded-t-full border mt-16">
+        <div className="w-[18rem] h-fit absolute left-1/2 top-8 -translate-x-1/2 translate-y-0 rounded-t-full rounded-b-full">
+          <img className="w-full h-full object-contain" src="./images/memoji.png" alt="memoji" />
+        </div>
+      </div>
+      
     </div>
   )
 }

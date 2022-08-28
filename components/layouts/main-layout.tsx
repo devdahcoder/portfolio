@@ -6,7 +6,6 @@ type Props = {
     title?: string;
 };
 
-
 const MainLayout = ({title = 'This is the default title', children}: Props) => {
     return (
         <div>
