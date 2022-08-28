@@ -12,7 +12,7 @@ const TextCircle = (props: Props) => {
     const splitText = text?.split('');
 
     return (
-        <div className="absolute -top-12 -left-12 capitalize rounded-full h-[180px] w-[180px] font-work-sans animate-spin-slow">
+        <div className={`absolute -top-12 -left-12 capitalize rounded-full h-[180px] w-[180px] font-work-sans animate-spin-slow ${className}`}>
             <p>
                 {splitText?.map((letter, index) => {
                     return (

@@ -12,7 +12,7 @@ type Props = {
 
 const SocialMediaLink = (props: Props) => {
     return (
-        <div style={props?.style} className={`${props?.className}`}>
+        <div style={props?.style} className={`group ${props?.className}`}>
             <a 
                 style={props?.linkStyle} 
                 className={`flex flex-row items-center w-full h-full px-5 py-2 font-medium ${props.linkClassName}`} 
@@ -20,7 +20,8 @@ const SocialMediaLink = (props: Props) => {
                 target="_blank" 
                 rel="noopener noreferrer"
             >
-                {props?.text} <span className="ml-1.5"><BsArrowUpRight /></span>
+                {props?.text} <span className="ml-1.5 group-hover:rotate-[45deg] transition-all delay-100
+                ease-in-out duration-500"><BsArrowUpRight /></span>
             </a>
         </div>
     )
