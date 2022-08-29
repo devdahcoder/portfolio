@@ -1,5 +1,6 @@
 import React, { ReactElement, ReactNode, useEffect } from 'react';
 import Head from 'next/head';
+import { useThemeContainer } from '../../state/theme';
 
 type Props = {
     children?: ReactNode;
@@ -7,6 +8,8 @@ type Props = {
 };
 
 const MainLayout = ({title = 'This is the default title', children}: Props) => {
+
+    const { theme } = useThemeContainer();
 
     return (
         <div>
@@ -16,7 +19,7 @@ const MainLayout = ({title = 'This is the default title', children}: Props) => {
                 <link rel="icon" href="/favicon.svg" />
             </Head>
 
-            <div className="">
+            <div className="bg-white dark:bg-dark-bg">
                 {children}
             </div>
         </div>

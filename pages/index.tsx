@@ -75,7 +75,7 @@ const Home = () => {
       <HomePage />
 
       <div className="!relative w-[90%] my-0 mx-auto overflow-hidden h-16">
-        <div className="text-8xl font-medium absolute -bottom-12 let-0 text-[#161313]">
+        <div className="text-8xl font-medium absolute -bottom-12 let-0 text-dark-bg dark:text-white">
           <p>Works</p>
         </div>
       </div>

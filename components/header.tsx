@@ -17,8 +17,8 @@ const Header = (props: Props) => {
     const whatTheme = theme === 'light' ? 'light' : 'dark';
 
     return (
-        <div className="flex border-b border-black">
-            <div className="flex flex-row items-center justify-between px-20 py-7 border-r border-black grow">
+        <div className={`flex border-b border-black dark:border-white`}>
+            <div className="flex flex-row items-center justify-between px-20 py-7 grow">
                 <div className="flex flex-row items-center">
                     <Logo />
                 </div>
@@ -48,7 +48,7 @@ const Header = (props: Props) => {
             </div>
 
 
-            <div className="flex flex-row items-center justify-center px-6 py-7 border ml-auto">
+            <div className="flex flex-row items-center justify-center px-6 py-7 border-l border-l-black dark:border-l-white ml-auto">
                 <div className="">
                     <IconButton 
                         containerClassName="border rounded-full" 

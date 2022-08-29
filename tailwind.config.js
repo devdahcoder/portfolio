@@ -15,6 +15,7 @@ module.exports = {
           100: "hsl(158, 75%, 47%)",
           200: "hsl(158, 100%, 23%)"
         },
+        'dark-bg': "hsl(0, 7%, 8%)",
       },
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],

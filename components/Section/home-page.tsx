@@ -8,20 +8,21 @@ type Props = {}
 const HomePage = (props: Props) => {
     return (
         <div className="flex flex-row pt-40 relative w-[90%] my-0 mx-auto space-x-32">
-            <div className="flex flex-col space-y-8 w-full max-w-[60%] select-none text-black dark:text-white">
+            <div className="flex flex-col space-y-8 w-full max-w-[60%] select-none text-black dark:text-white transition-all
+                        ease-in-out duration-500">
                 <div className="group text-8xl font-medium relative cursor-pointer">
                     <p>Hi, I am Olamide 
                     <NameStrike 
-                        className="absolute -bottom-1 right-8 -z-50 opacity-0 group-hover:opacity-100 transition-all delay-100
-                        ease-in-out duration-500" 
+                        className="absolute -bottom-1 right-8 z-0 opacity-0 group-hover:opacity-100 group-hover:z-10 transition-all
+                        ease-in-out duration-700" 
                     />
                     </p>
                 </div>
-                <div className="font-work-sans text-xl font-medium -tracking-wide pr-28">
+                <div className="font-work-sans text-xl font-light dark:font-light -tracking-wide pr-28">
                     <p>
-                    I’m a Senior Product Designer (UI, UX), and a Design mentor. I am
-                    passionate about creating a user-centered design, gathering and
-                    translating user data into design decisions and products.
+                        I’m a Product Designer (UI, UX), and a Software Engineer. I am
+                        passionate about creating a user-centered design, problem solving, gathering and
+                        translating user data into design decisions and products I’m amazing.
                     </p>
                 </div>
                 <div className="flex flex-row items-center space-x-5">
@@ -35,7 +36,8 @@ const HomePage = (props: Props) => {
                 <div
                     className="group !relative border-black bg-black dark:border-white dark:bg-white w-full max-w-[18rem] 
                     h-[21rem] flex items-center justify-center 
-                    rounded-t-full border mt-16"
+                    rounded-t-full border mt-16 transition-all
+                        ease-in-out duration-500"
                 >
                     <div
                         className="z-10 absolute -left-2 top-5 py-3 px-5 rounded-t-full rounded-bl-full text-black text-xs font-semibold 

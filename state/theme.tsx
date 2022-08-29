@@ -27,7 +27,7 @@ const useThemeState = (state = themeState): ThemeType => {
             if (getLocalStorageTheme) {
                 setTheme(getLocalStorageTheme);
             }
-            else {
+            else if (!getLocalStorageTheme) {
                 setTheme('light');
             }
         }
