@@ -7,15 +7,13 @@ type ThemeType = {
 }
 
 export const themeState = {
-    theme: 'light',
+    theme: '',
     handleThemeToggle: (theme: string) => {},
 }
 
 const useThemeState = (state = themeState): ThemeType => {
     
     const [theme, setTheme] = useState<string>('');
-
-
 
     const handleThemeToggle = (theme: string) => {
         setTheme(theme === 'light' ? 'dark' : 'light');
@@ -39,21 +37,8 @@ const useThemeState = (state = themeState): ThemeType => {
         }
     }, [])
     
-
     useEffect(() => {
-        // if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        //     document.documentElement.classList.add('dark');
-        //     // setTheme('dark');
-        // } else {
-        //     document.documentElement.classList.remove('dark');
-        //     // setTheme('light');
-        // }
-        // const getLocalStorageTheme = localStorage.getItem('theme');
-        // if (getLocalStorageTheme) {
-        //     setTheme(getLocalStorageTheme);
-        // } else {
-        //     setTheme('light');
-        // }
+
         localStorage.setItem('theme', `${theme}`);
 
         if (localStorage.theme === 'dark') {
@@ -63,20 +48,6 @@ const useThemeState = (state = themeState): ThemeType => {
         }
 
     }, [theme])
-    
-
-    // useEffect(() => {
-    //     localStorage.setItem('theme', JSON.stringify(theme));
-
-    //     if (localStorage.theme === 'dark') {
-    //         document.documentElement.classList.add('dark');
-    //         // setTheme('dark');
-    //     } else {
-    //         document.documentElement.classList.remove('dark');
-    //         // setTheme('light');
-    //     }
-    //     console.log('inside is inside');
-    // }, [theme])
 
     return {
         theme,

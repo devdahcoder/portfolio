@@ -48,7 +48,7 @@ export const headerNavigation: HeaderNavigation[] = [
         id: 5,
         name: "My Resume",
         href: "#",
-        className: `border border-black transition-all delay-100 ease-linear hover:bg-white`,
+        className: `border border-black dark:border-white`,
         style: {},
         type: NAVIGATION_TYPE.LINK,
     },

@@ -8,7 +8,7 @@ type Props = {}
 const HomePage = (props: Props) => {
     return (
         <div className="flex flex-row pt-40 relative w-[90%] my-0 mx-auto space-x-32">
-            <div className="flex flex-col space-y-8 w-full max-w-[60%] select-none">
+            <div className="flex flex-col space-y-8 w-full max-w-[60%] select-none text-black dark:text-white">
                 <div className="group text-8xl font-medium relative cursor-pointer">
                     <p>Hi, I am Olamide 
                     <NameStrike 
@@ -33,7 +33,8 @@ const HomePage = (props: Props) => {
 
             <div className="w-full max-w-[18rem] h-[35rem]">
                 <div
-                    className="group !relative border-black bg-black w-full max-w-[18rem] h-[21rem] flex items-center justify-center 
+                    className="group !relative border-black bg-black dark:border-white dark:bg-white w-full max-w-[18rem] 
+                    h-[21rem] flex items-center justify-center 
                     rounded-t-full border mt-16"
                 >
                     <div

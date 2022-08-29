@@ -22,7 +22,7 @@ const LinkNavigation = (props: Props) => {
             <Link href={href}>
                 <a 
                     className={`relative flex flex-row items-center justify-center w-full h-full py-2 px-3
-                        text-sm font-medium ${className}`} 
+                        text-sm font-medium transition-all delay-100 ease-linear text-black dark:text-white ${className}`} 
                     style={style}
                 >
                     {name}

@@ -14,6 +14,8 @@ const Header = (props: Props) => {
 
     const { handleThemeToggle, theme } = useThemeContainer();
 
+    const whatTheme = theme === 'light' ? 'light' : 'dark';
+
     return (
         <div className="flex border-b border-black">
             <div className="flex flex-row items-center justify-between px-20 py-7 border-r border-black grow">
@@ -50,11 +52,11 @@ const Header = (props: Props) => {
                 <div className="">
                     <IconButton 
                         containerClassName="border rounded-full" 
-                        className={`p-3 ${true ? 'bg-black' : 'bg-white'} transition-all delay-200 ease-linear rounded-full`} 
+                        className={`p-3 ${whatTheme === 'light' ? 'bg-black' : 'bg-white'} transition-all delay-200 ease-linear rounded-full`} 
                         icon={
-                            true ? 
-                            <BsFillMoonStarsFill className={`text-white ${true ? "visible opacity-100 scale-100" : "opacity-0 scale-0 invisible"} transition-all delay-300 ease-in-out`} /> : 
-                            <BsSunFill className={`text-black ${!true ? "visible opacity-100 scale-100" : "opacity-0 scale-0 invisible"} transition-all delay-300 ease-in-out`} />
+                            whatTheme === 'light' ? 
+                            <BsFillMoonStarsFill className={`text-white ${whatTheme === 'light' ? "visible opacity-100 scale-100" : "opacity-0 scale-0 invisible"} transition-all delay-300 ease-in-out`} /> : 
+                            <BsSunFill className={`text-black ${whatTheme === 'dark' ? "visible opacity-100 scale-100" : "opacity-0 scale-0 invisible"} transition-all delay-300 ease-in-out`} />
                         } 
                         handleClick={() => handleThemeToggle(theme)}
                     />
