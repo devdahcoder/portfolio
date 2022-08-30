@@ -35,6 +35,15 @@ module.exports = {
           '50%': {opacity: '0.6'},
         }
       },
+      screens: {
+        'xs': {'min': '320px'},
+        'sm': {'min': '480px'},
+        'lg': {'min': '600px'},
+        'xl': {'min': '768px'},
+        '1xl': {'min': '900px'},
+        '2xl': {'min': '1024px'},
+        '3xl': {'min': '1200px'},
+      }
     },
   },
   plugins: [],

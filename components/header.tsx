@@ -6,15 +6,12 @@ import LinkNavigation from './link-navigation';
 import Logo from './logo';
 import { BsFillMoonStarsFill, BsSunFill } from 'react-icons/bs';
 import { useThemeContainer } from '../state/theme'
+import ThemeToggleButton from './theme-toggle-button';
 
 
 type Props = {}
 
 const Header = (props: Props) => {
-
-    const { handleThemeToggle, theme } = useThemeContainer();
-
-    const whatTheme = theme === 'light' ? 'light' : 'dark';
 
     return (
         <div className={`flex border-b border-black dark:border-white`}>
@@ -47,20 +44,8 @@ const Header = (props: Props) => {
                 </div>
             </div>
 
-
             <div className="flex flex-row items-center justify-center px-6 py-7 border-l border-l-black dark:border-l-white ml-auto">
-                <div className="">
-                    <IconButton 
-                        containerClassName="border rounded-full" 
-                        className={`p-3 ${whatTheme === 'light' ? 'bg-black' : 'bg-white'} transition-all delay-200 ease-linear rounded-full`} 
-                        icon={
-                            whatTheme === 'light' ? 
-                            <BsFillMoonStarsFill className={`text-white ${whatTheme === 'light' ? "visible opacity-100 scale-100" : "opacity-0 scale-0 invisible"} transition-all delay-300 ease-in-out`} /> : 
-                            <BsSunFill className={`text-black ${whatTheme === 'dark' ? "visible opacity-100 scale-100" : "opacity-0 scale-0 invisible"} transition-all delay-300 ease-in-out`} />
-                        } 
-                        handleClick={() => handleThemeToggle(theme)}
-                    />
-                </div>
+                <ThemeToggleButton />
             </div>
         </div>
     )
