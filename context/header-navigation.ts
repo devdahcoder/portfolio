@@ -52,4 +52,15 @@ export const headerNavigation: HeaderNavigation[] = [
         style: {},
         type: NAVIGATION_TYPE.LINK,
     },
+    {
+        id: 5,
+        name: "Menu",
+        href: "#",
+        className: `border border-black dark:border-white`,
+        style: {},
+        type: NAVIGATION_TYPE.STATIC,
+        // subNavigation?: HeaderNavigation[
+        
+        // ];
+    },
 ]

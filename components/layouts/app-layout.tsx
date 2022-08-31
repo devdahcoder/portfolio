@@ -30,9 +30,9 @@ const AppLayout = (props: Props) => {
 
                 <div className="">
                     <Header />
-                    <div>
+                    {/* <div>
                         {props?.children}
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

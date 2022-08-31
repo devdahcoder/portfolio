@@ -18,59 +18,59 @@ const Home = () => {
 
     const loadingTextRefElement = useRef<HTMLParagraphElement>(null) as React.MutableRefObject<HTMLParagraphElement>;
 
-    const printText = () => {
-        if (index < text?.length) {
-            loadingTextRefElement.current.innerText += text.charAt(index);
-            setIndex(index => index + 1);
-        }
-        else if (index === text?.length) {
-            console.log('Text has completed');
-            setIsTextCompleted(true);
-            loadingTextRefElement.current.insertAdjacentHTML(
-                'beforeend',
-                `<span class="text-green-500 animate-pulse">.</code>`,
-            );
-        }
-    }
+    // const printText = () => {
+    //     if (index < text?.length) {
+    //         loadingTextRefElement.current.innerText += text.charAt(index);
+    //         setIndex(index => index + 1);
+    //     }
+    //     else if (index === text?.length) {
+    //         console.log('Text has completed');
+    //         setIsTextCompleted(true);
+    //         loadingTextRefElement.current.insertAdjacentHTML(
+    //             'beforeend',
+    //             `<span class="text-green-500 animate-pulse">.</code>`,
+    //         );
+    //     }
+    // }
 
-    useEffect(() => {
-        const printTextTimeOut = setTimeout(printText, delayTyping);
-        return () => clearTimeout(printTextTimeOut);
-    }, [index]);
+    // useEffect(() => {
+    //     const printTextTimeOut = setTimeout(printText, delayTyping);
+    //     return () => clearTimeout(printTextTimeOut);
+    // }, [index]);
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        let isSubscribed = true;
+    //     let isSubscribed = true;
 
-        let isTimeOutCompleted: NodeJS.Timeout;
+    //     let isTimeOutCompleted: NodeJS.Timeout;
 
-        if (isSubscribed) {
-            if (isTextCompleted) {
-                isTimeOutCompleted = setTimeout(() => {
-                    console.log('Page has loaded and animation has completed');
-                    setHasPageFullyLoaded(true);
-                }, 2000)
-            }
-        }
+    //     if (isSubscribed) {
+    //         if (isTextCompleted) {
+    //             isTimeOutCompleted = setTimeout(() => {
+    //                 console.log('Page has loaded and animation has completed');
+    //                 setHasPageFullyLoaded(true);
+    //             }, 2000)
+    //         }
+    //     }
 
-        return () => {
-            isSubscribed = false;
-            clearTimeout(isTimeOutCompleted);
-        }
-    }, [isTextCompleted]);
+    //     return () => {
+    //         isSubscribed = false;
+    //         clearTimeout(isTimeOutCompleted);
+    //     }
+    // }, [isTextCompleted]);
 
   return (
     <>
-      <TextCircle 
+      {/* <TextCircle 
         text={"design is life - design is life - design is life - "} 
-        className={`${hasPageFullyLoaded ? "!z-0 !left-[41.6rem] !top-[13.6rem] transition-all duration-500 ease-in-out" : "z-50"}`} />
+        className={`${hasPageFullyLoaded ? "!z-0 !left-[41.6rem] !top-[13.6rem] transition-all duration-500 ease-in-out" : "z-50"}`} /> */}
 
 
-      <Loading 
+      {/* <Loading 
         isTextCompleted={isTextCompleted}
         hasPageFullyLoaded={hasPageFullyLoaded}
         loadingTextRefElement={loadingTextRefElement}
-      />
+      /> */}
 
       <HomePage />
 

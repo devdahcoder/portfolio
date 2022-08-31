@@ -14,7 +14,7 @@ const Logo = (props: Props) => {
     const text = logoText ?? "Olamide"
 
     return (
-        <div className={`flex flex-row item-center font-medium text-4xl font-seibold capitalize ${className}`}>
+        <div className={`flex flex-row item-center font-medium text-base small-xs:text-2xl medium-xs:text-3xl medium-sm:text-4xl font-seibold capitalize ${className}`}>
             <span>{logoIcon}</span>
             <div className="flex flex-row items-center text-black dark:text-white transition-all delay-100 ease-linear">
                 <p>{text}</p> <span className="text-green-500 animate-pulse">.</span>
