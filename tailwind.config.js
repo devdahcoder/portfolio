@@ -36,13 +36,13 @@ module.exports = {
         }
       },
       screens: {
-        'xs': {'min': '320px'},
-        'sm': {'min': '480px'},
-        'lg': {'min': '600px'},
-        'xl': {'min': '768px'},
+        'small-xs': {'min': '320px'},
+        'small-sm': {'min': '480px'},
+        'medium-xs': {'min': '600px'},
+        'medium-sm': {'min': '768px'},
         '1xl': {'min': '900px'},
         '2xl': {'min': '1024px'},
-        '3xl': {'min': '1200px'},
+        '3xl': {'min': '1200px'}
       }
     },
   },

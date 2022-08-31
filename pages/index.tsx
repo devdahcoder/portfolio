@@ -12,7 +12,7 @@ const Home = () => {
     const { theme, handleThemeToggle} = useThemeContainer();
     const [hasPageFullyLoaded, setHasPageFullyLoaded] = useState<boolean>(false);
     const [delayTyping, setDelayTyping] = useState<number>(400);
-    const [text, setText] = useState<string>("lamide");
+    const [text, setText] = useState<string>("Olamide");
     const [index, setIndex] = useState<number>(0);
     const [isTextCompleted, setIsTextCompleted] = useState<boolean>(false);
 
