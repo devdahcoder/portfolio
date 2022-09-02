@@ -37,6 +37,7 @@ module.exports = {
       },
       screens: {
         'small-xs': {'min': '320px'},
+        'small-mid': {'min': '400px'},
         'small-sm': {'min': '480px'},
         'medium-xs': {'min': '600px'},
         'medium-sm': {'min': '768px'},

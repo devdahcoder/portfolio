@@ -64,7 +64,7 @@ const Home = () => {
       <TextCircle 
         text={"design is life - design is life - design is life - "} 
         className={`${true ? 
-          `!z-0 left-14 top-14 small-xs:top-20 small-xs:left-32
+          `!z-0 left-14 top-14 small-xs:top-20 small-xs:left-32 medium-xs:left-[24rem] medium-xs:top-24
           transition-all duration-500 ease-in-out`
           : 
           "z-50 -top-12 -left-12"}`} 
