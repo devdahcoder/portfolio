@@ -16,7 +16,7 @@ type Props = {}
 const Header = (props: Props) => {
 
     return (
-        <div className={`flex border-b border-black dark:border-white`}>
+        <div className={`flex border-b border-black dark:border-white w-full`}>
             <div 
                 className="flex flex-row items-center justify-between px-4 small-xs:px-6 py-1 small-xs:py-3 
                 small-sm:px-5 small-sm:py-4 medium-sm:px-10 extra-large-xs:px-20 medium-sm:py-7 grow"
@@ -27,7 +27,7 @@ const Header = (props: Props) => {
 
                 <div className="">
                     <nav>
-                        <ul className={`flex flex-row items-center list-none space-x-5 font-work-sans`}>
+                        <ul className={`flex flex-row items-center list-none font-work-sans large-sm:space-x-5`}>
                             {headerNavigation?.map(({name, href, id, type, className, style, subNavigation}, index) => (
                                 <li key={index}>
                                     {type === NAVIGATION_TYPE.LINK && (
@@ -61,7 +61,7 @@ const Header = (props: Props) => {
                 </div>
             </div>
 
-            <div className="flex flex-row items-center justify-center px-3 py-2 small-sm:px-5 small-sm:py-4 border-l border-l-black dark:border-l-white ml-auto">
+            <div className="flex flex-row items-center justify-center px-3 py-2 small-sm:px-5 small-sm:py-4 extra-large-xs:px-6 extra-large-xs:py-7 border-l border-l-black dark:border-l-white ml-auto">
                 <ThemeToggleButton />
             </div>
         </div>

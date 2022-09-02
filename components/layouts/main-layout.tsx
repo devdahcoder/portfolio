@@ -9,8 +9,6 @@ type Props = {
 
 const MainLayout = ({title = 'This is the default title', children}: Props) => {
 
-    const { theme } = useThemeContainer();
-
     return (
         <div>
             <Head>

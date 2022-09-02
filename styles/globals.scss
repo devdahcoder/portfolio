@@ -45,3 +45,7 @@ body {
   filter: blur(300px);
   transform: matrix(-0.36, -0.93, 0.93, -0.36, 0, 0);
 }
+
+.dele {
+  clip-path: circle(50% at 50% 50%);
+}

@@ -61,6 +61,14 @@ const Home = () => {
 
   return (
     <>
+      <TextCircle 
+        text={"design is life - design is life - design is life - "} 
+        className={`${true ? 
+          `!z-0 left-14 top-14 small-xs:top-20 small-xs:left-32
+          transition-all duration-500 ease-in-out`
+          : 
+          "z-50 -top-12 -left-12"}`} 
+      />
       {/* <TextCircle 
         text={"design is life - design is life - design is life - "} 
         className={`${hasPageFullyLoaded ? "!z-0 !left-[41.6rem] !top-[13.6rem] transition-all duration-500 ease-in-out" : "z-50"}`} /> */}
@@ -74,11 +82,11 @@ const Home = () => {
 
       <HomePage />
 
-      <div className="!relative w-[90%] my-0 mx-auto overflow-hidden h-16">
+      {/* <div className="!relative w-[90%] my-0 mx-auto overflow-hidden h-16">
         <div className="text-8xl font-medium absolute -bottom-12 let-0 text-dark-bg dark:text-white">
           <p>Works</p>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

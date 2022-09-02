@@ -28,11 +28,11 @@ const AppLayout = (props: Props) => {
                     </div>
                 </div> */}
 
-                <div className="">
+                <div className="border">
                     <Header />
-                    {/* <div>
+                    <div className="w-full min-h-full">
                         {props?.children}
-                    </div> */}
+                    </div>
                 </div>
             </div>
 
