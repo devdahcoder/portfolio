@@ -19,20 +19,27 @@ const TextCircle = (props: Props) => {
     }
 
     React.useEffect(() => {
-        getWindowWidth()
-        window.addEventListener("resize", getWindowWidth);
-        return () => window.removeEventListener('resize', getWindowWidth);
-    }, []);
+        let isSubscribed = true;
+
+        if (isSubscribed) {
+            getWindowWidth()
+            window.addEventListener("resize", getWindowWidth);
+        }
+        
+        return () => {
+            window.removeEventListener('resize', getWindowWidth);
+            isSubscribed = false;
+        }
+    }, [width]);
 
     return (
-        <div className={`absolute capitalize rounded-full h-[140px] w-[140px] large-sm:h-[200px] large-sm:w-[200px] border font-work-sans 
-            animate-spin-slow ${className}`}>
+        <div className={`absolute capitalize rounded-full font-work-sans animate-spin-slow ${className}`}>
             <p>
                 {splitText?.map((letter, index) => {
                     return (
                         <span style={{
                             transform: `rotate(${index * 7.0}deg)`,
-                            transformOrigin: `0 ${width >= breakpoint ? '100px' : '70px'}`,
+                            transformOrigin: `0 ${width >= breakpoint ? '90px' : '70px'}`,
                         }} 
                         className={` text-[0.50rem] z-0 absolute left-1/2 text-green-200 font-work-sans`} key={index}>{letter}</span>
                     )

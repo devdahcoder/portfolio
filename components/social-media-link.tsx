@@ -15,8 +15,13 @@ const SocialMediaLink = (props: Props) => {
         <div style={props?.style} className={`group ${props?.className}`}>
             <a 
                 style={props?.linkStyle} 
-                className={`flex flex-row items-center text-xs w-full h-full border px-1 py-1 small-xs:px-3 small-xs:py-2 
-                    small-large:px-5 small-large:py-3 font-medium ${props.linkClassName}`} 
+                className={`
+                    flex flex-row items-center w-full h-full border
+                    text-xs medium-xs:text-sm
+                    py-1 small-xs:py-2 small-mid:py-2.5
+                    px-1 small-xs:px-3 
+                    small-large:px-5 small-large:py-3 font-medium ${props.linkClassName}`
+                } 
                 href={`http://${props.href}`}
                 target="_blank" 
                 rel="noopener noreferrer"
