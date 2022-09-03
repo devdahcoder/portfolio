@@ -67,9 +67,9 @@ const Home = () => {
           `!z-0 transition-all duration-500 ease-in-out border
           h-[140px] large-sm:h-[180px] 
           w-[140px] large-sm:w-[180px] 
-          left-14 small-xs:left-32 medium-xs:left-[23rem] large-sm:left-[28rem] 
+          left-14 small-xs:left-32 medium-xs:left-[23rem] large-sm:left-[28rem] extra-large-xs:left-[40rem]
           top-[4.5rem] small-xs:top-[5.5rem] small-mid:top-[5.5rem] small-large:top-[7rem] medium-xs:top-24 medium-sm:top-36 large-xs:top-36
-          large-sm:top-52`
+          large-sm:top-52 extra-large-xs:top-56`
           : 
           "z-50 -top-12 -left-12"}`} 
       />
