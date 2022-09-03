@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React from 'react'
+import React from 'react';
 import { NAVIGATION_TYPE } from '../types/enums';
 
 type Props = {
@@ -23,7 +23,7 @@ const StaticNavigationLink = (props: Props) => {
             <button
                 onClick={handleClick}
                 className={`relative flex flex-row items-center justify-center outline-0 outline-none w-full h-full py-1 px-2
-                small-sm:py-2 small-sm:px-3
+                small-large:py-2 small-large:px-3
                     text-sm font-medium transition-all delay-100 ease-linear text-black dark:text-white ${className}`} 
                 style={style}
             >

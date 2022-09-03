@@ -7,11 +7,13 @@ type Props = {}
 
 const HomePage = (props: Props) => {
     return (
-        <div className="flex flex-col items-center medium-xs:items-start justify-center relative w-full px-4 border
-                small-sm:px-5 medium-sm:px-10 extra-large-xs:px-20 pt-10 medium-xs:pt-14">
-            <div className="flex flex-col space-y-3 small-sm:space-y-5 w-full medium-xs:max-w-[80%] select-none text-black dark:text-white transition-all
+        <div className="flex flex-col extra-large-xs:flex-row items-center medium-xs:items-start justify-center relative w-full px-4
+                small-large:px-5 medium-sm:px-10 extra-large-xs:px-20 pt-10 medium-xs:pt-14 medium-sm:pt-20 large-sm:pt-40">
+            <div className="flex flex-col space-y-3 small-large:space-y-5 small-mid:space-y-8 large-sm:space-y-10 w-full 
+                medium-xs:max-w-[80%] extra-large-xs:max-w-[80%] border select-none text-black dark:text-white transition-all
                         ease-in-out duration-500">
-                <div className="group text-4xl small-xs:text-5xl medium-xs:text-6xl font-medium relative cursor-pointer min-w-fit max-w-44 border ">
+                <div className="group text-4xl small-xs:text-5xl medium-xs:text-6xl large-sm:text-8xl extra-large-xs:text-7xl
+                    font-medium relative cursor-pointer min-w-fit max-w-44 ">
                     <div className="medium-xs:flex medium-xs:flex-row medium-xs:items-center">Hi, I am 
                         <div className="w-fit relative pt-5 medium-xs:pt-0 medium-xs:ml-2">Olamide
                             <NameStrike 
@@ -24,7 +26,8 @@ const HomePage = (props: Props) => {
                 </div>
 
 
-                <div className="font-work-sans text-xs small-sm:text-sm medium-xs:pr-3 font-light dark:font-light -tracking-wide">
+                <div className="font-work-sans text-xs small-large:text-sm medium-sm:text-base large-sm:text-lg medium-xs:pr-3 
+                    large-sm:pr-28 extra-large-xs:pr-16 font-light dark:font-light tracking-wider leading-5">
                     <p>
                         I’m a Product Designer (UI, UX), and a Software Engineer. I am
                         passionate about creating a user-centered design, problem solving, gathering and
@@ -32,7 +35,7 @@ const HomePage = (props: Props) => {
                     </p>
                 </div>
 
-                <div className="flex flex-row items-center justify-between medium-xs:justify-start medium-xs:space-x-3">
+                <div className="flex flex-row items-center justify-between small-mid:justify-start small-mid:space-x-7">
                     <SocialMediaLink text={"Resume"} />
                     <SocialMediaLink text={"GitHub"} />
                     <SocialMediaLink text={"Linkedin"} />
@@ -41,8 +44,8 @@ const HomePage = (props: Props) => {
 
             <div className="w-full flex flex-col items-center h-[35rem]">
                 <div
-                    className=" group !relative border-black bg-black dark:border-white dark:bg-white w-full max-w-[19rem]
-                    h-[15rem] small-xs:h-[19rem] small-mid:h-[20rem] flex items-center justify-center 
+                    className=" group !relative border-black bg-black dark:border-white dark:bg-white w-full max-w-[19rem] medium-xs:max-w-[25rem]
+                    h-[15rem] small-xs:h-[19rem] small-mid:h-[20rem] medium-xs:h-[25rem] flex items-center justify-center 
                     rounded-t-full border mt-16 transition-all
                         ease-in-out duration-500"
                 >
@@ -54,7 +57,7 @@ const HomePage = (props: Props) => {
                         <p>Hi, I am Olamide</p>
                     </div>
                     <div
-                        className="z-0 w-[10rem] small-xs:w-[13rem] small-mid:w-[14rem] h-fit absolute left-1/2 -translate-x-1/2 top-16  rounded-t-full rounded-b-full group-hover:top-20 transition-all 
+                        className="z-0 w-[10rem] small-xs:w-[13rem] small-mid:w-[14rem] medium-xs:w-[19rem] h-fit absolute left-1/2 -translate-x-1/2 top-16  rounded-t-full rounded-b-full group-hover:top-20 transition-all 
                         delay-100 duration-500 ease-in-out"
                     >
                         <img

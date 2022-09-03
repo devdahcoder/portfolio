@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
+import { BsFillMoonStarsFill, BsSunFill } from 'react-icons/bs';
 import { headerNavigation } from '../context/header-navigation';
+import { useThemeContainer } from '../state/theme';
 import { NAVIGATION_TYPE } from '../types/enums';
 import IconButton from './IconButton';
 import LinkNavigation from './link-navigation';
 import Logo from './logo';
-import { BsFillMoonStarsFill, BsSunFill } from 'react-icons/bs';
-import { useThemeContainer } from '../state/theme'
-import ThemeToggleButton from './theme-toggle-button';
 import StaticNavigationLink from './static-navigation-link';
+import ThemeToggleButton from './theme-toggle-button';
 
 
 
@@ -19,7 +19,7 @@ const Header = (props: Props) => {
         <div className={`flex border-b border-black dark:border-white w-full`}>
             <div 
                 className="flex flex-row items-center justify-between px-4 small-xs:px-6 py-1 small-xs:py-3 
-                small-sm:px-5 small-sm:py-4 medium-sm:px-10 extra-large-xs:px-20 medium-sm:py-7 grow"
+                small-large:px-5 small-large:py-4 medium-sm:px-10 extra-large-xs:px-20 medium-sm:py-7 grow"
             >
                 <div className="flex flex-row items-center">
                     <Logo />
@@ -61,7 +61,7 @@ const Header = (props: Props) => {
                 </div>
             </div>
 
-            <div className="flex flex-row items-center justify-center px-3 py-2 small-sm:px-5 small-sm:py-4 extra-large-xs:px-6 extra-large-xs:py-7 border-l border-l-black dark:border-l-white ml-auto">
+            <div className="flex flex-row items-center justify-center px-3 py-2 small-large:px-5 small-large:py-4 extra-large-xs:px-6 extra-large-xs:py-7 border-l border-l-black dark:border-l-white ml-auto">
                 <ThemeToggleButton />
             </div>
         </div>

@@ -11,16 +11,30 @@ const TextCircle = (props: Props) => {
 
     const splitText = text?.split('');
 
+    const [width, setWidth] = React.useState<number>(0);
+    const breakpoint = 1024;
+
+    const getWindowWidth = () => {
+        setWidth(window?.innerWidth)
+    }
+
+    React.useEffect(() => {
+        getWindowWidth()
+        window.addEventListener("resize", getWindowWidth);
+        return () => window.removeEventListener('resize', getWindowWidth);
+    }, []);
+
     return (
-        <div className={`absolute capitalize rounded-full h-[140px] w-[140px] font-work-sans animate-spin-slow ${className}`}>
+        <div className={`absolute capitalize rounded-full h-[140px] w-[140px] large-sm:h-[200px] large-sm:w-[200px] border font-work-sans 
+            animate-spin-slow ${className}`}>
             <p>
                 {splitText?.map((letter, index) => {
                     return (
                         <span style={{
                             transform: `rotate(${index * 7.0}deg)`,
-                            transformOrigin: '0 70px',
+                            transformOrigin: `0 ${width >= breakpoint ? '100px' : '70px'}`,
                         }} 
-                        className={`text-[0.50rem] z-0 absolute left-1/2 text-green-200 font-work-sans`} key={index}>{letter}</span>
+                        className={` text-[0.50rem] z-0 absolute left-1/2 text-green-200 font-work-sans`} key={index}>{letter}</span>
                     )
                 })}
             </p>

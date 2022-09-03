@@ -30,9 +30,9 @@ const AppLayout = (props: Props) => {
 
                 <div className="border">
                     <Header />
-                    <div className="w-full min-h-full">
+                    {/* <div className="w-full min-h-full">
                         {props?.children}
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

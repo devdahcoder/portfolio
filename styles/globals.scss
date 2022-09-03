@@ -49,3 +49,12 @@ body {
 .dele {
   clip-path: circle(50% at 50% 50%);
 }
+
+
+.small-rounded {
+  transform-origin: 0px 70px;
+}
+
+.big-rounded {
+  transform-origin: 0px 100px;
+}

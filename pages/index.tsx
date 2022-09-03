@@ -4,7 +4,7 @@ import { getAppLayout } from "../components/layouts/app-layout";
 import Loading from "../components/loading";
 import HomePage from "../components/Section/home-page";
 import TextCircle from "../components/text-circle";
-import { useThemeContainer } from '../state/theme'
+import { useThemeContainer } from '../state/theme';
 
 
 const Home = () => {
@@ -64,8 +64,8 @@ const Home = () => {
       <TextCircle 
         text={"design is life - design is life - design is life - "} 
         className={`${true ? 
-          `!z-0 left-14 top-14 small-xs:top-20 small-xs:left-32 medium-xs:left-[24rem] medium-xs:top-24
-          transition-all duration-500 ease-in-out`
+          `!z-0 left-14 top-16 small-xs:top-20 small-mid:top-[5.5rem] small-xs:left-32 small-large:top-[7rem] medium-xs:left-[24rem] 
+          medium-xs:top-24 medium-sm:top-[8rem] large-sm:left-[39rem] large-sm:top-52 transition-all duration-500 ease-in-out`
           : 
           "z-50 -top-12 -left-12"}`} 
       />
