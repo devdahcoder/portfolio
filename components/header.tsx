@@ -18,9 +18,11 @@ const Header = (props: Props) => {
     return (
         <div className={`flex border-b border-black dark:border-white w-full`}>
             <div 
-                className="flex flex-row items-center justify-between px-4 small-xs:px-6 py-1 small-xs:py-3 
-                small-large:px-5 small-large:py-4 medium-sm:px-10 extra-large-xs:px-20 medium-sm:py-7 grow"
-            >
+                className="
+                    flex flex-row items-center justify-between grow 
+                    px-4 small-xs:px-6 medium-sm:px-10 extra-large-xs:px-20
+                    py-2 small-xs:py-3 small-large:py-3.5 medium-sm:py-7"
+                >
                 <div className="flex flex-row items-center">
                     <Logo />
                 </div>
@@ -61,7 +63,13 @@ const Header = (props: Props) => {
                 </div>
             </div>
 
-            <div className="flex flex-row items-center justify-center px-3 py-2 small-large:px-5 small-large:py-4 extra-large-xs:px-6 extra-large-xs:py-7 border-l border-l-black dark:border-l-white ml-auto">
+            <div 
+                className="
+                    flex flex-row items-center justify-center border-l ml-auto
+                    px-3 small-mid:px-3.5 small-large:px-5 extra-large-xs:px-6 extra-large-xs:py-7
+                    py-2 small-xs:py-3 small-large:py-3.5 medium-sm:py-7
+                    border-l-black dark:border-l-white"
+                >
                 <ThemeToggleButton />
             </div>
         </div>

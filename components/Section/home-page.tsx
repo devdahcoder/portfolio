@@ -15,7 +15,7 @@ const HomePage = (props: Props) => {
                 <div className="group text-4xl small-xs:text-5xl medium-xs:text-6xl large-sm:text-8xl extra-large-xs:text-7xl
                     font-medium relative cursor-pointer min-w-fit max-w-44 ">
                     <div className="medium-xs:flex medium-xs:flex-row medium-xs:items-center">Hi, I am 
-                        <div className="w-fit relative pt-5 medium-xs:pt-0 medium-xs:ml-2">Olamide
+                        <div className="w-fit relative pt-5 medium-xs:pt-0 medium-xs:ml-2">Ariouse
                             <NameStrike 
                                 className="absolute -bottom-1 right-0 z-0 opacity-0 w-full group-hover:opacity-100 group-hover:z-10 transition-all
                                 ease-in-out duration-700" 
@@ -54,7 +54,7 @@ const HomePage = (props: Props) => {
                         w-fit font-inter bg-white invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all delay-300
                         ease-in-out duration-500"
                     >
-                        <p>Hi, I am Olamide</p>
+                        <p>Hi, I am Ariouse</p>
                     </div>
                     <div
                         className="z-0 w-[10rem] small-xs:w-[13rem] small-mid:w-[14rem] medium-xs:w-[19rem] h-fit absolute left-1/2 -translate-x-1/2 top-16  rounded-t-full rounded-b-full group-hover:top-20 transition-all 
@@ -105,7 +105,7 @@ export default HomePage
 //             <div className="flex flex-col space-y-8 w-full max-w-[60%] select-none text-black dark:text-white transition-all
 //                         ease-in-out duration-500">
 //                 <div className="group text-8xl font-medium relative cursor-pointer">
-//                     <p>Hi, I am Olamide 
+//                     <p>Hi, I am Ariouse 
 //                     <NameStrike 
 //                         className="absolute -bottom-1 right-8 z-0 opacity-0 group-hover:opacity-100 group-hover:z-10 transition-all
 //                         ease-in-out duration-700" 
@@ -138,7 +138,7 @@ export default HomePage
 //                         w-fit font-inter bg-white invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all delay-300
 //                         ease-in-out duration-500"
 //                     >
-//                         <p>Hi, I am Olamide</p>
+//                         <p>Hi, I am Ariouse</p>
 //                     </div>
 //                     <div
 //                         className="z-0 w-[18rem] h-fit absolute -right-3 top-5  rounded-t-full rounded-b-full group-hover:top-20 transition-all 

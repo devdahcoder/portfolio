@@ -22,8 +22,10 @@ const StaticNavigationLink = (props: Props) => {
         <div className="flex large-sm:hidden flex-row items-center" draggable="false" >
             <button
                 onClick={handleClick}
-                className={`relative flex flex-row items-center justify-center outline-0 outline-none w-full h-full py-1 px-2
-                small-large:py-2 small-large:px-3
+                className={`
+                    relative flex flex-row items-center justify-center outline-0 outline-none w-full h-full 
+                    py-1 small-large:py-2 medium-xs:py-2.5
+                    px-2 small-mid:px-3 small-large:px-3 medium-xs:px-5
                     text-sm font-medium transition-all delay-100 ease-linear text-black dark:text-white ${className}`} 
                 style={style}
             >

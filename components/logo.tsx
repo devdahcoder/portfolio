@@ -11,7 +11,7 @@ const Logo = (props: Props) => {
 
     const { className, logoIcon, logoText, style } = props;
 
-    const text = logoText ?? "Olamide"
+    const text = logoText ?? "Ariouse"
 
     return (
         <div className={`flex flex-row item-center font-medium text-xl small-xs:text-2xl medium-xs:text-3xl medium-sm:text-4xl font-seibold capitalize ${className}`}>
