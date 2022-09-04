@@ -12,7 +12,7 @@ const Home = () => {
     const { theme, handleThemeToggle} = useThemeContainer();
     const [hasPageFullyLoaded, setHasPageFullyLoaded] = useState<boolean>(false);
     const [delayTyping, setDelayTyping] = useState<number>(400);
-    const [text, setText] = useState<string>("Ariouse");
+    const [text, setText] = useState<string>("Olamide");
     const [index, setIndex] = useState<number>(0);
     const [isTextCompleted, setIsTextCompleted] = useState<boolean>(false);
 
@@ -67,7 +67,7 @@ const Home = () => {
           `!z-0 transition-all duration-500 ease-in-out border
           h-[140px] large-sm:h-[180px] 
           w-[140px] large-sm:w-[180px] 
-          left-14 small-xs:left-32 medium-xs:left-[23rem] large-sm:left-[28rem] extra-large-xs:left-[40rem]
+          left-14 small-xs:left-32 medium-xs:left-[23rem] large-sm:left-[28rem] extra-large-xs:left-[42.5rem]
           top-[4.5rem] small-xs:top-[5.5rem] small-mid:top-[5.5rem] small-large:top-[7rem] medium-xs:top-24 medium-sm:top-36 large-xs:top-36
           large-sm:top-52 extra-large-xs:top-56`
           : 

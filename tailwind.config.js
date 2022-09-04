@@ -43,7 +43,9 @@ module.exports = {
         'medium-sm': {'min': '768px'},
         'large-xs': {'min': '900px'},
         'large-sm': {'min': '1024px'},
-        'extra-large-xs': {'min': '1200px'}
+        'extra-large-xs': {'min': '1200px'},
+        'extra-large-mid': {'min': '1280px'},
+        'extra-large-large': {'min': '1536px'},
       }
     },
   },
