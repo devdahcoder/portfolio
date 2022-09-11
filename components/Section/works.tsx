@@ -3,7 +3,7 @@ import WorkItem from '../work-item';
 import TouchCarousel from "react-touch-carousel";
 import touchWithMouseHOC from "react-touch-carousel/lib/touchWithMouseHOC";
 import WorkList from '../work-list';
-
+import { myWork } from '../../context/work';
 
 type Props = {}
 
@@ -13,14 +13,14 @@ const Works = (props: Props) => {
     const Container = touchWithMouseHOC(WorkList);
 
     return (
-        <div>
+        <div className="border">
             <TouchCarousel
                 ref={sliderElementRef}
                 component={Container}
-                cardSize={480}
-                cardCount={9}
+                cardSize={500}
+                cardCount={myWork.length}
                 loop={false}
-                renderCard={WorkItem}
+                renderCard={(index: number) => <WorkItem index={index} />}
                 onRest={(index: number) => console.log(`rest at index ${index}`)}
             />
         </div>

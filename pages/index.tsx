@@ -17,72 +17,72 @@ const Home = () => {
     const [index, setIndex] = useState<number>(0);
     const [isTextCompleted, setIsTextCompleted] = useState<boolean>(false);
 
-    const loadingTextRefElement = useRef<HTMLParagraphElement>(null) as React.MutableRefObject<HTMLParagraphElement>;
+    // const loadingTextRefElement = useRef<HTMLParagraphElement>(null) as React.MutableRefObject<HTMLParagraphElement>;
 
-    const printText = () => {
-        if (index < text?.length) {
-            loadingTextRefElement.current.innerText += text.charAt(index);
-            setIndex(index => index + 1);
-        }
-        else if (index === text?.length) {
-            console.log('Text has completed');
-            setIsTextCompleted(true);
-            loadingTextRefElement.current.insertAdjacentHTML(
-                'beforeend',
-                `<span class="text-green-500 animate-pulse">.</code>`,
-            );
-        }
-    }
+    // const printText = () => {
+    //     if (index < text?.length) {
+    //         loadingTextRefElement.current.innerText += text.charAt(index);
+    //         setIndex(index => index + 1);
+    //     }
+    //     else if (index === text?.length) {
+    //         console.log('Text has completed');
+    //         setIsTextCompleted(true);
+    //         loadingTextRefElement.current.insertAdjacentHTML(
+    //             'beforeend',
+    //             `<span class="text-green-500 animate-pulse">.</code>`,
+    //         );
+    //     }
+    // }
 
-    useEffect(() => {
-        const printTextTimeOut = setTimeout(printText, delayTyping);
-        return () => clearTimeout(printTextTimeOut);
-    }, [index]);
+    // useEffect(() => {
+    //     const printTextTimeOut = setTimeout(printText, delayTyping);
+    //     return () => clearTimeout(printTextTimeOut);
+    // }, [index]);
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        let isSubscribed = true;
+    //     let isSubscribed = true;
 
-        let isTimeOutCompleted: NodeJS.Timeout;
+    //     let isTimeOutCompleted: NodeJS.Timeout;
 
-        if (isSubscribed) {
-            if (isTextCompleted) {
-                isTimeOutCompleted = setTimeout(() => {
-                    console.log('Page has loaded and animation has completed');
-                    setHasPageFullyLoaded(true);
-                }, 2000)
-            }
-        }
+    //     if (isSubscribed) {
+    //         if (isTextCompleted) {
+    //             isTimeOutCompleted = setTimeout(() => {
+    //                 console.log('Page has loaded and animation has completed');
+    //                 setHasPageFullyLoaded(true);
+    //             }, 2000)
+    //         }
+    //     }
 
-        return () => {
-            isSubscribed = false;
-            clearTimeout(isTimeOutCompleted);
-        }
-    }, [isTextCompleted]);
+    //     return () => {
+    //         isSubscribed = false;
+    //         clearTimeout(isTimeOutCompleted);
+    //     }
+    // }, [isTextCompleted]);
 
-  return (
-    <>
-      <TextCircle 
-        text={"design is life - design is life - design is life - "} 
-        className={`${hasPageFullyLoaded ? 
-          `!z-0 transition-all duration-500 ease-in-out
-          left-14 small-xs:left-32 medium-xs:left-[24rem] large-sm:left-[28rem] extra-large-xs:left-[32rem] extra-large-mid:left-[41.5rem]
-          top-[4.5rem] small-xs:top-[5.5rem] small-mid:top-[5.5rem] small-large:top-[7rem] medium-xs:top-24 medium-sm:top-36 large-xs:top-36
-          large-sm:top-52 extra-large-xs:top-[13rem] extra-large-mid:top-56`
-          : 
-          "z-50 -top-12 -left-12"}`} 
-      />
+    return (
+        <div>
+            {/* <TextCircle 
+                text={"design is life - design is life - design is life - "} 
+                className={`${hasPageFullyLoaded ? 
+                `!z-0 transition-all duration-500 ease-in-out
+                left-[5.5rem] small-xs:left-32 medium-xs:left-[24rem] large-sm:left-[28rem] extra-large-xs:left-[32rem] extra-large-mid:left-[41.5rem]
+                top-[3rem] small-xs:top-[4rem] small-mid:top-[4.5rem] small-large:top-[5rem] medium-xs:top-24 medium-sm:top-[7rem] large-xs:top-36
+                large-sm:top-52 extra-large-xs:top-[13rem] extra-large-mid:top-56`
+                : 
+                "z-50 -top-12 -left-12"}`} 
+            />
 
-      <Loading 
-        isTextCompleted={isTextCompleted}
-        hasPageFullyLoaded={hasPageFullyLoaded}
-        loadingTextRefElement={loadingTextRefElement}
-      />
+            <Loading 
+                isTextCompleted={isTextCompleted}
+                hasPageFullyLoaded={hasPageFullyLoaded}
+                loadingTextRefElement={loadingTextRefElement}
+            /> */}
 
-      <HomePage />
-      <Works />
-    </>
-  );
+            <HomePage />
+            <Works />
+        </div>
+    );
 };
 
 Home.getLayout = getAppLayout;

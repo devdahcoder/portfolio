@@ -1,17 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react'
-import NameStrike from '../../public/icons/name-strike'
-import SocialMediaLink from '../social-media-link'
+import React from 'react';
+import NameStrike from '../../public/icons/name-strike';
+import SocialMediaLink from '../social-media-link';
+import { BsArrowUpRight } from 'react-icons/bs';
+import { linkClassName, linkIconContainer } from '../../styles/global-style';
 
 type Props = {}
 
 const HomePage = (props: Props) => {
+
+
     return (
-        <div className="
+        <section className="
                 flex flex-col large-xs:flex-row items-center medium-xs:items-start justify-center large-sm:justify-between 
-                relative w-full 
+                relative 
                 px-4 small-large:px-5 medium-sm:px-10 extra-large-xs:px-20 
-                pt-10 medium-xs:pt-14 medium-sm:pt-20 large-sm:pt-40">
+                pt-16 medium-xs:pt-24 medium-sm:pt-20 large-sm:pt-40">
 
             <div className="
                 flex flex-col w-full large-sm:grow
@@ -64,11 +68,29 @@ const HomePage = (props: Props) => {
 
                 <div className="flex flex-row items-center justify-between small-mid:justify-start small-mid:space-x-7">
 
-                    <SocialMediaLink text={"Twitter"} href={`https://twitter.com/devdahcoder`}  />
+                    <SocialMediaLink 
+                        text={"Twitter"} 
+                        href={`https://twitter.com/devdahcoder`} 
+                        linkClassName={linkClassName} 
+                        icon={<BsArrowUpRight />}
+                        iconContainerClassName={linkIconContainer}
+                    />
 
-                    <SocialMediaLink text={"GitHub"} href={`https://github.com/devdahcoder`} />
+                    <SocialMediaLink 
+                        text={"GitHub"} 
+                        href={`https://github.com/devdahcoder`} 
+                        linkClassName={linkClassName} 
+                        icon={<BsArrowUpRight />}
+                        iconContainerClassName={linkIconContainer}
+                    />
 
-                    <SocialMediaLink text={"Linkedin"} href={`https://www.linkedin.com/in/olamide-adigun-200/`} />
+                    <SocialMediaLink 
+                        text={"Linkedin"} 
+                        href={`https://www.linkedin.com/in/olamide-adigun-200/`} 
+                        linkClassName={linkClassName} 
+                        icon={<BsArrowUpRight />}
+                        iconContainerClassName={linkIconContainer}
+                    />
 
                 </div>
 
@@ -111,7 +133,7 @@ const HomePage = (props: Props) => {
                 </div>
             </div>
 
-        </div>
+        </section>
     )
 }
 

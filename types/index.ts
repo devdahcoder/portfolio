@@ -9,3 +9,11 @@ export type HeaderNavigation = {
     type: NAVIGATION_TYPE;
     subNavigation?: HeaderNavigation[];
 }
+
+export type Work = {
+    id: number;
+    header: string;
+    description: string;
+    href: string;
+    image: string;
+}

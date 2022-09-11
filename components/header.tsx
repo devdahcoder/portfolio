@@ -20,7 +20,7 @@ const Header = (props: Props) => {
             <div 
                 className="
                     flex flex-row items-center justify-between grow 
-                    px-4 small-xs:px-6 medium-sm:px-10 extra-large-xs:px-20
+                    px-4 small-xs:px-5 medium-sm:px-10 extra-large-xs:px-20
                     py-2 small-xs:py-3 small-large:py-3.5 medium-sm:py-7"
                 >
                 <div className="flex flex-row items-center">

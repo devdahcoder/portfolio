@@ -8,6 +8,8 @@ type Props = {
     linkStyle?: React.CSSProperties;
     text?: string;
     href?: string;
+    icon: React.ReactNode;
+    iconContainerClassName?: string;
 }
 
 const SocialMediaLink = (props: Props) => {
@@ -16,18 +18,16 @@ const SocialMediaLink = (props: Props) => {
             <a 
                 style={props?.linkStyle} 
                 className={`
-                    flex flex-row items-center w-full h-full border capitalize
-                    text-xs medium-xs:text-sm
-                    py-1 small-xs:py-2 small-mid:py-2.5 small-large:py-3
-                    px-1 small-xs:px-3 small-large:px-5
+                    flex flex-row items-center w-full h-full
                     font-medium ${props.linkClassName}`
                 } 
                 href={`${props.href}`}
                 target="_blank" 
                 rel="noopener noreferrer"
             >
-                {props?.text} <span className="ml-1 group-hover:rotate-[45deg] transition-all delay-100
-                ease-in-out duration-500"><BsArrowUpRight /></span>
+                {props?.text} <span className={`${props?.iconContainerClassName}`}>
+                    {props?.icon}
+                </span>
             </a>
         </div>
     )
