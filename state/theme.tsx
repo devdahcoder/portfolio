@@ -21,14 +21,15 @@ const useThemeState = (state = themeState): ThemeType => {
 
     useEffect(() => {
         let isSubscribed = true;
-
         if (isSubscribed) {
             const getLocalStorageTheme = localStorage.getItem('theme');
             if (getLocalStorageTheme) {
                 setTheme(getLocalStorageTheme);
+                console.log('true there is something in localStorage');
             }
             else if (!getLocalStorageTheme) {
                 setTheme('light');
+                console.log('false there is nothing in localStorage');
             }
         }
 
