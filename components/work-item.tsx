@@ -19,7 +19,7 @@ const WorkItem = (props: Props) => {
         <div 
             key={index}
             className="
-                w-full min-w-[30rem] h-full flex flex-col items-start 
+                rounded-sm w-full min-w-[30rem] h-full flex flex-col items-start 
                 border-2 border-green-200 select-none cursor-pointer
                 pl-6 
                 pr-8
@@ -28,14 +28,11 @@ const WorkItem = (props: Props) => {
                 space-y-4 small-mid:space-y-5 mr-5"
             >
 
-            <div className="text-7xl font-medium text-green-200">
-                <p>{currentItem?.header}</p>
+            <div className="text-7xl font-medium text-green-200 border w-full overflow-hidden text-ellipsis whitespace-nowrap">
+                {currentItem?.header}
             </div>
-            {/* <div className="text-3xl small-xs:text-4xl medium-xs:text-5xl large-sm:text-6xl font-medium text-green-200">
-                <p>{currentItem?.header}</p>
-            </div> */}
 
-            <div className="font-inter text-xs text-black dark:text-white tracking-wider">
+            <div className="font-inter text-xs text-black dark:text-white tracking-wider border pr-8">
                 <p>
                     An emergency app which give users the ability to - on the spot- report emergency cases near them as happening at exact time of reporting.
                 </p>
