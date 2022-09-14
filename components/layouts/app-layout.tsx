@@ -14,19 +14,25 @@ const AppLayout = (props: Props) => {
     return (
         <div className="relative">
             <div className="">
-                {/* <div className="flex items-center justify-center w-screen h-screen bg-white absolute -z-50 ">
-                    <div className=" flex items-center justify-center border border-black w-screen h-screen ">
-                        <BackgroundIcon 
-                            className="w-[70rem] h-full absolute top-0 right-0 z-10 border border-black" 
-                            backgroundSvgIcon={<RightBackgroundOval className="w-full h-full" />} 
-                        />
+                <div className="flex items-center justify-center w-screen h-screen bg-white fixed -z-50 ">
+                    <div className="flex items-center justify-center  w-screen h-screen ">
+                        
 
                         <BackgroundIcon 
-                            className="w-[70rem] h-full absolute top-0 left-0 z-0 border border-black" 
-                            backgroundSvgIcon={<LeftBackgroundOval className="w-full h-full" />} 
+                            className="grow h-full border border-black" 
+                            backgroundSvgIcon={<LeftBackgroundOval className="w-full h-screen" />} 
                         />
+                        <BackgroundIcon 
+                            className="grow h-full border border-black" 
+                            backgroundSvgIcon={<RightBackgroundOval className="w-full h-screen" />} 
+                        />
+                        {/* <LeftBackgroundOval className="w-full h-full" />
+                        <RightBackgroundOval className="w-full h-full" /> */}
+                        
+                        
+
                     </div>
-                </div> */}
+                </div>
 
                 <div className="border">
                     <Header />

@@ -20,7 +20,7 @@ const MainLayout = ({title = 'This is the default title', children}: Props) => {
                 <link rel="icon" href="/favicon.svg" />
             </Head>
 
-            <div className="bg-white dark:bg-dark-bg">
+            <div className="">
                 {children}
             </div>
         </div>

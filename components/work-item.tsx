@@ -44,7 +44,7 @@ const WorkItem = (props: Props) => {
                     href={`https://twitter.com/devdahcoder`} 
                     icon={<BsArrowUpRight className={`w-3 h-3`} />} 
                     className={`border`}
-                    linkClassName={`pl-0 pr-2 py-0.5 font-medium`} 
+                    linkClassName={`pl-0 pr-2 py-0.5 font-medium text-base tracking-wide dark:text-white`} 
                     iconContainerClassName={`${linkIconContainer} ml-2`}
                 />
             </div>
