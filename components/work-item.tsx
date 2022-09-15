@@ -19,26 +19,30 @@ const WorkItem = (props: Props) => {
         <div 
             key={index}
             className="
-                rounded-sm w-full min-w-[30rem] h-full flex flex-col items-start 
+                group relative rounded-sm w-full min-w-[30rem] h-full flex flex-col items-start 
                 border-2 border-green-200 select-none cursor-pointer
                 pl-6 
                 pr-8
                 pt-9 
                 pb-6 
-                space-y-4 small-mid:space-y-5 mr-5"
+                mr-5"
             >
 
-            <div className="text-7xl font-medium text-green-200 border w-full overflow-hidden text-ellipsis whitespace-nowrap">
+                <div className="absolute left-0 top-0 w-0 opacity-0 h-full bg-green-200 transition-all duration-500 ease-linear group-hover:w-full group-hover:opacity-100">
+
+                </div>
+
+            <div className="text-7xl font-medium text-green-200 border w-full overflow-hidden text-ellipsis whitespace-nowrap mb-5">
                 {currentItem?.header}
             </div>
 
-            <div className="font-inter text-xs text-black dark:text-white tracking-wider border pr-8">
+            <div className="font-inter text-xs text-black dark:text-white tracking-wider border pr-8 mb-14">
                 <p>
                     An emergency app which give users the ability to - on the spot- report emergency cases near them as happening at exact time of reporting.
                 </p>
             </div>
 
-            <div>
+            <div className="absolute left-6 bottom-6 z-10">
                 <SocialMediaLink 
                     text={"Casestudy"} 
                     href={`https://twitter.com/devdahcoder`} 
