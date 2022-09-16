@@ -10,7 +10,11 @@ const TalkItem = (props: Props) => {
 
     return (
         <div className="border">
-            <div onClick={() => setIsAccordionOpen(!isAccordionOpen)} role={"button"} className="group flex flex-row items-center justify-between border-b py-1 cursor-pointer">
+            <div 
+                onClick={() => setIsAccordionOpen(!isAccordionOpen)} 
+                role={"button"} 
+                className="group flex flex-row items-center justify-between border-b py-1 cursor-pointer"
+                >
                 <div className="text-6xl font-normal ">
                     <p>2022</p>
                 </div>
@@ -23,7 +27,18 @@ const TalkItem = (props: Props) => {
             </div>
 
             <div className={`border overflow-y-auto h-0 transition-all duration-500 ease-in-out ${isAccordionOpen && 'h-60'} `}>
-                hello world
+                <div className="py-3 font-inter">
+                    <div className="flex flex-col justify-start items-start text-sm">
+                        <div><p>Modern Android Development with Kotlin</p></div>
+                    <div className="flex flex-row items-center">
+                        <div className="flex flex-row items-center">
+                            <div><p>GDG DevFest Ikorodu </p></div>
+                        <div><p>2018</p></div>
+                        </div> <span className="mx-1">•</span>
+                        <div><p>December 8th, 2018</p></div> <span className="mx-1">•</span>
+                        <span><a className="underline" href="http://" target="_blank" rel="noopener noreferrer">See Presentation</a></span></div>
+                    </div>
+                </div>
             </div>
         </div>
     )

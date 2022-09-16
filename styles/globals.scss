@@ -5,6 +5,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Quicksand;
+  src: url("../public/Quicksand_Complete/Fonts/OTF/Quicksand-Regular.otf");
+}
+
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;

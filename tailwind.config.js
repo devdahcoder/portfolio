@@ -21,6 +21,7 @@ module.exports = {
         'inter': ['Inter', 'sans-serif'],
         'vollkorn': ['Vollkorn', 'serif'],
         'work-sans': ['Work Sans', 'sans-serif'],
+        'quick-sand': ['Quicksand', 'sans-serif'],
       },
       animation: {
         'spin-slow': 'spin 15s linear infinite',
