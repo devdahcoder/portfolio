@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
-import TalkItem from './talk-item'
+import React, { useState } from 'react';
+import { talks } from '../context/talks';
+import TalkItem from './talk-item';
+
 
 type Props = {}
 
@@ -8,8 +10,8 @@ const TalkList = (props: Props) => {
     return (
         <div className="space-y-5">
             {
-                [1, 2, 3, 4, 5].map((index) => {
-                    return (<TalkItem key={index} />)
+                talks.map(({ id, year, talkList }, index) => {
+                    return (<TalkItem key={index} id={id} year={year} talkList={talkList} />)
                 })
             }
         </div>

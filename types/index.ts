@@ -1,5 +1,9 @@
 import { NAVIGATION_TYPE } from "./enums";
 
+export type Id = {
+    id: number;
+}
+
 export type HeaderNavigation = {
     id: number,
     name: string,
@@ -16,4 +20,18 @@ export type Work = {
     description: string;
     href: string;
     image: string;
+}
+
+export type TalkList = {
+    id: number;
+    talkTitle: string;
+    eventTitle: string;
+    eventDate: string;
+    eventLink: string;
+}
+
+export type Talks = {
+    id: number;
+    year: string;
+    talkList: TalkList[];
 }
