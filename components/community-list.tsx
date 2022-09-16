@@ -9,7 +9,7 @@ const CommunityList = (props: any) => {
 
     const { cursor, ...rest } = props;
 
-    const translateX = cursor.toFixed(13) * 500;
+    const translateX = cursor.toFixed(13) * 488;
 
     return (
         <Container>
