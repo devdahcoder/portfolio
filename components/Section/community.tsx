@@ -1,23 +1,22 @@
 import React, { RefObject, useRef } from 'react'
 import WorkItem from '../work-item';
-import WorkList from '../work-list';
-import { myWork } from '../../context/work';
 import Slider from '../slider';
+import { community } from '../../context/community';
+import CommunityList from '../community-list';
+
 
 type Props = {}
 
-const Works = (props: Props) => {
-    
+const Community = (props: Props) => {
     const sliderElementRef = useRef<HTMLDivElement>(null) as RefObject<HTMLDivElement>;
 
     return (
         <div className="border">
-
             <Slider
                 sliderElementRef={sliderElementRef}
-                contentLength={myWork?.length}
+                contentLength={community?.length}
                 renderCard={(index: number) => <WorkItem index={index} />}
-                renderContainer={WorkList}
+                renderContainer={CommunityList}
                 loop={false}
                 onReset={() => {}}
                 cardSize={500}
@@ -26,4 +25,4 @@ const Works = (props: Props) => {
     )
 }
 
-export default Works
+export default Community

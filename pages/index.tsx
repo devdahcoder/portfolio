@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { getAppLayout } from "../components/layouts/app-layout";
 import Talk from "../components/layouts/talk";
 import Loading from "../components/loading";
+import Community from "../components/Section/community";
 import HomePage from "../components/Section/home-page";
 import Works from "../components/Section/works";
 import TextCircle from "../components/text-circle";
@@ -82,6 +83,7 @@ const Home = () => {
             <HomePage />
             <Works />
             <Talk />
+            <Community />
         </div>
     );
 };

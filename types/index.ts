@@ -35,3 +35,11 @@ export type Talks = {
     year: string;
     talkList: TalkList[];
 }
+
+export type Community = {
+    id: number;
+    image?: string;
+    communityTitle: string;
+    roleInCommunity: string;
+    description: string;
+}
