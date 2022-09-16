@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, RefObject } from 'react';
 import { CgArrowLongDown } from 'react-icons/cg';
+import { CloseOnEventListen } from '../hooks';
+
 
 type Props = {}
 
@@ -7,10 +9,14 @@ const TalkItem = (props: Props) => {
 
     const [isAccordionOpen, setIsAccordionOpen] = useState<boolean>(false);
     const [currentAccordionIndex, setCurrentAccordionIndex] = useState<number>(0);
+    const refElement = useRef<HTMLDivElement>(null) as RefObject<HTMLDivElement>;
+
+    CloseOnEventListen(refElement, setIsAccordionOpen);
 
     return (
         <div className="border">
             <div 
+                ref={refElement}
                 onClick={() => setIsAccordionOpen(!isAccordionOpen)} 
                 role={"button"} 
                 className="group flex flex-row items-center justify-between border-b py-1 cursor-pointer"
