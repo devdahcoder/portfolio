@@ -25,7 +25,9 @@ module.exports = {
       },
       animation: {
         'spin-slow': 'spin 15s linear infinite',
-        'blinker': 'blinker 600ms linear infinite'
+        'blinker': 'blinker 600ms linear infinite',
+        'slow-bounce': 'slow-bounce 2s linear infinite',
+
       },
       keyframes: {
         'spin-slow': {
@@ -34,6 +36,11 @@ module.exports = {
         },
         'blinker': {
           '50%': {opacity: '0.6'},
+        },
+        'slow-bounce': {
+          '0% 100%': { transform: 'translateY(0)'},
+          // '30%': { transform: 'translateY(-20px)'},
+          '50%': { transform: 'translateY(-100px)'}
         }
       },
       screens: {

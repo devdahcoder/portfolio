@@ -39,7 +39,7 @@ const TalkItem = (props: Props) => {
                 </div>
             </div>
 
-            <div className={`border overflow-y-auto h-0 transition-all duration-500 ease-in-out ${isAccordionOpen && 'h-60'} `}>
+            <div className={`border transition-all duration-500 ease-in-out ${isAccordionOpen ? 'h-60 overflow-y-auto' : 'overflow-y-hidden h-0'} `}>
                 <div className="py-3 font-inter space-y-3">
                     <div className="flex flex-col justify-start items-start text-sm">
                         <div><p>Modern Android Development with Kotlin</p></div>
