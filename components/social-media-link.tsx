@@ -18,8 +18,7 @@ const SocialMediaLink = (props: Props) => {
             <a 
                 style={props?.linkStyle} 
                 className={`
-                    flex flex-row items-center w-full h-full
-                    font-medium ${props.linkClassName}`
+                    flex flex-row items-center w-full h-full ${props.linkClassName}`
                 } 
                 href={`${props.href}`}
                 target="_blank" 

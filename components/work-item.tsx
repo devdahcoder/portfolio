@@ -28,9 +28,7 @@ const WorkItem = (props: Props) => {
                 mr-5"
             >
 
-                <div className="absolute left-0 top-0 w-0 opacity-0 h-full bg-green-200 transition-all duration-500 ease-linear group-hover:w-full group-hover:opacity-100">
-
-                </div>
+            <div className="absolute left-0 top-0 w-0 opacity-0 h-full bg-green-200 transition-all duration-500 ease-linear group-hover:w-full group-hover:opacity-100"></div>
 
             <div className="text-7xl font-medium text-green-200 border w-full overflow-hidden text-ellipsis whitespace-nowrap mb-5">
                 {currentItem?.header}

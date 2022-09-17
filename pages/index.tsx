@@ -3,6 +3,7 @@ import { getAppLayout } from "../components/layouts/app-layout";
 import Talk from "../components/layouts/talk";
 import Loading from "../components/loading";
 import Community from "../components/Section/community";
+import Contact from "../components/Section/contact";
 import HomePage from "../components/Section/home-page";
 import Works from "../components/Section/works";
 import TextCircle from "../components/text-circle";
@@ -63,18 +64,18 @@ const Home = () => {
 
     return (
         <div>
-            {/* <TextCircle 
+            <TextCircle 
                 text={"design is life - design is life - design is life - "} 
-                className={`${hasPageFullyLoaded ? 
+                className={`${true ? 
                 `!z-0 transition-all duration-500 ease-in-out
-                left-[5.5rem] small-xs:left-32 medium-xs:left-[24rem] large-sm:left-[28rem] extra-large-xs:left-[32rem] extra-large-mid:left-[41.5rem]
+                left-[5.5rem] small-xs:left-32 medium-xs:left-[24rem] large-sm:left-[28rem] extra-large-xs:left-[32rem] extra-large-mid:left-[43.5rem]
                 top-[3rem] small-xs:top-[4rem] small-mid:top-[4.5rem] small-large:top-[5rem] medium-xs:top-24 medium-sm:top-[7rem] large-xs:top-36
                 large-sm:top-52 extra-large-xs:top-[13rem] extra-large-mid:top-56`
                 : 
                 "z-50 -top-12 -left-12"}`} 
             />
 
-            <Loading 
+            {/* <Loading 
                 isTextCompleted={isTextCompleted}
                 hasPageFullyLoaded={hasPageFullyLoaded}
                 loadingTextRefElement={loadingTextRefElement}
@@ -84,6 +85,7 @@ const Home = () => {
             <Works />
             <Talk />
             <Community />
+            <Contact />
         </div>
     );
 };

@@ -51,7 +51,7 @@ const HomePage = (props: Props) => {
                 </div>
 
                 <div className="
-                    font-work-sans font-light dark:font-light tracking-wider leading-5
+                    font-work-sans tracking-wider leading-5
                     w-full large-sm:max-w-[90%] extra-large-mid:max-w-[78%]
                     text-xs small-mid:text-sm medium-sm:text-base large-sm:text-lg extra-large-xs:text-xl
                     large-sm:pr-5"

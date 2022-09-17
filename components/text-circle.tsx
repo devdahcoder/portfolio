@@ -45,7 +45,7 @@ const TextCircle = (props: Props) => {
                             transform: `rotate(${index * 7.0}deg)`,
                             transformOrigin: `0 ${width >= breakpoint ? '90px' : '70px'}`,
                         }} 
-                        className={` text-[0.50rem] small-xs:text-[0.59rem] z-0 absolute left-1/2 text-green-200 font-work-sans`} key={index}>{letter}</span>
+                        className={` text-[0.50rem] small-xs:text-[0.55rem] z-0 absolute left-1/2 text-green-200 font-work-sans`} key={index}>{letter}</span>
                     )
                 })}
             </p>

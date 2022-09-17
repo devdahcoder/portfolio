@@ -28,13 +28,13 @@ const TalkItem = (props: Props) => {
                 role={"button"} 
                 className="group flex flex-row items-center justify-between border-b py-1 cursor-pointer"
                 >
-                <div className="text-6xl font-normal ">
+                <div className="text-6xl font-normal opacity-60">
                     <p>{year}</p>
                 </div>
 
                 <div className="flex items-center justify-center">
                     <button className="group-hover:animate-bounce flex items-center justify-center border min-w-fit w-7 h-7">
-                        <CgArrowLongDown className="" />
+                        <CgArrowLongDown className="opacity-60" />
                     </button>
                 </div>
             </div>

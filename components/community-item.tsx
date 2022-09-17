@@ -29,13 +29,13 @@ const CommunityItem = (props: Props) => {
                             <img className="w-full h-full object-cover" src={currentItem.image} alt="community" />
                         </div>
 
-                        <div className="flex flex-col font-work-sans">
-                            <div className="text-4xl font-extrabold "><p>{currentItem.communityTitle}</p></div>
+                        <div className="flex flex-col font-work-sans space-y-1">
+                            <div className="text-4xl font-semibold "><p>{currentItem.communityTitle}</p></div>
                             <div className="text-lg font-medium"><p>Role: <span className="font-semibold">{currentItem.roleInCommunity}</span></p></div>
                         </div>
                     </div>
 
-                    <div className="w-full border my-6">
+                    <div className="w-full border border-black my-6">
 
                     </div>
 
