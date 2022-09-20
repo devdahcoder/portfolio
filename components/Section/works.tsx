@@ -11,8 +11,7 @@ const Works = (props: Props) => {
     const sliderElementRef = useRef<HTMLDivElement>(null) as RefObject<HTMLDivElement>;
 
     return (
-        <div className="border">
-
+        <section className="border border-black py-20">
             <Slider
                 sliderElementRef={sliderElementRef}
                 contentLength={myWork?.length}
@@ -22,7 +21,7 @@ const Works = (props: Props) => {
                 onReset={() => {}}
                 cardSize={500}
             />
-        </div>
+        </section>
     )
 }
 

@@ -14,14 +14,14 @@ import ThemeToggleButton from './theme-toggle-button';
 type Props = {}
 
 const Header = (props: Props) => {
-
+    
     return (
         <div className={`flex border-b border-black dark:border-white w-full`}>
             <div 
                 className="
                     flex flex-row items-center justify-between grow 
-                    px-4 small-xs:px-5 medium-sm:px-10 extra-large-xs:px-20
-                    py-2 small-xs:py-3 small-large:py-3.5 medium-sm:py-7"
+                    px-2 small-xs:px-5 medium-sm:px-10 extra-large-xs:px-20 border 
+                    py-2 small-xs:py-3.5 large-sm:py-7"
                 >
                 <div className="flex flex-row items-center">
                     <Logo />
@@ -66,8 +66,8 @@ const Header = (props: Props) => {
             <div 
                 className="
                     flex flex-row items-center justify-center border-l ml-auto
-                    px-3 small-mid:px-3.5 small-large:px-5 extra-large-xs:px-6 extra-large-xs:py-7
-                    py-2 small-xs:py-3 small-large:py-3.5 medium-sm:py-7
+                    px-3 small-mid:px-4 extra-large-xs:px-6 
+                    py-2 small-xs:py-3.5 large-sm:py-7
                     border-l-black dark:border-l-white"
                 >
                 <ThemeToggleButton />

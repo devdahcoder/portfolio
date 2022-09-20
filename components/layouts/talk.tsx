@@ -1,4 +1,5 @@
 import React from 'react'
+import ContainerLayout from '../container-layout'
 import SectionHeader from '../section-header'
 import TalkList from '../talk-list'
 
@@ -6,10 +7,8 @@ type Props = {}
 
 const Talk = (props: Props) => {
     return (
-        <div className="pt-20 pb-40">
-            <div className="
-                flex flex-col relative w-full space-y-12
-                px-4 small-large:px-5 medium-sm:px-10 extra-large-xs:px-20 ">
+        <section className="border border-black py-20">
+            <ContainerLayout className="border">
 
                     <div className="flex flex-row">
                         <div className="w-full flex-grow">
@@ -25,8 +24,8 @@ const Talk = (props: Props) => {
                     <div className="flex flex-col">
                         <TalkList />
                     </div>
-            </div>
-        </div>
+            </ContainerLayout>
+        </section>
     )
 }
 

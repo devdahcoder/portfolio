@@ -12,7 +12,7 @@ const Community = (props: Props) => {
     const sliderElementRef = useRef<HTMLDivElement>(null) as RefObject<HTMLDivElement>;
 
     return (
-        <div className="border">
+        <section className="border border-black py-20">
             <Slider
                 sliderElementRef={sliderElementRef}
                 contentLength={community?.length}
@@ -22,7 +22,7 @@ const Community = (props: Props) => {
                 onReset={() => {}}
                 cardSize={488}
             />
-        </div>
+        </section>
     )
 }
 

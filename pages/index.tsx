@@ -28,11 +28,11 @@ const Home = () => {
     //     }
     //     else if (index === text?.length) {
     //         console.log('Text has completed');
-    //         setIsTextCompleted(true);
     //         loadingTextRefElement.current.insertAdjacentHTML(
     //             'beforeend',
     //             `<span class="text-green-500 animate-pulse">.</code>`,
     //         );
+    //         setIsTextCompleted(true);
     //     }
     // }
 
@@ -69,7 +69,7 @@ const Home = () => {
                 className={`${true ? 
                 `!z-0 transition-all duration-500 ease-in-out
                 left-[5.5rem] small-xs:left-32 medium-xs:left-[24rem] large-sm:left-[28rem] extra-large-xs:left-[32rem] extra-large-mid:left-[43.5rem]
-                top-[3rem] small-xs:top-[4rem] small-mid:top-[4.5rem] small-large:top-[5rem] medium-xs:top-24 medium-sm:top-[7rem] large-xs:top-36
+                top-[4rem] small-xs:top-[5.5rem] small-mid:top-[4.5rem] small-large:top-[5rem] medium-xs:top-24 medium-sm:top-[7rem] large-xs:top-36
                 large-sm:top-52 extra-large-xs:top-[13rem] extra-large-mid:top-56`
                 : 
                 "z-50 -top-12 -left-12"}`} 
@@ -82,10 +82,10 @@ const Home = () => {
             /> */}
 
             <HomePage />
-            <Works />
+            {/* <Works />
             <Talk />
             <Community />
-            <Contact />
+            <Contact /> */}
         </div>
     );
 };

@@ -21,7 +21,7 @@ const Loading = (props: Props) => {
     const { hasPageFullyLoaded, isTextCompleted, loadingTextRefElement } = props;
     
     return (
-        <div className={`absolute left-0 top-0 flex items-center justify-center w-full h-screen 
+        <div className={`fixed left-0 top-0 flex items-center justify-center w-full h-screen 
             bg-white-bg dark:bg-dark-bg ${hasPageFullyLoaded ? "opacity-0 z-0 invisible transition-all duration-500 ease-in-out" : "opacity-100 z-40 visible"}`}>
 
 
