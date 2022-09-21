@@ -26,7 +26,7 @@ const StaticNavigationLink = (props: Props) => {
                     relative flex flex-row items-center justify-center outline-0 outline-none w-full h-full 
                     py-1 small-xs:py-2 medium-xs:py-2.5
                     px-2 small-xs:px-3 medium-xs:px-5
-                    text-sm font-medium transition-all delay-100 ease-linear text-black dark:text-white ${className}`} 
+                    text-sm font-medium transition-all delay-100 ease-linear text-black dark:text-white hover:tracking-widest ${className}`} 
                 style={style}
             >
                 {name}

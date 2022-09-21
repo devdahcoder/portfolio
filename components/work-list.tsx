@@ -6,7 +6,7 @@ import SliderContainer from './slider-container';
 
 const WorkList = (props: any) => {
 
-    const { cursor, ...rest } = props;
+    const { cursor, sliderElementRef, ...rest } = props;
 
     const translateX = cursor.toFixed(13) * 500;
 
@@ -16,6 +16,7 @@ const WorkList = (props: any) => {
             <SectionHeader headerText={"Selected Projects"} sectionTitle={"Works"} />
 
             <SliderContainer rest={rest} translate={translateX} />
+            
         </Container>
     )
 }
