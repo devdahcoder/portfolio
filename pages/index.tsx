@@ -82,10 +82,10 @@ const Home = () => {
             />
 
             <HomePage />
-            <Works />
-            <Talk />
-            <Community />
-            <Contact />
+            {/* <Works /> */}
+            {/* <Talk /> */}
+            {/* <Community /> */}
+            {/* <Contact /> */}
         </div>
     );
 };

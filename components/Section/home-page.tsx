@@ -9,9 +9,8 @@ import ContainerLayout from '../container-layout';
 
 
 type Props = {}
-// px-4 small-large:px-5 medium-sm:px-10 extra-large-xs:px-20 
-const HomePage = (props: Props) => {
 
+const HomePage = (props: Props) => {
 
     return (
         <section className="border border-black pb-20">
@@ -30,10 +29,6 @@ const HomePage = (props: Props) => {
                         text-4xl small-xs:text-5xl medium-xs:text-6xl large-sm:text-7xl extra-large-mid:text-8xl
                         min-w-fit"
                 >
-
-
-
-
 
                     <div className="medium-xs:flex medium-xs:flex-row medium-xs:items-center">
 
@@ -113,18 +108,19 @@ const HomePage = (props: Props) => {
                             flex items-center justify-center rounded-t-full mt-16 transition-all
                             ease-in-out duration-500"
                     >
-                        {/* <div
+                        <div
                             className="z-10 absolute 
                             -left-3 small-xs:-left-2 small-mid:left-0
                             top-48 small-xs:top-64 small-mid:top-60
                             py-2 small-xs:py-3
                             px-3 small-xs:px-5
                             border rounded-tl-full rounded-b-full text-black text-xs font-semibold 
-                            w-fit font-inter bg-white invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-700
+                            w-fit font-inter bg-white invisible opacity-0 
+                            group-hover:visible group-hover:opacity-100 transition-all duration-700
                             ease-in-out"
                         >
                             <p>Hi, I am Olamide</p>
-                        </div> */}
+                        </div>
                         <div
                             className=" 
                                 z-0 border-white
@@ -134,8 +130,6 @@ const HomePage = (props: Props) => {
                                 bottom-0
                                 rounded-t-full "
                         >
-                            {/* group-hover:top-20 transition-all 
-                            delay-100 duration-500 ease-in-out */}
                             <img
                                 className="w-full h-full object-contain"
                                 src="./images/wave.png"
@@ -151,4 +145,3 @@ const HomePage = (props: Props) => {
 }
 
 export default HomePage
-// w-full max-w-[19rem] medium-xs:max-w-[25rem] large-xs:max-w-[17.5rem] large-sm:max-w-[19rem]
