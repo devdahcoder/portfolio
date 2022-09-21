@@ -18,7 +18,7 @@ const HomePage = (props: Props) => {
             <ContainerLayout className="large-xs:flex-row items-center large-xs:items-start
                 justify-center large-sm:justify-between 
                 px-2 small-xs:px-5 medium-sm:px-10 extra-large-xs:px-20
-                pt-16 medium-xs:pt-24 medium-sm:pt-20 large-sm:pt-40">
+                pt-16 medium-xs:pt-24 medium-sm:pt-32 large-sm:pt-40">
                     
                 <div className="border flex flex-col w-full large-sm:grow
                     space-y-4 small-xs:space-y-5 small-mid:space-y-8
@@ -73,7 +73,7 @@ const HomePage = (props: Props) => {
 
                 </div>
 
-                <div className="flex flex-row items-center justify-between small-mid:justify-start small-mid:space-x-7">
+                <div className="flex flex-row items-center justify-between small-large:justify-start small-mid:space-x-7">
 
                     <SocialMediaLink 
                         text={"Twitter"} 
@@ -113,7 +113,7 @@ const HomePage = (props: Props) => {
                             flex items-center justify-center rounded-t-full mt-16 transition-all
                             ease-in-out duration-500"
                     >
-                        <div
+                        {/* <div
                             className="z-10 absolute 
                             -left-3 small-xs:-left-2 small-mid:left-0
                             top-48 small-xs:top-64 small-mid:top-60
@@ -124,7 +124,7 @@ const HomePage = (props: Props) => {
                             ease-in-out"
                         >
                             <p>Hi, I am Olamide</p>
-                        </div>
+                        </div> */}
                         <div
                             className=" 
                                 z-0 border-white

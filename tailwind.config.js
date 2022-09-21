@@ -22,6 +22,7 @@ module.exports = {
         'vollkorn': ['Vollkorn', 'serif'],
         'work-sans': ['Work Sans', 'sans-serif'],
         'quick-sand': ['Quicksand', 'sans-serif'],
+        'pencerio': ['pencerio', 'san-serif'],
       },
       animation: {
         'spin-slow': 'spin 15s linear infinite',
