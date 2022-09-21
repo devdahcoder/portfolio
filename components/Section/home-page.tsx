@@ -19,7 +19,7 @@ const HomePage = (props: Props) => {
                 px-2 small-xs:px-5 medium-sm:px-10 extra-large-xs:px-20
                 pt-16 medium-xs:pt-24 medium-sm:pt-32 large-sm:pt-40">
                     
-                <div className="border flex flex-col w-full large-sm:grow
+                <div className="flex flex-col w-full large-sm:grow
                     space-y-4 small-xs:space-y-5 small-mid:space-y-8
                     select-none text-black dark:text-white transition-all ease-in-out duration-500"
                 >
@@ -99,7 +99,7 @@ const HomePage = (props: Props) => {
                 </div>
 
 
-                <div className="border flex flex-col items-center  w-full max-w-[23rem]">
+                <div className="flex flex-col items-center  w-full max-w-[23rem]">
                     <div
                         className="
                             group relative border-black bg-black dark:border-white dark:bg-white 

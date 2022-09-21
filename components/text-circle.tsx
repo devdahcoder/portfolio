@@ -1,4 +1,5 @@
 import React from 'react';
+import { WindowSize } from '../hooks';
 
 type Props = {
     text?: string;
@@ -11,35 +12,13 @@ const TextCircle = (props: Props) => {
 
     const splitText = text?.split('');
 
-    const [width, setWidth] = React.useState<number>(0);
-    // const breakpoint = 1024;
     const breakpoint = 320;
-
-    const getWindowWidth = () => {
-        setWidth(window?.innerWidth)
-    }
-
-    // React.useEffect(() => {
-    //     getWindowWidth();
-    // }, [])
-
-    React.useEffect(() => {
-        let isSubscribed = true;
-
-        if (isSubscribed) {
-            getWindowWidth()
-            window.addEventListener("resize", getWindowWidth);
-        }
-        
-        return () => {
-            window.removeEventListener('resize', getWindowWidth);
-            isSubscribed = false;
-        }
-    }, [width]);
+    
+    const width = WindowSize();
 
     return (
         <div className={`
-            absolute border capitalize rounded-full font-work-sans animate-spin-slow
+            absolute capitalize rounded-full font-work-sans animate-spin-slow
             h-[140px] small-xs:h-[180px] 
             w-[140px] small-xs:w-[180px] ${className}`}>
             <p>

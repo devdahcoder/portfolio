@@ -2,7 +2,7 @@ export const HeaderNavigationStyle = `before:content-[''] before:absolute before
                         before:rounded-full before:left-1/2 before:bottom-0 before:hover:w-full before:transition-all
                         before:ease-linear before:delay-100 before:-translate-x-1/2 before:translate-y-0`;
 
-export const linkClassName = `border capitalize
+export const linkClassName = `capitalize
                     text-xs small-xs:text-sm medium-sm:text-base
                     py-1 small-xs:py-2
                     pr-1 small-xs:pr-3 small-large:pr-5 font-semibold `;

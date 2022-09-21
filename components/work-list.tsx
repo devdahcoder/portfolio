@@ -10,6 +10,8 @@ const WorkList = (props: any) => {
 
     const translateX = cursor.toFixed(13) * 500;
 
+    console.log('This is the ref', sliderElementRef)
+
     return (
         <Container>
             

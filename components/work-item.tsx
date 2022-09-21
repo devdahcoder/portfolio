@@ -14,12 +14,12 @@ const WorkItem = (props: Props) => {
     const { modIndex, index } = props;
 
     const currentItem = myWork[index];
-
+// min-w-[30rem]
     return (
         <div 
             key={index}
             className="
-                group relative rounded-sm w-full min-w-[30rem] h-full flex flex-col items-start 
+                group relative rounded-sm w-full min-w-[25rem] medium-sm:min-w-[30rem] h-full flex flex-col items-start 
                 border-2 border-green-200 select-none cursor-pointer
                 pl-6 
                 pr-8
@@ -30,11 +30,11 @@ const WorkItem = (props: Props) => {
 
             <div className="absolute left-0 top-0 w-0 opacity-0 h-full bg-green-200 transition-all duration-500 ease-linear group-hover:w-full group-hover:opacity-100"></div>
 
-            <div className="text-7xl font-medium text-green-200 border w-full overflow-hidden text-ellipsis whitespace-nowrap mb-5">
+            <div className="text-5xl medium-sm:text-7xl font-medium text-green-200 w-full overflow-hidden text-ellipsis whitespace-nowrap mb-5">
                 {currentItem?.header}
             </div>
 
-            <div className="font-inter text-xs text-black dark:text-white tracking-wider border pr-8 mb-14">
+            <div className="font-inter text-xs medium-sm:text-sm text-black dark:text-white tracking-wider pr-8 mb-14">
                 <p>
                     An emergency app which give users the ability to - on the spot- report emergency cases near them as happening at exact time of reporting.
                 </p>
@@ -45,7 +45,7 @@ const WorkItem = (props: Props) => {
                     text={"Casestudy"} 
                     href={`https://twitter.com/devdahcoder`} 
                     icon={<BsArrowUpRight className={`w-3 h-3`} />} 
-                    className={`border`}
+                    className={``}
                     linkClassName={`pl-0 pr-2 py-0.5 font-medium text-base tracking-wide dark:text-white`} 
                     iconContainerClassName={`${linkIconContainer} ml-2`}
                 />
