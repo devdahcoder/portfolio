@@ -81,9 +81,9 @@ const Home = () => {
                 loadingTextRefElement={loadingTextRefElement}
             />
 
-            {/* <HomePage /> */}
+            <HomePage />
             <Works />
-            {/* <Talk /> */}
+            <Talk />
             {/* <Community /> */}
             {/* <Contact /> */}
         </div>

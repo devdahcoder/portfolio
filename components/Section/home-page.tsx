@@ -52,7 +52,7 @@ const HomePage = (props: Props) => {
 
 
                 <div className="
-                    font-work-sans
+                    font-work-sans transition-all duration-500 ease-linear
                     w-full large-sm:max-w-[90%] extra-large-mid:max-w-[78%]
                     text-xs small-xs:text-sm medium-sm:text-base large-sm:text-lg extra-large-xs:text-xl
                     large-sm:pr-5"
