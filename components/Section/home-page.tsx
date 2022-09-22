@@ -12,6 +12,8 @@ type Props = {}
 
 const HomePage = (props: Props) => {
 
+    const name = "Olamide".split("");
+
     return (
         <section className="border border-black pb-20">
             <ContainerLayout className="large-xs:flex-row items-center large-xs:items-start
@@ -25,7 +27,7 @@ const HomePage = (props: Props) => {
                 >
 
                 <div className="
-                        group font-medium relative cursor-pointer 
+                        group font-medium relative cursor-text 
                         text-4xl small-xs:text-5xl medium-xs:text-6xl large-sm:text-7xl extra-large-mid:text-8xl
                         min-w-fit"
                 >
@@ -36,7 +38,15 @@ const HomePage = (props: Props) => {
 
                         <div className=" w-fit relative pt-5 medium-xs:pt-0 medium-xs:ml-2 extra-large-xs:ml-4">
 
-                                Olamide
+                                {/* Olamide */}
+
+                                {name && name.map((name, index: number) => {
+                                    return (
+                                        <span key={index}
+                                            className="hover:text-green-200 transition-all ease-in-out duration-500"
+                                        >{name}</span>
+                                    )
+                                })}
 
                             <NameStrike 
                                 className="

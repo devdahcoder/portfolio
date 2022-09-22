@@ -8,7 +8,7 @@ type Props = {}
 const Talk = (props: Props) => {
     return (
         <section className="border border-black py-20">
-            <ContainerLayout className="border">
+            <ContainerLayout className="">
 
                     <div className="flex flex-row">
                         <div className="w-full flex-grow">
