@@ -49,7 +49,7 @@ const AppLayout = (props: Props) => {
 }
 
 export const getAppLayout = (page?: React.ReactElement) => (
-    getMainLayout(<AppLayout>{page}</AppLayout>, 'Olamide--Devdahcoder')
+    getMainLayout(<AppLayout>{page}</AppLayout>, 'Olamide — Devdahcoder')
 );
 
 export default AppLayout

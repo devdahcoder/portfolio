@@ -1,5 +1,4 @@
 import React, { RefObject, useRef } from 'react'
-import WorkItem from '../work-item';
 import Slider from '../slider';
 import { community } from '../../context/community';
 import CommunityList from '../community-list';

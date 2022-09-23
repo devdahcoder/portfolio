@@ -7,7 +7,7 @@ import SliderContainer from './slider-container';
 
 const WorkList = (props: any) => {
 
-    const { cursor, sliderElementRef, ...rest } = props;
+    const { cursor, ...rest } = props;
 
     const breakpoint = 768;
 
