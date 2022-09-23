@@ -10,8 +10,8 @@ const LoadingText: (props: Props) => JSX.Element = (props: Props) => {
         <div className="text-center z-50 flex flex-col items-center justify-center text-dark-bg dark:text-white 
             transition-all duration-500 ease-in-out">
                 
-            <div className="text-4xl small-xs:text-6xl small-large:text-8xl font-seibold capitalize">
-                <p className={`${!props?.isTextCompleted && 'animate-blinker'}`} ref={props?.loadingTextRefElement}></p>
+            <div className="text-4xl small-xs:text-6xl small-large:text-8xl font-seibold capitalize transition-all ease-in-out">
+                <p className={`${!props?.isTextCompleted && 'animate-blinker'} transition-all ease-in-out`} ref={props?.loadingTextRefElement}></p>
             </div>
 
             <div className={`relative text-xs small-large:text-xl

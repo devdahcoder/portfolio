@@ -27,7 +27,6 @@ const Home = () => {
             setIndex(index => index + 1);
         }
         else if (index === text?.length) {
-            console.log('Text has completed');
             loadingTextRefElement.current.insertAdjacentHTML(
                 'beforeend',
                 `<span class="text-green-500 animate-pulse">.</code>`,
@@ -84,8 +83,8 @@ const Home = () => {
             <HomePage />
             <Works />
             <Talk />
-            {/* <Community /> */}
-            {/* <Contact /> */}
+            <Community />
+            <Contact />
         </div>
     );
 };

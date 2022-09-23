@@ -19,7 +19,7 @@ const HomePage = (props: Props) => {
             <ContainerLayout className="large-xs:flex-row items-center large-xs:items-start
                 justify-center large-sm:justify-between 
                 px-2 small-xs:px-5 medium-sm:px-10 extra-large-xs:px-20
-                pt-16 medium-xs:pt-24 medium-sm:pt-32 large-sm:pt-40">
+                pt-16 medium-xs:pt-24 medium-sm:pt-32 large-sm:pt-40 ">
                     
                 <div className="flex flex-col w-full large-sm:grow
                     space-y-4 small-xs:space-y-5 small-mid:space-y-8
@@ -64,7 +64,7 @@ const HomePage = (props: Props) => {
                 <div className="
                     font-work-sans transition-all duration-500 ease-linear
                     w-full large-sm:max-w-[90%] extra-large-mid:max-w-[78%]
-                    text-xs small-xs:text-sm medium-sm:text-base large-sm:text-lg extra-large-xs:text-xl
+                    text-xs small-xs:text-sm medium-xs:text-base large-sm:text-lg 
                     large-sm:pr-5"
                 >
 
@@ -109,7 +109,7 @@ const HomePage = (props: Props) => {
                 </div>
 
 
-                <div className="flex flex-col items-center  w-full max-w-[23rem]">
+                <div className="flex flex-col items-center transition-all ease-in-out duration-500  w-full max-w-[23rem]">
                     <div
                         className="
                             group relative border-black bg-black dark:border-white dark:bg-white 
@@ -134,7 +134,7 @@ const HomePage = (props: Props) => {
                         <div
                             className=" 
                                 z-0 border-white
-                                w-[10rem] small-xs:w-[15rem] small-mid:w-[17rem] large-sm:w-[18.5rem]
+                                w-[11rem] small-xs:w-[15rem] small-mid:w-[17rem] large-sm:w-[18.5rem]
                                 h-fit absolute 
                                 left-12 large-sm:left-14
                                 bottom-0
