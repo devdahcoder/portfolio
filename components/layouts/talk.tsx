@@ -16,7 +16,7 @@ const Talk = (props: Props) => {
                         </div>
 
 
-                        <div className="border font-work-sans mr-auto w-[80%] small-xs:w-full text-sm" dir="rtl">
+                        <div className="font-work-sans mr-auto w-[80%] small-xs:w-full text-sm" dir="rtl">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id viverra praesent nisi tempor pharetra vel. Est nisl id ornare condimentum diam nunc suspendisse.</p>
                         </div>
                     </div>

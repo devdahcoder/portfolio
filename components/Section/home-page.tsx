@@ -8,11 +8,13 @@ import WavingMemoji from '../../public/icons/waving-memoji';
 import ContainerLayout from '../container-layout';
 
 
-type Props = {}
+type Props = {
+    name: string;
+}
 
 const HomePage = (props: Props) => {
 
-    const name = "Olamide".split("");
+    const splitName = props?.name && props?.name?.split("");
 
     return (
         <section className="border border-black pb-20">
@@ -38,9 +40,7 @@ const HomePage = (props: Props) => {
 
                         <div className=" w-fit relative pt-5 medium-xs:pt-0 medium-xs:ml-2 extra-large-xs:ml-4">
 
-                                {/* Olamide */}
-
-                                {name && name.map((name, index: number) => {
+                                {splitName && splitName.map((name, index: number) => {
                                     return (
                                         <span key={index}
                                             className="hover:text-green-200 transition-all ease-in-out duration-500"
@@ -145,7 +145,6 @@ const HomePage = (props: Props) => {
                                 src="./images/wave.png"
                                 alt="memoji"
                             />
-                            {/* <WavingMemoji className={`rounded-t-full border w-fit`} /> */}
                         </div>
                     </div>
                 </div>

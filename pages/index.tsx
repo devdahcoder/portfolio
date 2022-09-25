@@ -4,6 +4,7 @@ import Talk from "../components/layouts/talk";
 import Loading from "../components/loading";
 import Community from "../components/Section/community";
 import Contact from "../components/Section/contact";
+import Contributions from "../components/Section/contributions";
 import HomePage from "../components/Section/home-page";
 import Works from "../components/Section/works";
 import TextCircle from "../components/text-circle";
@@ -15,18 +16,18 @@ const Home = () => {
     const { theme, handleThemeToggle} = useThemeContainer();
     const [hasPageFullyLoaded, setHasPageFullyLoaded] = useState<boolean>(false);
     const [delayTyping, setDelayTyping] = useState<number>(400);
-    const [text, setText] = useState<string>("Olamide");
+    const [name, setName] = useState<string>("Olamide");
     const [index, setIndex] = useState<number>(0);
     const [isTextCompleted, setIsTextCompleted] = useState<boolean>(false);
 
     const loadingTextRefElement = useRef<HTMLParagraphElement>(null) as React.MutableRefObject<HTMLParagraphElement>;
 
     const printText = () => {
-        if (index < text?.length) {
-            loadingTextRefElement.current.innerText += text.charAt(index);
+        if (index < name?.length) {
+            loadingTextRefElement.current.innerText += name.charAt(index);
             setIndex(index => index + 1);
         }
-        else if (index === text?.length) {
+        else if (index === name?.length) {
             loadingTextRefElement.current.insertAdjacentHTML(
                 'beforeend',
                 `<span class="text-green-500 animate-pulse">.</code>`,
@@ -80,10 +81,11 @@ const Home = () => {
                 loadingTextRefElement={loadingTextRefElement}
             />
 
-            <HomePage />
+            <HomePage name={name} />
             <Works />
             <Talk />
             <Community />
+            <Contributions />
             <Contact />
         </div>
     );

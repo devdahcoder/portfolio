@@ -1,5 +1,5 @@
 import React, { useState, useRef, RefObject } from 'react';
-import { CgArrowLongDown } from 'react-icons/cg';
+import { IoIosArrowDown } from 'react-icons/io';
 import { CloseOnEventListen } from '../hooks';
 import { TalkList } from '../types';
 
@@ -21,7 +21,7 @@ const TalkItem = (props: Props) => {
     CloseOnEventListen(refElement, setIsAccordionOpen);
 
     return (
-        <div className="border">
+        <div className="">
             <div 
                 ref={refElement}
                 onClick={() => setIsAccordionOpen(!isAccordionOpen)} 
@@ -34,13 +34,13 @@ const TalkItem = (props: Props) => {
 
                 <div className="flex items-center justify-center">
                     <button className=" flex items-center justify-center border min-w-fit w-7 h-7">
-                        <CgArrowLongDown className="opacity-60" />
+                        <IoIosArrowDown className="opacity-60" />
                     </button>
                 </div>
             </div>
 
-            <div className={`border transition-all duration-500 ease-in-out ${isAccordionOpen ? 'h-60 ' : 'overflow-y-hidden h-0'} `}>
-                <div className="py-3 font-inter space-y-3">
+            <div className={`transition-all duration-500 ease-in-out ${isAccordionOpen ? 'h-60 ' : 'overflow-y-hidden h-0'} `}>
+                <div className={`py-3 font-inter space-y-3`}>
                     {
                         talkList.map(({ id, talkTitle, eventTitle, eventLink, eventDate }, index) => (
                             <div key={index} className="flex flex-col justify-start items-start text-sm">
