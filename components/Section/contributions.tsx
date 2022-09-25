@@ -1,7 +1,9 @@
 import React, { RefObject, useRef } from 'react';
+import { contributions } from '../../context/contibutions';
 import ContributionItem from '../contribution-item';
 import ContributionList from '../contribution-list';
 import Slider from '../slider';
+
 
 type Props = {}
 
@@ -13,7 +15,7 @@ const Contributions = (props: Props) => {
         <section className="border border-black py-20">
             <Slider
                 sliderElementRef={sliderElementRef}
-                contentLength={5}
+                contentLength={contributions?.length}
                 renderCard={(index: number) => <ContributionItem index={index} />}
                 renderContainer={ContributionList}
                 loop={false}

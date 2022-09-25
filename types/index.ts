@@ -43,3 +43,9 @@ export type Community = {
     roleInCommunity: string;
     description: string;
 }
+
+export type Contribution = {
+    id: number;
+    picture: string;
+    contributionTitle: string;
+}

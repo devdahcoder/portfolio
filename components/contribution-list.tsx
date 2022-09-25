@@ -12,7 +12,7 @@ const ContributionList = (props: any) => {
 
     const width = WindowSize();
 
-    const translateX = cursor.toFixed(13) * (width >= breakpoint ? 500 : 420);
+    const translateX = cursor.toFixed(13) * (width >= breakpoint ? 660 : 420);
 
     return (
         <Container>

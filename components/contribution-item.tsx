@@ -1,23 +1,38 @@
-import React from 'react'
+/* eslint-disable @next/next/no-img-element */
+import React from 'react';
+import { contributions } from '../context/contibutions';
+
 
 type Props = {
     index: number;
 }
 
 const ContributionItem = (props: Props) => {
+
+    const currentItem = contributions[props?.index];
+
     return (
         <div 
             key={props?.index}
             className="
-                group relative rounded-sm w-full min-w-[25rem] medium-sm:min-w-[40rem] h-full flex flex-col items-start 
+                group relative rounded-sm overflow-hidden w-full min-w-[25rem] medium-sm:min-w-[40rem] h-full flex flex-col items-start 
                 border-2 border-green-200 select-none cursor-pointer transition-all ease-linear duration-500
-                pl-6 
-                pr-8
-                pt-9 
-                pb-6 
                 mr-5"
         >
-            hello world
+
+            <div className="flex flex-col items-start justify-end absolute 
+                bg-white opacity-60
+                left-0 top-0 w-0 h-full transition-all duration-500 ease-linear group-hover:w-full">
+                <div className="fixed m-10 text-4xl font-medium w-full 
+                    transition-all ease-linear delay-75
+                    invisible group-hover:visible group-hover:transition-all 
+                    group-hover:ease-linear group-hover:duration-500 group-hover:delay-200">
+                    <p>Memoji Placeholder</p>
+                </div>
+            </div>
+
+
+            <img className="w-full h-full object-cover" src={currentItem?.picture} alt="" />
         </div>
     )
 }
