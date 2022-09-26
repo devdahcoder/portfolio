@@ -20,7 +20,6 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  // overflow-y: scroll;
   font-family: Vollkorn, Inter, Work Sans, Pencerio, cursive, Quicksand, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
@@ -30,46 +29,11 @@ body {
 
     &::-webkit-scrollbar-track {
       box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.3);
-      // border-radius: 20px;
     }
 
     &::-webkit-scrollbar-thumb {
       background-color: hsl(225, 14%, 89%);
       border-radius: 20px;
-      // color: hsla(90, 25%, 52%, 0.35);
-      // color: hsl(210, 20%, 98%);
       color: hsl(0, 0%, 96%);
     }
-    // background: #1ED291;
-    // filter: blur(300px);
-    // transform: matrix(-0.36, -0.93, 0.93, -0.36, 0, 0);
-    
-    // background: #00754B;
-    // filter: blur(300px);
-    // transform: matrix(0.62, -0.78, 0.78, 0.62, 0, 0);
 }
-
-// .dev {
-//   background: hsl(158, 100%, 23%);
-//   filter: blur(300px);
-//   transform: matrix(0.62, -0.78, 0.78, 0.62, 0, 0);
-// }
-// .deve {
-//   background: hsl(158, 75%, 47%);
-//   filter: blur(300px);
-//   transform: matrix(-0.36, -0.93, 0.93, -0.36, 0, 0);
-// }
-
-// .dele {
-//   clip-path: circle(50% at 50% 50%);
-// }
-
-
-// .small-rounded {
-//   transform-origin: 0px 70px;
-// }
-
-// .big-rounded {
-//   transform-origin: 0px 100px;
-//   color: hsl(158, 100%, 23%);
-// }

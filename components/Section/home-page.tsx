@@ -30,7 +30,7 @@ const HomePage = (props: Props) => {
 
                 <div className="
                         group font-medium relative cursor-text 
-                        text-4xl small-xs:text-5xl medium-xs:text-6xl large-sm:text-7xl extra-large-mid:text-8xl
+                        text-4xl small-xs:text-5xl small-mid:text-6xl large-sm:text-7xl extra-large-mid:text-8xl
                         min-w-fit"
                 >
 
@@ -64,7 +64,7 @@ const HomePage = (props: Props) => {
                 <div className="
                     font-work-sans transition-all duration-500 ease-linear
                     w-full large-sm:max-w-[90%] extra-large-mid:max-w-[78%]
-                    text-xs small-xs:text-sm medium-xs:text-base large-sm:text-lg 
+                    text-xs small-xs:text-sm small-mid:text-base large-sm:text-lg 
                     large-sm:pr-5"
                 >
 
