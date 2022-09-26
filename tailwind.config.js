@@ -51,6 +51,7 @@ module.exports = {
         'medium-xs': {'min': '600px'},
         'medium-sm': {'min': '768px'},
         'large-xs': {'min': '900px'},
+        'large-mid': {'min': '1000px'},
         'large-sm': {'min': '1024px'},
         'extra-large-xs': {'min': '1200px'},
         'extra-large-mid': {'min': '1280px'},

@@ -14,12 +14,12 @@ const WorkItem = (props: Props) => {
     const { modIndex, index } = props;
 
     const currentItem = myWork[index];
-// min-w-[30rem]
+
     return (
         <div 
             key={index}
             className="
-                group relative rounded-sm w-full min-w-[24rem] medium-sm:min-w-[28rem] large-xs:min-w-[30rem] h-full flex flex-col items-start 
+                group relative rounded-sm w-full min-w-[26rem] medium-xs:min-w-[28rem] large-xs:min-w-[31rem] h-full flex flex-col items-start 
                 border-2 border-green-200 select-none cursor-pointer transition-all ease-linear duration-500
                 pl-6 
                 pr-8
@@ -30,11 +30,12 @@ const WorkItem = (props: Props) => {
 
             <div className="absolute left-0 top-0 w-0 opacity-0 h-full bg-green-200 transition-all duration-500 ease-linear group-hover:w-full group-hover:opacity-100"></div>
 
-            <div className="text-5xl small-mid:text-6xl large-xs:text-7xl font-medium text-green-200 w-full overflow-hidden text-ellipsis whitespace-nowrap mb-5">
+            <div className="text-5xl small-mid:text-6xl large-xs:text-7xl font-medium text-green-200 w-full 
+            overflow-hidden text-ellipsis whitespace-nowrap mb-5">
                 {currentItem?.header}
             </div>
 
-            <div className="font-work-sans text-xs small-xs:text-sm text-black dark:text-white tracking-wider pr-8 mb-14">
+            <div className="font-work-sans text-xs small-xs:text-sm large-xs:text-base text-black dark:text-white tracking-wider pr-8 mb-14">
                 <p>
                     An emergency app which give users the ability to - on the spot- report emergency cases near them as happening at exact time of reporting.
                 </p>
