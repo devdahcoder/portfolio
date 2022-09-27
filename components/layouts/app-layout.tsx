@@ -4,7 +4,7 @@ import { getMainLayout } from './main-layout';
 import BackgroundIcon from '../background-icon';
 import RightBackgroundOval from '../../public/icons/right-background-oval';
 import LeftBackgroundOval from '../../public/icons/left-background-oval';
-
+import Menu from '../menu'
 
 type Props = {
     children: React.ReactNode;
@@ -13,8 +13,9 @@ type Props = {
 const AppLayout = (props: Props) => {
     return (
         <div className="relative">
+            {/* <Menu /> */}
             <div className="">
-                {/* <div className="flex items-center justify-center w-screen h-screen bg-white fixed -z-50 ">
+                <div className="flex items-center justify-center w-screen h-screen bg-white fixed -z-50 ">
                     <div className="flex items-center justify-center  w-screen h-screen ">
                         
 
@@ -24,7 +25,7 @@ const AppLayout = (props: Props) => {
                         
 
                     </div>
-                </div> */}
+                </div>
 
                 
                         {/* <BackgroundIcon 
