@@ -31,4 +31,18 @@ body {
       border-radius: 20px;
       color: hsl(0, 0%, 96%);
     }
+
+    
+  .left-bg-oval {
+    background: #1ED291;
+    filter: blur(150px);
+    transform: matrix(-0.36, -0.93, 0.93, -0.36, 0, 0);
+  }
+
+  .right-bg-oval {
+    background: #00754B;
+    filter: blur(150px);
+    transform: matrix(0.62, -0.78, 0.78, 0.62, 0, 0);
+  }
 }
+

@@ -16,28 +16,15 @@ const AppLayout = (props: Props) => {
             {/* <Menu /> */}
             <div className="">
                 <div className="flex items-center justify-center w-screen h-screen bg-white fixed -z-50 ">
-                    <div className="flex items-center justify-center  w-screen h-screen ">
+                    <div className="flex animate-spin-slow items-center justify-center w-screen h-screen ">
                         
-
-                        <LeftBackgroundOval className="w-full h-full" />
-                        <RightBackgroundOval className="w-full h-full" />
+                        <LeftBackgroundOval className="left-bg-oval border w-full h-fit" />
+                        <RightBackgroundOval className="right-bg-oval border w-full h-full" />
                         
-                        
-
                     </div>
                 </div>
 
-                
-                        {/* <BackgroundIcon 
-                            className="grow h-full border border-black" 
-                            backgroundSvgIcon={<LeftBackgroundOval className="w-full h-screen" />} 
-                        />
-                        <BackgroundIcon 
-                            className="grow h-full border border-black" 
-                            backgroundSvgIcon={<RightBackgroundOval className="w-full h-screen" />} 
-                        /> */}
-
-                <div className="border">
+                <div className="border ">
                     <Header />
                     <div className="w-full min-h-full">
                         {props?.children}

@@ -7,6 +7,7 @@ import Contact from "../components/Section/contact";
 import Contributions from "../components/Section/contributions";
 import HomePage from "../components/Section/home-page";
 import Works from "../components/Section/works";
+import Footer from "../components/Section/footer";
 import TextCircle from "../components/text-circle";
 import { useThemeContainer } from '../state/theme';
 
@@ -87,6 +88,7 @@ const Home = () => {
             <Community />
             <Contributions />
             <Contact />
+            <Footer />
         </div>
     );
 };
