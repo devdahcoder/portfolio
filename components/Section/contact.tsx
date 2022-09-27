@@ -14,7 +14,7 @@ const Contact = (props: Props) => {
             pt-16 medium-xs:pt-24 medium-sm:pt-20 large-sm:pt-40 pb-20"
         >
             <div className="flex flex-col flex-grow border space-y-28">
-                <div className="text-7xl font-semibold leading-[5.5rem]"><p>Do you have any Ideas? <br />Let’s create the future</p></div>
+                <div className="text-4xl small-large:text-5xl medium-xs:text-6xl large-xs:text-7xl font-semibold large-xs:leading-[5.5rem]"><p>Do you have any Ideas? <br />Let’s create the future</p></div>
 
                 <div>
                     <form action="" method="post">
@@ -64,7 +64,7 @@ const Contact = (props: Props) => {
                 </div>
             </div>
 
-            <div className="flex flex-col items-center justify-center w-96 border h-max">
+            <div className="hidden flex-col items-center justify-center w-96 border h-max large-xs:flex">
                 <div className="relative w-64 h-fit border border-black animate-slow-bounce mt-60">
                     <div className="">
                         <img className="w-full h-full object-contain" src="./images/idea-memoji.png" alt="idea" />

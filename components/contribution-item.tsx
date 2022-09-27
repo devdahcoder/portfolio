@@ -10,13 +10,13 @@ type Props = {
 const ContributionItem = (props: Props) => {
 
     const currentItem = contributions[props?.index];
-
+    
     return (
         <div 
             key={props?.index}
             className="
-                group relative rounded-sm overflow-hidden w-full min-w-[25rem] medium-sm:min-w-[40rem] h-full flex flex-col items-start 
-                border-2 border-green-200 select-none cursor-pointer transition-all ease-linear duration-500
+                group relative rounded-sm overflow-hidden w-full min-w-[25rem] medium-sm:min-w-[33rem] large-xs:min-w-[40rem] h-full flex flex-col items-start 
+                select-none cursor-pointer transition-all ease-linear duration-500
                 mr-5"
         >
 
