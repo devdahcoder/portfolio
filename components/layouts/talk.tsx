@@ -1,13 +1,19 @@
-import React from 'react'
-import ContainerLayout from '../container-layout'
-import SectionHeader from '../section-header'
-import TalkList from '../talk-list'
+import React from 'react';
+import ContainerLayout from '../container-layout';
+import SectionHeader from '../section-header';
+import TalkList from '../talk-list';
+import { motion } from 'framer-motion';
+
 
 type Props = {}
 
 const Talk = (props: Props) => {
     return (
-        <section className="border border-black py-20">
+        <motion.div 
+            initial={{ visibility: 'hidden' }}
+            whileInView={{ visibility: 'visible' }}
+
+            className="border border-black py-20">
             <ContainerLayout className="px-2 small-xs:px-5 medium-sm:px-10 extra-large-xs:px-20">
 
                     <div className="flex flex-col medium-xs:flex-row">
@@ -25,7 +31,7 @@ const Talk = (props: Props) => {
                         <TalkList />
                     </div>
             </ContainerLayout>
-        </section>
+        </motion.div>
     )
 }
 

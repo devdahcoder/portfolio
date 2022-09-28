@@ -40,7 +40,7 @@ const TalkItem = (props: Props) => {
             </div>
 
             <div className={`transition-all duration-500 ease-in-out ${isAccordionOpen ? 'h-60 ' : 'overflow-y-hidden h-0'} `}>
-                <div className={`py-3 font-inter space-y-3`}>
+                <div className={`py-3 font-inter space-y-3 `}>
                     {
                         talkList.map(({ id, talkTitle, eventTitle, eventLink, eventDate }, index) => (
                             <div key={index} className="flex flex-col justify-start items-start text-sm">

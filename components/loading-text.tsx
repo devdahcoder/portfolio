@@ -6,6 +6,7 @@ type Props = {
 }
 
 const LoadingText: (props: Props) => JSX.Element = (props: Props) => {
+    
     return (
         <div className="text-center z-50 flex flex-col items-center justify-center text-dark-bg dark:text-white 
             transition-all duration-500 ease-in-out">

@@ -6,15 +6,24 @@ import { BsArrowUpRight } from 'react-icons/bs';
 import { linkClassName, linkIconContainer } from '../../styles/global-style';
 import WavingMemoji from '../../public/icons/waving-memoji';
 import ContainerLayout from '../container-layout';
+import { motion } from 'framer-motion';
 
 
 type Props = {
     name: string;
+    hasPageFullyLoaded: boolean;
 }
 
 const HomePage = (props: Props) => {
 
-    const splitName = props?.name && props?.name?.split("");
+    const { hasPageFullyLoaded, name } = props;
+
+    const splitName = name && name?.split("");
+
+    const variants = {
+        open: { opacity: 1, x: 0 },
+        closed: { opacity: 0, x: "-200%" },
+    }
 
     return (
         <section className="border border-black pb-20">
@@ -34,7 +43,9 @@ const HomePage = (props: Props) => {
                         min-w-fit"
                 >
 
-                    <div className="medium-xs:flex medium-xs:flex-row medium-xs:items-center">
+                    <motion.div 
+                        className="medium-xs:flex medium-xs:flex-row medium-xs:items-center"
+                    >
 
                         Hi, I am 
 
@@ -42,9 +53,12 @@ const HomePage = (props: Props) => {
 
                                 {splitName && splitName.map((name, index: number) => {
                                     return (
-                                        <span key={index}
+                                        <motion.span 
+                                            key={index}
                                             className="hover:text-green-200 transition-all ease-in-out duration-500"
-                                        >{name}</span>
+                                        >
+                                            {name}
+                                        </motion.span>
                                     )
                                 })}
 
@@ -56,7 +70,7 @@ const HomePage = (props: Props) => {
 
                         </div>
 
-                    </div>
+                    </motion.div>
                     
                 </div>
 
@@ -110,7 +124,8 @@ const HomePage = (props: Props) => {
 
 
                 <div className="flex flex-col items-center transition-all ease-in-out duration-500  w-full max-w-[23rem]">
-                    <div
+                    <motion.div
+                        whileHover={{scale: 1.1}}
                         className="
                             group relative border-black bg-black dark:border-white dark:bg-white 
                             w-full max-w-[19rem]
@@ -146,7 +161,7 @@ const HomePage = (props: Props) => {
                                 alt="memoji"
                             />
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </ContainerLayout>
         </section>

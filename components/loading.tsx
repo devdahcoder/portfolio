@@ -34,18 +34,6 @@ const Loading = (props: Props) => {
                 loadingTextRefElement={loadingTextRefElement}
             />
 
-            {/* <div className="">
-                <BackgroundIcon 
-                    className="w-[70rem] h-full absolute top-0 right-0 z-10" 
-                    backgroundSvgIcon={<RightBackgroundOval className="w-full h-full" />} 
-                />
-
-                <BackgroundIcon 
-                    className="w-[70rem] h-full absolute top-0 left-0 z-0" 
-                    backgroundSvgIcon={<LeftBackgroundOval className="w-full h-full" />} 
-                />
-            </div> */}
-
         </div>
     )
 }
