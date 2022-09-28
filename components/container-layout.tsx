@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { motion } from 'framer-motion';
 
 type Props = {
     className?: string;
@@ -8,11 +9,11 @@ type Props = {
 
 const ContainerLayout = (props: Props) => {
     return (
-        <div 
+        <motion.div 
             style={props?.style} 
             className={`flex flex-col w-full border relative ${props?.className}`}>
             {props?.children}
-        </div>
+        </motion.div>
     )
 }
 

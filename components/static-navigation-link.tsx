@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { NAVIGATION_TYPE } from '../types/enums';
+import { motion } from 'framer-motion';
 
 type Props = {
     id?: number;
@@ -20,17 +21,20 @@ const StaticNavigationLink = (props: Props) => {
 
     return (
         <div className="flex large-sm:hidden flex-row items-center" draggable="false" >
-            <button
+            <motion.button
+                initial={{scale: 1}}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 onClick={handleClick}
                 className={`
                     relative flex flex-row items-center justify-center outline-0 outline-none w-full h-full 
                     py-1 small-xs:py-2 medium-xs:py-2.5
                     px-2 small-xs:px-3 medium-xs:px-5
-                    text-sm font-medium transition-all delay-100 ease-linear text-black dark:text-white hover:tracking-widest ${className}`} 
+                    text-sm font-medium text-black dark:text-white hover:tracking-widest transition-all ease-linear ${className}`} 
                 style={style}
             >
                 {name}
-            </button>
+            </motion.button>
         </div>
     )
 }

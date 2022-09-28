@@ -9,14 +9,15 @@ type Props = {}
 
 const Talk = (props: Props) => {
     return (
-        <motion.div 
-            initial={{ visibility: 'hidden' }}
-            whileInView={{ visibility: 'visible' }}
+        <div className="border border-black py-28">
+            <ContainerLayout 
+                className="px-2 small-xs:px-5 medium-sm:px-10 extra-large-xs:px-20 space-y-14">
 
-            className="border border-black py-20">
-            <ContainerLayout className="px-2 small-xs:px-5 medium-sm:px-10 extra-large-xs:px-20">
-
-                    <div className="flex flex-col medium-xs:flex-row">
+                    <motion.div 
+                        initial={{ x: -200, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 1, ease: 'easeInOut' }}
+                        className="flex flex-col medium-xs:flex-row">
                         <div className="w-full flex-grow">
                             <SectionHeader containerClassName={""} headerText={"Public Speaking"} sectionTitle={"Talks"} />
                         </div>
@@ -25,13 +26,13 @@ const Talk = (props: Props) => {
                         <div className="font-work-sans mr-auto w-[80%] small-xs:w-full text-sm" dir="rtl">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id viverra praesent nisi tempor pharetra vel. Est nisl id ornare condimentum diam nunc suspendisse.</p>
                         </div>
-                    </div>
+                    </motion.div>
 
                     <div className="flex flex-col">
                         <TalkList />
                     </div>
             </ContainerLayout>
-        </motion.div>
+        </div>
     )
 }
 

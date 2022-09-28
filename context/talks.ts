@@ -40,4 +40,17 @@ export const talks: Talks[] = [
             }
         ]
     },
+    {
+        id: 1,
+        year: '2020',
+        talkList: [
+            {
+                id: 1,
+                eventTitle: "Today in Mobile: Building with Kotlin & Flutter",
+                talkTitle: "GDG DevFest Ajah",
+                eventDate: "November 17th, 2018",
+                eventLink: "/",
+            }
+        ]
+    },
 ]

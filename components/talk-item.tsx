@@ -17,7 +17,6 @@ const TalkItem = (props: Props) => {
     const [isAccordionOpen, setIsAccordionOpen] = useState<boolean>(false);
     const [currentAccordionIndex, setCurrentAccordionIndex] = useState<number>(0);
     const refElement = useRef<HTMLDivElement>(null) as RefObject<HTMLDivElement>;
-
     CloseOnEventListen(refElement, setIsAccordionOpen);
 
     return (
