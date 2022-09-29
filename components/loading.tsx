@@ -10,6 +10,7 @@ import LoadingText from './loading-text';
 import ThemeToggleButton from './theme-toggle-button';
 
 
+
 type Props = {
     hasPageFullyLoaded: boolean;
     isTextCompleted: boolean;
