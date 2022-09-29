@@ -62,7 +62,7 @@ const useMainState = (state = mainState): MainType => {
                 isTimeOutCompleted = setTimeout(() => {
                     console.log('Page has loaded and animation has completed');
                     setHasPageFullyLoaded(true);
-                }, 2000)
+                }, 1000)
             }
         }
 
