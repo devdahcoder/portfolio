@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
+import { useMainContainer } from '../state/main';
 import { NAVIGATION_TYPE } from '../types/enums';
+import { motion } from 'framer-motion';
 
 type Props = {
     id?: number;
@@ -13,12 +15,31 @@ type Props = {
     type: NAVIGATION_TYPE;
 }
 
+const linkNavigationVariant = {
+    hidden: { y: -20, opacity: 0 },
+    visible: (index: number) => ({ 
+        y: 0, 
+        opacity: 1,
+        transition: {
+            delay: index * 0.3,
+            ease: "easeInOut",
+        }
+    })
+}
+
 const LinkNavigation = (props: Props) => {
 
-    const { id, index, name, href, icon, className, style, type } = props;
+    const { index, name, href, className, style } = props;
+
+    const { hasPageFullyLoaded } = useMainContainer();
 
     return (
-        <div className="hidden large-sm:flex flex-row items-center" draggable="false" >
+        <motion.div 
+            custom={index}
+            variants={linkNavigationVariant}
+            initial="hidden"
+            animate={hasPageFullyLoaded ? "visible" : "hidden"}
+            className="hidden large-sm:flex flex-row items-center" draggable="false" >
             <Link href={href}>
                 <a 
                     className={`relative flex flex-row items-center justify-center w-full h-full py-2 px-3
@@ -28,7 +49,7 @@ const LinkNavigation = (props: Props) => {
                     {name}
                 </a>
             </Link>
-        </div>
+        </motion.div>
     )
 }
 
