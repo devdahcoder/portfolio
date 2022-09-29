@@ -7,6 +7,11 @@ import { motion } from 'framer-motion';
 
 type Props = {}
 
+const talkContainerVariant = {
+    hidden: { x: -200, opacity: 0 },
+    visibility: { x: 0, opacity: 1 }
+}
+
 const Talk = (props: Props) => {
     return (
         <div className="border border-black py-28">
@@ -14,8 +19,9 @@ const Talk = (props: Props) => {
                 className="px-2 small-xs:px-5 medium-sm:px-10 extra-large-xs:px-20 space-y-14">
 
                     <motion.div 
-                        initial={{ x: -200, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
+                        variants={talkContainerVariant}
+                        initial="hidden"
+                        whileInView="visibility"
                         transition={{ duration: 1, ease: 'easeInOut' }}
                         className="flex flex-col medium-xs:flex-row">
                         <div className="w-full flex-grow">
