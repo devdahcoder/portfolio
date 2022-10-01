@@ -18,19 +18,19 @@ body {
   font-family: Vollkorn, Inter, Work Sans, Pencerio, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
-    &::-webkit-scrollbar {
-      width: 0.5rem;
-    }
+    // &::-webkit-scrollbar {
+    //   width: 0.5rem;
+    // }
 
-    &::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.3);
-    }
+    // &::-webkit-scrollbar-track {
+    //   box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.3);
+    // }
 
-    &::-webkit-scrollbar-thumb {
-      background-color: hsl(225, 14%, 89%);
-      border-radius: 20px;
-      color: hsl(0, 0%, 96%);
-    }
+    // &::-webkit-scrollbar-thumb {
+    //   background-color: hsl(225, 14%, 89%);
+    //   border-radius: 20px;
+    //   color: hsl(0, 0%, 96%);
+    // }
 
     
   .left-bg-oval {

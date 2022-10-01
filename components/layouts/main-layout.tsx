@@ -1,6 +1,7 @@
 import React, { ReactElement, ReactNode, useEffect } from 'react';
 import Head from 'next/head';
 import { useThemeContainer } from '../../state/theme';
+import NavigationModal from '../navigation-modal';
 
 type Props = {
     children?: ReactNode;
@@ -20,14 +21,14 @@ const MainLayout = ({title = 'This is the default title', children}: Props) => {
                 <link rel="icon" href="/images/himemoji.png" />
                 <link href="https://api.fontshare.com/v2/css?f[]=pencerio@50&display=swap" rel="stylesheet"></link>
             </Head>
-{/* bg-white dark:bg-dark-bg */}
+                {/* bg-white dark:bg-dark-bg */}
             <div className="">
                 {children}
+                {/* <NavigationModal /> */}
             </div>
         </div>
     )
 }
-
 
 export const getMainLayout = (page?: ReactElement, title?: string) => (
     <MainLayout title={title}>{page}</MainLayout>

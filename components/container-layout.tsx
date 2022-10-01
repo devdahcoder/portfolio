@@ -11,7 +11,7 @@ const ContainerLayout = (props: Props) => {
     return (
         <motion.div 
             style={props?.style} 
-            className={`flex flex-col w-full border relative ${props?.className}`}>
+            className={`flex flex-col w-full relative ${props?.className}`}>
             {props?.children}
         </motion.div>
     )

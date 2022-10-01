@@ -15,7 +15,7 @@ const SliderContainer = (props: Props) => {
     const { rest, translate, containerStyle, style, className, containerClassName } = props;
 
     return (
-        <div style={containerStyle} className={`flex flex-row border overflow-x-hidden touch-pan-y ${containerClassName}`}
+        <div style={containerStyle} className={`flex flex-row overflow-x-hidden touch-pan-y ${containerClassName}`}
             >
             <div className={`flex flex-row w-full ${className}`}
                 style={{ 

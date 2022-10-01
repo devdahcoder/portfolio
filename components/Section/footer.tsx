@@ -8,7 +8,7 @@ type Props = {}
 const Footer = (props: Props) => {
 
     return (
-        <div className="border py-10">
+        <div className="py-10">
             <div className="flex flex-row items-center justify-between px-2 small-xs:px-5 medium-sm:px-10 extra-large-xs:px-20">
                 <div className="flex row items-center">
                     <SocialMediaIcon Icon={() => <BsFacebook />} />

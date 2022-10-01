@@ -26,7 +26,7 @@ const TalkList = (props: Props) => {
             className="space-y-5">
             {
                 talks.map(({ id, year, talkList }, index) => {
-                    return (<TalkItem key={index} id={id} year={year} talkList={talkList} />)
+                    return (<TalkItem key={index} index={index} id={id} year={year} talkList={talkList} />)
                 })
             }
         </motion.div>

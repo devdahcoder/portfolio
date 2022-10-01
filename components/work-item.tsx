@@ -43,7 +43,8 @@ const WorkItem = (props: Props) => {
 
             <div className="absolute left-6 bottom-6 z-10">
                 <SocialMediaLink 
-                    text={"Casestudy"} 
+                    // text={"Casestudy"} 
+                    text={"More Details"}
                     href={`https://twitter.com/devdahcoder`} 
                     icon={<BsArrowUpRight className={`w-3 h-3`} />} 
                     className={``}

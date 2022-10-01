@@ -26,7 +26,7 @@ const HomePage = (props: Props) => {
     }
 
     return (
-        <section className="border border-black pb-20">
+        <section className="pb-20">
             <ContainerLayout className="large-xs:flex-row items-center large-xs:items-start
                 justify-center large-sm:justify-between 
                 px-2 small-xs:px-5 medium-sm:px-10 extra-large-xs:px-20
@@ -37,95 +37,94 @@ const HomePage = (props: Props) => {
                     select-none text-black dark:text-white transition-all ease-in-out duration-500"
                 >
 
-                <div className="
-                        group font-medium relative cursor-text 
-                        text-4xl small-xs:text-5xl small-mid:text-6xl large-sm:text-7xl extra-large-mid:text-8xl
-                        min-w-fit"
-                >
-
-                    <motion.div 
-                        className="medium-xs:flex medium-xs:flex-row medium-xs:items-center"
+                    <div className="
+                            group font-medium relative cursor-text 
+                            text-4xl small-xs:text-5xl small-mid:text-6xl large-sm:text-7xl extra-large-mid:text-8xl
+                            min-w-fit"
                     >
 
-                        Hi, I am 
+                        <motion.div 
+                            className="medium-xs:flex medium-xs:flex-row medium-xs:items-center"
+                        >
 
-                        <div className=" w-fit relative pt-5 medium-xs:pt-0 medium-xs:ml-2 extra-large-xs:ml-4">
+                            Hi, I am 
 
-                                {splitName && splitName.map((name, index: number) => {
-                                    return (
-                                        <motion.span 
-                                            key={index}
-                                            className="hover:text-green-200 transition-all ease-in-out duration-500"
-                                        >
-                                            {name}
-                                        </motion.span>
-                                    )
-                                })}
+                            <div className=" w-fit relative pt-5 medium-xs:pt-0 medium-xs:ml-2 extra-large-xs:ml-4">
 
-                            <NameStrike 
-                                className="
-                                    absolute -bottom-1 right-0 z-0 opacity-0 w-full group-hover:opacity-100 
-                                    group-hover:z-10 transition-all ease-in-out duration-700" 
-                            />
+                                    {splitName && splitName.map((name, index: number) => {
+                                        return (
+                                            <motion.span 
+                                                key={index}
+                                                className="hover:text-green-200 transition-all ease-in-out duration-500"
+                                            >
+                                                {name}
+                                            </motion.span>
+                                        )
+                                    })}
 
-                        </div>
+                                <NameStrike 
+                                    className="
+                                        absolute -bottom-1 right-0 z-0 opacity-0 w-full group-hover:opacity-100 
+                                        group-hover:z-10 transition-all ease-in-out duration-700" 
+                                />
 
-                    </motion.div>
-                    
-                </div>
+                            </div>
+
+                        </motion.div>
+                        
+                    </div>
 
 
-                <div className="
-                    font-work-sans transition-all duration-500 ease-linear
-                    w-full large-sm:max-w-[90%] extra-large-mid:max-w-[78%]
-                    text-xs small-xs:text-sm small-mid:text-base large-sm:text-lg 
-                    large-sm:pr-5"
-                >
+                    <div className="
+                        font-work-sans transition-all duration-500 ease-linear
+                        w-full large-sm:max-w-[90%] extra-large-mid:max-w-[78%]
+                        text-xs small-xs:text-sm small-mid:text-base large-sm:text-lg 
+                        large-sm:pr-5"
+                    >
 
-                    <p>
+                        <p>
 
-                        “I’m a Product Designer (UI, UX), and a Software Engineer. I am
-                        passionate about creating a user-centered design, problem solving, gathering and
-                        translating user data into design decisions and products.”
+                            “I’m a Product Designer (UI, UX), and a Software Engineer. I am
+                            passionate about creating a user-centered design, problem solving, gathering and
+                            translating user data into design decisions and products.”
 
-                    </p>
+                        </p>
 
-                </div>
+                    </div>
 
-                <div className="flex flex-row items-center justify-between small-large:justify-start small-mid:space-x-7">
+                    <div className="flex flex-row items-center justify-between small-large:justify-start small-mid:space-x-7">
 
-                    <SocialMediaLink 
-                        text={"Twitter"} 
-                        href={`https://twitter.com/devdahcoder`} 
-                        linkClassName={linkClassName} 
-                        icon={<BsArrowUpRight />}
-                        iconContainerClassName={linkIconContainer}
-                    />
+                        <SocialMediaLink 
+                            text={"Twitter"} 
+                            href={`https://twitter.com/devdahcoder`} 
+                            linkClassName={linkClassName} 
+                            icon={<BsArrowUpRight />}
+                            iconContainerClassName={linkIconContainer}
+                        />
 
-                    <SocialMediaLink 
-                        text={"GitHub"} 
-                        href={`https://github.com/devdahcoder`} 
-                        linkClassName={linkClassName} 
-                        icon={<BsArrowUpRight />}
-                        iconContainerClassName={linkIconContainer}
-                    />
+                        <SocialMediaLink 
+                            text={"GitHub"} 
+                            href={`https://github.com/devdahcoder`} 
+                            linkClassName={linkClassName} 
+                            icon={<BsArrowUpRight />}
+                            iconContainerClassName={linkIconContainer}
+                        />
 
-                    <SocialMediaLink 
-                        text={"Linkedin"} 
-                        href={`https://www.linkedin.com/in/olamide-adigun-200/`} 
-                        linkClassName={linkClassName} 
-                        icon={<BsArrowUpRight />}
-                        iconContainerClassName={linkIconContainer}
-                    />
+                        <SocialMediaLink 
+                            text={"Linkedin"} 
+                            href={`https://www.linkedin.com/in/olamide-adigun-200/`} 
+                            linkClassName={linkClassName} 
+                            icon={<BsArrowUpRight />}
+                            iconContainerClassName={linkIconContainer}
+                        />
 
-                </div>
+                    </div>
 
                 </div>
 
 
                 <div className="flex flex-col items-center transition-all ease-in-out duration-500  w-full max-w-[23rem]">
                     <motion.div
-                        whileHover={{scale: 1.1}}
                         className="
                             group relative border-black bg-black dark:border-white dark:bg-white 
                             w-full max-w-[19rem]

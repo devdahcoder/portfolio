@@ -7,6 +7,7 @@ import { TalkList } from '../types';
 
 type Props = {
     id: number;
+    index: number;
     year: string;
     talkList: TalkList[];
 }
@@ -26,16 +27,16 @@ const talkItemVariant = {
 const talkVariant = {
     open: { 
         opacity: 1,
-        transition: {
-            delay: 0.3
-        }
+        transition: (index: number) => ({
+            delay: index * 0.3
+        })
     },
     close: { opacity: 0 }
 }
 
 const TalkItem = (props: Props) => {
 
-    const { id, year, talkList } = props;
+    const { id, index, year, talkList } = props;
     const [isAccordionOpen, setIsAccordionOpen] = useState<boolean>(false);
     const [currentAccordionIndex, setCurrentAccordionIndex] = useState<number>(0);
     const refElement = useRef<HTMLDivElement>(null) as RefObject<HTMLDivElement>;
@@ -68,6 +69,7 @@ const TalkItem = (props: Props) => {
                 <motion.div 
                     whileInView={isAccordionOpen ? "open" : "close"}
                     variants={talkVariant}
+                    custom={index}
 
                     className={`py-3 font-inter space-y-3 `}>
                     {

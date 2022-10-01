@@ -11,7 +11,7 @@ const Works = (props: Props) => {
     const sliderElementRef = useRef<HTMLDivElement>(null) as RefObject<HTMLDivElement>;
 
     return (
-        <section className="border border-black py-20">
+        <section className="py-28">
             <Slider
                 sliderElementRef={sliderElementRef}
                 contentLength={myWork?.length}
