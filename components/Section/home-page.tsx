@@ -49,7 +49,7 @@ const HomePage = (props: Props) => {
 
                             Hi, I am 
 
-                            <div className=" w-fit relative pt-5 medium-xs:pt-0 medium-xs:ml-2 extra-large-xs:ml-4">
+                            <div className="flex flex-row w-fit relative pt-5 medium-xs:pt-0 medium-xs:ml-2 extra-large-xs:ml-4">
 
                                     {splitName && splitName.map((name, index: number) => {
                                         return (
@@ -84,9 +84,10 @@ const HomePage = (props: Props) => {
 
                         <p>
 
-                            “I’m a Product Designer (UI, UX), and a Software Engineer. I am
-                            passionate about creating a user-centered design, problem solving, gathering and
-                            translating user data into design decisions and products.”
+                            “Hello stranger! 👋, my name is {name} and I am a frontend engineer who is
+                                passionate about creating beautiful and intuitive user interfaces and experiences 
+                                for web and mobile applications, also gathering and
+                                translating user data into design decisions and products..”
 
                         </p>
 

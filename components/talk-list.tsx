@@ -9,10 +9,9 @@ type Props = {}
 const itemContainerVariant = {
     hidden: { opacity: 0 },
     visible: { 
-        opacity: 1, 
-        transition: { ease: "easeInOut", delay: 1 },
-        when: "beforeChildren",
-        delayChildren: 5
+        // opacity: 1, 
+        transition: { ease: "easeInOut", delay: 1, when: "beforeChildren" },
+        // delayChildren: 5
     },
 }
 

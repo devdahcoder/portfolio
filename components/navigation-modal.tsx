@@ -8,7 +8,7 @@ const NavigationModal = (props: Props) => {
         <div className="fixed left-0 top-0 w-full h-full bg-slate-800">
             hello world
 
-            <div>
+            <div className="border w-full max-w-2xl my-0 mx-auto">
                 <ul>
                     <li>
                         <Link href="">
