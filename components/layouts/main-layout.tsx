@@ -21,7 +21,7 @@ const MainLayout = ({title = 'This is the default title', children}: Props) => {
                 <link rel="icon" href="/images/himemoji.png" />
                 <link href="https://api.fontshare.com/v2/css?f[]=pencerio@50&display=swap" rel="stylesheet"></link>
             </Head>
-                {/* bg-white dark:bg-dark-bg */}
+            
             <div className="">
                 {children}
                 {/* <NavigationModal /> */}

@@ -15,7 +15,7 @@ const AppLayout = (props: Props) => {
         <div className="relative">
             {/* <Menu /> */}
             <div className="">
-                <div className="flex items-center justify-center w-screen h-screen bg-white fixed -z-50 ">
+                <div className="flex items-center justify-center w-screen h-screen bg-white dark:bg-dark-bg fixed -z-50 ">
                     <div className="flex animate-spin-slow items-center justify-center w-screen h-screen ">
                         
                         <LeftBackgroundOval className="left-bg-oval border w-full h-fit" />
