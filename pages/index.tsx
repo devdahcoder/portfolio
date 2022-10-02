@@ -34,13 +34,15 @@ const Home = () => {
                 loadingTextRefElement={loadingTextRefElement}
             />
 
-            <HomePage hasPageFullyLoaded={hasPageFullyLoaded} name={name} />
-            <Works />
-            <Talk />
-            <Community />
-            <Contributions />
-            <Contact />
-            <Footer />
+            <div className="">
+                <HomePage hasPageFullyLoaded={hasPageFullyLoaded} name={name} />
+                <Works />
+                <Talk />
+                <Community />
+                <Contributions />
+                <Contact />
+                <Footer />
+            </div>
         </div>
     );
 };
