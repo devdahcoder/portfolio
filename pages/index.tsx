@@ -34,7 +34,7 @@ const Home = () => {
                 loadingTextRefElement={loadingTextRefElement}
             />
 
-            <div className="">
+            {/* <div className="">
                 <HomePage hasPageFullyLoaded={hasPageFullyLoaded} name={name} />
                 <Works />
                 <Talk />
@@ -42,7 +42,7 @@ const Home = () => {
                 <Contributions />
                 <Contact />
                 <Footer />
-            </div>
+            </div> */}
         </div>
     );
 };

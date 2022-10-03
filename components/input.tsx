@@ -36,7 +36,7 @@ const Input = (props: Props) => {
             name={name}
             id={`${name}-input`}
             type={type && type ? type : 'text'}
-            className={`w-full border-transparent focus:border-transparent focus:ring-0 outline-none ${className}`}
+            className={`w-full bg-transparent border-transparent focus:border-transparent focus:ring-0 outline-none ${className}`}
             style={style}
             placeholder={placeholder ?? ""}
             onChange={onChange}

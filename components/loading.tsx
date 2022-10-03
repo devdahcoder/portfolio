@@ -25,7 +25,10 @@ const Loading = (props: Props) => {
         <div className={`fixed left-0 top-0 flex items-center justify-center w-full h-screen 
             bg-transparent ${hasPageFullyLoaded ? "opacity-0 z-0 invisible transition-all duration-500 ease-in-out" : "opacity-100 z-50 visible"}`}>
 
-            <div className="absolute right-6 top-7">
+            <div className="absolute 
+                right-[1.26rem] small-mid:right-6 extra-large-xs:right-8
+                top-[0.95rem] small-xs:top-[1rem] large-sm:top-7
+            ">
                 <ThemeToggleButton />
             </div>
 

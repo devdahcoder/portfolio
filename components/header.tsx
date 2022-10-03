@@ -21,7 +21,7 @@ const Header = (props: Props) => {
                 className="
                     flex flex-row items-center justify-between grow 
                     px-2 small-xs:px-5 medium-sm:px-10 extra-large-xs:px-20 
-                    py-2 small-xs:py-3.5 large-sm:py-7"
+                    py-3.5 large-sm:py-7"
                 >
                 <div className="flex flex-row items-center">
                     <Logo />
@@ -65,9 +65,9 @@ const Header = (props: Props) => {
 
             <div 
                 className="
-                    flex flex-row items-center justify-center border-l ml-auto
-                    px-3 small-mid:px-4 extra-large-xs:px-6 
-                    py-2 small-xs:py-3.5 large-sm:py-7
+                    flex flex-row items-center justify-center border-l ml-auto relative
+                    w-full max-w-[3.7rem] small-mid:max-w-[5rem] extra-large-xs:max-w-[5.4rem]
+                    py-3.5 large-sm:py-7
                     border-l-black dark:border-l-white"
                 >
                 <ThemeToggleButton />
@@ -75,6 +75,8 @@ const Header = (props: Props) => {
         </div>
     )
 }
+// w-full small-mid:max-w-[5rem] extra-large-xs:max-w-[5.4rem]
+// px-3 small-mid:px-4 extra-large-xs:px-6 
 
 export default Header
 
