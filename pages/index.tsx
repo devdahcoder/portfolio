@@ -22,7 +22,7 @@ const Home = () => {
                 className={`${hasPageFullyLoaded ? 
                 `!z-0 transition-all duration-500 ease-in-out
                 left-[5.5rem] small-xs:left-32 medium-xs:left-[24rem] large-sm:left-[30rem] extra-large-xs:left-[32rem] extra-large-mid:left-[43.5rem]
-                top-[4rem] small-xs:top-[5.5rem] small-mid:top-[6rem] medium-xs:top-[7rem]  medium-sm:top-[9rem] large-xs:top-36
+                top-[5.5rem] small-mid:top-[6rem] medium-xs:top-[7rem]  medium-sm:top-[9rem] large-xs:top-36
                 large-sm:top-52 extra-large-xs:top-[13rem] extra-large-mid:top-56`
                 : 
                 "z-50 -top-12 -left-12"}`} 
@@ -34,7 +34,7 @@ const Home = () => {
                 loadingTextRefElement={loadingTextRefElement}
             />
 
-            {/* <div className="">
+            <div className="">
                 <HomePage hasPageFullyLoaded={hasPageFullyLoaded} name={name} />
                 <Works />
                 <Talk />
@@ -42,7 +42,7 @@ const Home = () => {
                 <Contributions />
                 <Contact />
                 <Footer />
-            </div> */}
+            </div>
         </div>
     );
 };

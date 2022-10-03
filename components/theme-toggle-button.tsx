@@ -16,7 +16,7 @@ const ThemeToggleButton = (props: Props) => {
   const iconClassName = ""
 
   return (
-    <div className="absolute small-mid:right-4 small-mid:top-3 extra-large-xs:right-5 extra-large-xs:top-6">
+    <div className="absolute small-mid:right-4 small-mid:top-3 extra-large-xs:right-5 extra-large-xs:top-6 z-50">
         <IconButton 
             containerClassName="border rounded-full" 
             className={`p-2 small-xs:p-3 bg-black dark:bg-white transition-all duration-500 ease-linear rounded-full`} 
