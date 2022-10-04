@@ -93,7 +93,7 @@ const HomePage = (props: Props) => {
 
                     </div>
 
-                    <div className="flex flex-row items-center justify-between small-large:justify-start small-mid:space-x-7">
+                    <div className="flex flex-row items-center justify-between medium-xs:justify-start medium-xs:space-x-7">
 
                         <SocialMediaLink 
                             text={"Twitter"} 
@@ -149,7 +149,7 @@ const HomePage = (props: Props) => {
                         <div
                             className=" 
                                 z-0 border-white
-                                w-[11rem] small-xs:w-[15rem] small-mid:w-[17rem] large-sm:w-[18.5rem]
+                                w-[11rem] small-xs:w-[16rem] small-mid:w-[17rem] large-sm:w-[18.5rem]
                                 h-fit absolute 
                                 left-12 large-sm:left-14
                                 bottom-0

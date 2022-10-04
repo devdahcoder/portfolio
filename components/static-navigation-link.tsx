@@ -2,6 +2,8 @@ import Link from 'next/link';
 import React from 'react';
 import { NAVIGATION_TYPE } from '../types/enums';
 import { motion } from 'framer-motion';
+import { useMainContainer } from '../state/main';
+
 
 type Props = {
     id?: number;
@@ -19,13 +21,15 @@ const StaticNavigationLink = (props: Props) => {
 
     const { id, index, name, icon, className, style, type, handleClick } = props;
 
+    const { toggleNavigationModal } = useMainContainer();
+
     return (
         <div className="flex large-sm:hidden flex-row items-center" draggable="false" >
             <motion.button
                 initial={{scale: 1}}
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                onClick={handleClick}
+                onClick={toggleNavigationModal}
                 className={`
                     relative flex flex-row items-center justify-center outline-0 outline-none w-full h-full 
                     py-1 small-xs:py-2 medium-xs:py-2.5

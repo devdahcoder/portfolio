@@ -9,6 +9,8 @@ type MainType = {
     index: number;
     isTextCompleted: boolean;
     loadingTextRefElement: any | React.MutableRefObject<HTMLParagraphElement>;
+    navigationModal: boolean;
+    toggleNavigationModal: () => void;
 }
 
 export const mainState: MainType = {
@@ -19,6 +21,8 @@ export const mainState: MainType = {
     index: 0,
     isTextCompleted: false,
     loadingTextRefElement: '',
+    navigationModal: false,
+    toggleNavigationModal: () => {},
 }
 
 
@@ -29,6 +33,7 @@ const useMainState = (state = mainState): MainType => {
     const [name, setName] = useState<string>("Olamide");
     const [index, setIndex] = useState<number>(0);
     const [isTextCompleted, setIsTextCompleted] = useState<boolean>(false);
+    const [navigationModal, setNavigationModal] = useState<boolean>(false);
 
     const loadingTextRefElement = useRef<HTMLParagraphElement>(null) as React.MutableRefObject<HTMLParagraphElement>;
 
@@ -72,7 +77,11 @@ const useMainState = (state = mainState): MainType => {
         }
     }, [isTextCompleted]);
 
-    return { delayTyping, hasPageFullyLoaded, index, isTextCompleted, name, printText, loadingTextRefElement }
+    const toggleNavigationModal = () => {
+        setNavigationModal(!navigationModal)
+    }
+
+    return { delayTyping, hasPageFullyLoaded, index, isTextCompleted, name, printText, loadingTextRefElement, navigationModal, toggleNavigationModal }
 }
 
 export const MainContainer = createContainer(useMainState);

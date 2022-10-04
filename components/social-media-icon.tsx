@@ -16,7 +16,7 @@ const SocialMediaIcon = (props: Props) => {
             //     borderRadius: ["20%", "20%", "50%", "50%", "20%"],
             // }}
         >
-            <a style={style} className={`border rounded-md p-3 flex flex-col items-center justify-center ${className}`} role="button" href={`http://${href}`} target="_blank" rel="noopener noreferrer">
+            <a style={style} className={`border border-black dark:border-white rounded-md p-3 flex flex-col items-center justify-center ${className}`} role="button" href={`http://${href}`} target="_blank" rel="noopener noreferrer">
                 <Icon />
             </a>
         </motion.div>

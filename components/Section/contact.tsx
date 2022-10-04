@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import Container from '../container'
 import Input from '../input';
@@ -54,7 +55,7 @@ const Contact = (props: Props) => {
 
                             <div>
                                 <a href="mailto: adigunolamide200@gmail.com.com" className="flex flex-row items-center text-base font-semibold font-vollkorn py-2" type="submit">
-                                    SEND <span className="ml-2 border"><TiLocationArrowOutline className="align-middle w-5 h-5" /></span>
+                                    SEND <span className="ml-2"><TiLocationArrowOutline className="align-middle w-5 h-5" /></span>
                                 </a>
                             </div>
                             

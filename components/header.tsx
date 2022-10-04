@@ -27,6 +27,10 @@ const Header = (props: Props) => {
                     <Logo />
                 </div>
 
+                <div className="absolute small-mid:left-4 small-mid:top-3 large-sm:top-6 extra-large-xs:left-5 z-50">
+                    <Logo logoText={"Ola"} />
+                </div>
+
                 <div className="">
                     <nav>
                         <ul className={`flex flex-row items-center list-none font-work-sans large-sm:space-x-5`}>

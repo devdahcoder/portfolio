@@ -75,9 +75,9 @@ const TalkItem = (props: Props) => {
                     {
                         talkList.map(({ id, talkTitle, eventTitle, eventLink, eventDate }, index) => (
                             <div key={index} className="flex flex-col justify-start items-start text-sm">
-                                <div><p>{eventTitle}</p></div>
-                                <div className="flex flex-row items-center">
-                                    <div className="flex flex-row items-center">
+                                <div className="flex flex-row items-center flex-wrap"><p>{eventTitle}</p></div>
+                                <div className="flex flex-row items-center flex-wrap">
+                                    <div className="flex flex-row items-center flex-wrap">
                                         <div>
                                             <p>{talkTitle}</p>
                                         </div>

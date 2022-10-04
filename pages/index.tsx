@@ -35,7 +35,10 @@ const Home = () => {
             />
 
             <div className="">
-                <HomePage hasPageFullyLoaded={hasPageFullyLoaded} name={name} />
+                <HomePage 
+                    hasPageFullyLoaded={hasPageFullyLoaded} 
+                    name={name} 
+                />
                 <Works />
                 <Talk />
                 <Community />

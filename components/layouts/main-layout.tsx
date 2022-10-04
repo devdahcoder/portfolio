@@ -1,7 +1,5 @@
 import React, { ReactElement, ReactNode, useEffect } from 'react';
 import Head from 'next/head';
-import { useThemeContainer } from '../../state/theme';
-import NavigationModal from '../navigation-modal';
 
 type Props = {
     children?: ReactNode;
@@ -24,7 +22,6 @@ const MainLayout = ({title = 'This is the default title', children}: Props) => {
             
             <div className="">
                 {children}
-                {/* <NavigationModal /> */}
             </div>
         </div>
     )
