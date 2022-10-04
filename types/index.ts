@@ -49,3 +49,9 @@ export type Contribution = {
     picture: string;
     contributionTitle: string;
 }
+
+export type FormikInitValue = {
+    name: string;
+    email: string;
+    message: string;
+}

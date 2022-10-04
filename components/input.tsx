@@ -1,3 +1,4 @@
+import { useField } from 'formik';
 import React from 'react'
 
 type Props = {
@@ -22,6 +23,7 @@ const Input = (props: Props) => {
             isTyping, containerStyle, labelClassName,
             mainContainerClassName
     } = props;
+    
 
   return (
     <div className={`${mainContainerClassName}`}>
@@ -36,7 +38,7 @@ const Input = (props: Props) => {
             name={name}
             id={`${name}-input`}
             type={type && type ? type : 'text'}
-            className={`w-full bg-transparent border-transparent focus:border-transparent focus:ring-0 outline-none ${className}`}
+            className={`w-full bg-transparent border-transparent focus:border-transparent focus:ring-0 outline-none autofill:!bg-amber-400 ${className}`}
             style={style}
             placeholder={placeholder ?? ""}
             onChange={onChange}
