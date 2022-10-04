@@ -3,6 +3,7 @@ import React from 'react'
 import Container from '../container'
 import Input from '../input';
 import { TiLocationArrowOutline } from 'react-icons/ti';
+import emailjs from '@emailjs/browser';
 
 type Props = {}
 
