@@ -2,14 +2,70 @@ import React from 'react';
 import Link from 'next/link';
 import { headerNavigation } from '../context/header-navigation';
 import { HeaderNavigation } from '../types';
+import { motion } from 'framer-motion';
+import { useMainContainer } from '../state/main';
+
 
 type Props = {}
 
-const NavigationModal = (props: Props) => {
-    return (
-        <div className="fixed left-0 top-0 w-full h-full bg-white dark:bg-dark-bg z-50">
 
-            <div className="w-full max-w-xl my-0 mx-auto mt-24">
+const modalVariant = {
+    hidden: { opacity: 0, transition: { delay: 5 } },
+    visible: { opacity: 1 }
+}
+
+const spanVariant = {
+    hidden: (index: number) => ({ 
+        y: -800, 
+        opacity: 1,
+        transition: {
+            delay: index * 0.3,
+            ease: "easeInOut",
+        }
+    }),
+    visible: (index: number) => ({ 
+        y: 0, 
+        opacity: 1,
+        transition: {
+            delay: index * 0.2,
+            duration: 1,
+            ease: "easeInOut",
+        }
+    })
+}
+
+const NavigationModal = (props: Props) => {
+
+    const { navigationModal } = useMainContainer();
+
+    return (
+        <motion.div 
+            variants={modalVariant}
+            initial="hidden"
+            animate={navigationModal ? "visible" : "hidden"}
+            className="border border-black grid grid-cols-4 fixed left-0 top-0 w-full h-full z-50"
+        >
+            {[1, 2, 3, 4].map((index: number) => {
+                return (
+                    <motion.span 
+                        key={index}
+                        custom={index}
+                        variants={spanVariant}
+                        initial="hidden"
+                        animate={ navigationModal ? "visible" : "hidden"}
+                        className="bg-white dark:bg-dark-bg w-full h-full"
+                    >
+                    </motion.span>
+                )
+            })}
+        </motion.div>
+    )
+}
+
+export default NavigationModal
+
+
+{/* <div className="w-full max-w-xl my-0 mx-auto mt-24">
                 <ul className="flex flex-col">
 
                     {
@@ -30,9 +86,4 @@ const NavigationModal = (props: Props) => {
                         })
                     }
                 </ul>
-            </div>
-        </div>
-    )
-}
-
-export default NavigationModal
+            </div> */}

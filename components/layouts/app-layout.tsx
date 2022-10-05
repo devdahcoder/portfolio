@@ -18,8 +18,6 @@ const AppLayout = (props: Props) => {
     const { hasPageFullyLoaded, navigationModal } = useMainContainer();
     return (
         <div className="relative">
-            {/* <Menu /> */}
-            { navigationModal && <NavigationModal />}
             <div className="">
                 <div className={`flex items-center justify-center w-screen h-screen bg-white dark:bg-dark-bg fixed transition-all duration-500 ease-in-out ${ hasPageFullyLoaded ? '-z-50' : 'z-50'}  `}>
                     <div className="flex animate-spin-slow items-center justify-center w-screen h-screen ">
@@ -32,6 +30,7 @@ const AppLayout = (props: Props) => {
 
                 <div className="">
                     <Header />
+                    <NavigationModal />
                     <div className="w-full min-h-full">
                         {props?.children}
                     </div>

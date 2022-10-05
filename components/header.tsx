@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BsFillMoonStarsFill, BsSunFill } from 'react-icons/bs';
 import { headerNavigation } from '../context/header-navigation';
+import { useMainContainer } from '../state/main';
 import { useThemeContainer } from '../state/theme';
 import { NAVIGATION_TYPE } from '../types/enums';
 import IconButton from './IconButton';
@@ -14,6 +15,8 @@ import ThemeToggleButton from './theme-toggle-button';
 type Props = {}
 
 const Header = (props: Props) => {
+
+    const { navigationModal } = useMainContainer();
     
     return (
         <div className={`flex border-b border-b-black dark:border-white w-full`}>
@@ -21,13 +24,16 @@ const Header = (props: Props) => {
                 className="
                     flex flex-row items-center justify-between grow 
                     px-2 small-xs:px-5 medium-sm:px-10 extra-large-xs:px-20 
-                    py-3.5 large-sm:py-7"
+                    py-7"
                 >
                 <div className="flex flex-row items-center">
                     <Logo />
                 </div>
 
-                <div className="absolute small-mid:left-4 small-mid:top-3 large-sm:top-6 extra-large-xs:left-5 z-50">
+                <div 
+                    className={`absolute small-mid:left-4 small-mid:top-3 large-sm:top-6 extra-large-xs:left-5 
+                    z-50  ${navigationModal ? "flex" : "hidden"} transition-all duration-500 ease-linear`}
+                >
                     <Logo logoText={"Ola"} />
                 </div>
 
@@ -71,7 +77,7 @@ const Header = (props: Props) => {
                 className="
                     flex flex-row items-center justify-center border-l ml-auto relative
                     w-full max-w-[3.7rem] small-mid:max-w-[5rem] extra-large-xs:max-w-[5.4rem]
-                    py-3.5 large-sm:py-7
+                    py-7
                     border-l-black dark:border-l-white"
                 >
                 <ThemeToggleButton />

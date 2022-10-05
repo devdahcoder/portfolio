@@ -19,7 +19,7 @@ const ThemeToggleButton = (props: Props) => {
   const iconClassName = ""
 
   return (
-    <div className="absolute small-mid:right-4 small-mid:top-3 large-sm:top-6 extra-large-xs:right-5 z-50">
+    <div className="absolute small-mid:right-4 small-mid:top-3 large-sm:top-6 extra-large-xs:right-5 z-[100]">
 
 
         {

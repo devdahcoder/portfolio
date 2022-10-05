@@ -12,9 +12,7 @@ type Props = {}
 
 const Contact = (props: Props) => {
 
-    const [name, setName] = useState<string>("");
-    const [email, setEmail] = useState<string>("");
-    const [message, setMessage] = useState<string>("");
+    const [loading, setLoading] = useState<boolean>(false);
 
     const initialValues:FormikInitValue = {
         name: "",
@@ -24,11 +22,11 @@ const Contact = (props: Props) => {
 
     const formRef: React.MutableRefObject<HTMLFormElement> = useRef() as React.MutableRefObject<HTMLFormElement>;
 
-    const sendEmail = (e: FormEvent, { resetForm }: any) => {
-        
-        console.log('sending')
+    const sendEmail = async (e: FormEvent, { resetForm }: any) => {
 
-        emailjs.sendForm(
+        console.log('sending')
+        setLoading(true);
+        await emailjs.sendForm(
             "service_rvsyqk7", 
             "template_zwmprdd", 
             formRef.current, 
@@ -36,8 +34,10 @@ const Contact = (props: Props) => {
         )
             .then((result) => {
                 console.log(result.text);
+                setLoading(false);
                 resetForm();
             }, (error) => {
+                setLoading(false);
                 console.log(error.text);
             });
     }
@@ -80,7 +80,7 @@ const Contact = (props: Props) => {
                                                 labelText={`Name`} 
                                                 type={`text`} 
                                                 name={"name"}
-                                                value={values[name]}
+                                                value={values["name"]}
                                                 onChange={handleChange}
                                                 className={`py-1 text-base font-normal px-0`}
                                                 containerClassName={`border-b border-dark-bg`}
@@ -93,7 +93,7 @@ const Contact = (props: Props) => {
                                                 labelText={`Email`} 
                                                 type={`email`} 
                                                 name={"email"}
-                                                value={values[email]}
+                                                value={values["email"]}
                                                 onChange={handleChange}
                                                 className={`py-1 text-base font-normal px-0`}
                                                 containerClassName={`border-b border-dark-bg`}
@@ -106,7 +106,7 @@ const Contact = (props: Props) => {
                                                 labelText={`Message`} 
                                                 type={`text`} 
                                                 name={"message"}
-                                                value={values[message]}
+                                                value={values["message"]}
                                                 onChange={handleChange}
                                                 className={`py-1 text-base font-normal px-0`}
                                                 containerClassName={`border-b border-dark-bg`}
@@ -116,8 +116,10 @@ const Contact = (props: Props) => {
                                         </div>
 
                                         <div>
-                                            <button type="submit" className="flex flex-row items-center text-base font-semibold font-vollkorn py-2" type="submit">
-                                                SEND <span className="ml-2"><TiLocationArrowOutline className="align-middle w-5 h-5" /></span>
+                                            <button type="submit" className="flex flex-row items-center text-base font-semibold font-vollkorn py-2">
+                                                SEND <span className="ml-2">
+                                                    <TiLocationArrowOutline className="align-middle w-5 h-5" />
+                                                </span>
                                             </button>
                                         </div>
                                         

@@ -9,7 +9,7 @@ const Footer = (props: Props) => {
 
     return (
         <div className="py-10">
-            <div className="flex flex-col medium-sm:flex-row space-y-6 medium-sm:space-y-0 justify-between 
+            <div className="flex flex-col medium-xs:flex-row space-y-6 medium-xs:space-y-0 justify-between 
                 items-center px-2 small-xs:px-5 medium-sm:px-10 extra-large-xs:px-20">
                     
                 <div className="flex flex-row items-center justify-center space-x-5 ">
@@ -26,9 +26,9 @@ const Footer = (props: Props) => {
                         <span><a className="underline mx-1 " href="https://twitter.com/devdahcoder" target="_blank" rel="noopener noreferrer">Olamide</a></span>
                 </div>
 
-                <div className="flex flex-row items-center">
+                {/* <div className="flex flex-row items-center">
                     <Logo />
-                </div>
+                </div> */}
             </div>
         </div>
     )
