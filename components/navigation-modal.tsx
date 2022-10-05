@@ -10,22 +10,21 @@ type Props = {}
 
 
 const modalVariant = {
-    hidden: { opacity: 0, transition: { delay: 5 } },
+    hidden: { opacity: 0, transition: { delay: 2 } },
     visible: { opacity: 1 }
 }
 
 const spanVariant = {
     hidden: (index: number) => ({ 
         y: -800, 
-        opacity: 1,
         transition: {
-            delay: index * 0.3,
+            delay: index * 0.2,
+            duration: 1,
             ease: "easeInOut",
         }
     }),
     visible: (index: number) => ({ 
         y: 0, 
-        opacity: 1,
         transition: {
             delay: index * 0.2,
             duration: 1,
@@ -43,7 +42,7 @@ const NavigationModal = (props: Props) => {
             variants={modalVariant}
             initial="hidden"
             animate={navigationModal ? "visible" : "hidden"}
-            className="border border-black grid grid-cols-4 fixed left-0 top-0 w-full h-full z-50"
+            className={`border grid grid-cols-4 fixed left-0 top-0 w-full h-full z-50 ${navigationModal ? "pointer-events-auto" : "pointer-events-none"}`}
         >
             {[1, 2, 3, 4].map((index: number) => {
                 return (

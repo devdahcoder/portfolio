@@ -5,7 +5,7 @@ import Input from '../input';
 import { TiLocationArrowOutline } from 'react-icons/ti';
 import emailjs from '@emailjs/browser';
 import { Formik, Form, useField, Field } from 'formik';
-import { FormikInitValue } from '../../types';
+import { ContactInitValue } from '../../types';
 import * as Yup from 'yup';
 
 type Props = {}
@@ -14,7 +14,7 @@ const Contact = (props: Props) => {
 
     const [loading, setLoading] = useState<boolean>(false);
 
-    const initialValues:FormikInitValue = {
+    const initialValues: ContactInitValue = {
         name: "",
         email: "",
         message: "",
@@ -22,7 +22,7 @@ const Contact = (props: Props) => {
 
     const formRef: React.MutableRefObject<HTMLFormElement> = useRef() as React.MutableRefObject<HTMLFormElement>;
 
-    const sendEmail = async (e: FormEvent, { resetForm }: any) => {
+    const sendEmail = async ({ resetForm }: any) => {
 
         console.log('sending')
         setLoading(true);

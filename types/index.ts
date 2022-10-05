@@ -50,7 +50,7 @@ export type Contribution = {
     contributionTitle: string;
 }
 
-export type FormikInitValue = {
+export type ContactInitValue = {
     name: string;
     email: string;
     message: string;

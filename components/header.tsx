@@ -29,10 +29,10 @@ const Header = (props: Props) => {
                 <div className="flex flex-row items-center">
                     <Logo />
                 </div>
-
+                
                 <div 
-                    className={`absolute small-mid:left-4 small-mid:top-3 large-sm:top-6 extra-large-xs:left-5 
-                    z-50  ${navigationModal ? "flex" : "hidden"} transition-all duration-500 ease-linear`}
+                    className={`absolute small-mid:left-4 small-mid:top-6 large-sm:top-6 extra-large-xs:left-5 z-[100]  
+                    ${navigationModal ? "flex transition-all delay-[3000ms] ease-linear" : "hidden"}`}
                 >
                     <Logo logoText={"Ola"} />
                 </div>
@@ -85,6 +85,9 @@ const Header = (props: Props) => {
         </div>
     )
 }
+
+// py-3.5 large-sm:
+// py-3.5 large-sm:
 // w-full small-mid:max-w-[5rem] extra-large-xs:max-w-[5.4rem]
 // px-3 small-mid:px-4 extra-large-xs:px-6 
 

@@ -8,6 +8,7 @@ import TextCircle from '../components/text-circle';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 import LoadingText from './loading-text';
 import ThemeToggleButton from './theme-toggle-button';
+import BackgroundGradient from './background-gradient';
 
 
 
@@ -23,8 +24,9 @@ const Loading = (props: Props) => {
     
     return (
         <div className={`fixed left-0 top-0 flex items-center justify-center w-full h-screen 
-            bg-transparent ${hasPageFullyLoaded ? "opacity-0 z-0 invisible transition-all duration-500 ease-in-out" : "opacity-100 z-50 visible"}`}>
+            bg-transparent ${hasPageFullyLoaded ? "opacity-0 z-0 invisible transition-all duration-500 ease-in-out" : "opacity-100 z-30 visible"}`}>
             
+            <BackgroundGradient />
 
             <LoadingText
                 isTextCompleted={isTextCompleted}
