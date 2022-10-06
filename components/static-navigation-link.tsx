@@ -22,9 +22,9 @@ const StaticNavigationLink = (props: Props) => {
     const { id, index, name, icon, className, style, type, handleClick } = props;
 
     const { toggleNavigationModal } = useMainContainer();
-
+// flex large-sm:hidden flex-row items-center" draggable="false
     return (
-        <div className="flex large-sm:hidden flex-row items-center" draggable="false" >
+        <div className="flex flex-row items-center" draggable="false" >
             <motion.button
                 initial={{scale: 1}}
                 whileTap={{ scale: 0.9 }}

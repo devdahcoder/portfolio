@@ -16,10 +16,10 @@ type Props = {}
 
 const Header = (props: Props) => {
 
-    const { navigationModal } = useMainContainer();
+    const { navigationModal, toggleNavigationModal } = useMainContainer();
     
     return (
-        <div className={`flex border-b border-b-black dark:border-white w-full`}>
+        <div className={`flex border-b border-b-black dark:border-white transition-all duration-500 ease-linear w-full`}>
             <div 
                 className="
                     flex flex-row items-center justify-between grow 
@@ -31,13 +31,13 @@ const Header = (props: Props) => {
                 </div>
                 
                 <div 
-                    className={`absolute small-mid:left-4 small-mid:top-6 large-sm:top-6 extra-large-xs:left-5 z-[100]  
+                    className={`absolute small-mid:left-4 small-mid:top-6 large-sm:top-6 extra-large-xs:left-5 z-50 
                     ${navigationModal ? "flex transition-all delay-[3000ms] ease-linear" : "hidden"}`}
                 >
                     <Logo logoText={"Ola"} />
                 </div>
 
-                <div className="">
+                {/* <div className="">
                     <nav>
                         <ul className={`flex flex-row items-center list-none font-work-sans large-sm:space-x-5`}>
                             {headerNavigation?.map(({name, href, id, type, className, style, subNavigation}, index) => (
@@ -70,6 +70,15 @@ const Header = (props: Props) => {
                             ))}
                         </ul>
                     </nav>
+                </div> */}
+                <div className=" flex z-50 rounded-full">
+                    <button 
+                        onClick={toggleNavigationModal}
+                        className="flex flex-col items-center justify-center font-inter relative h-10 w-10 rounded-full">
+                        <span className={`absolute h-[1px] w-9/12 bg-black dark:bg-white rounded-full transition-all duration-300 ease-linear ${navigationModal ? " translate-y-0 -rotate-45" : "-translate-y-[10px]"}`}></span>
+                        <span className={`absolute h-[1px] w-9/12 bg-black dark:bg-white rounded-full transition-all duration-300 ease-linear ${navigationModal ? "opacity-0" : "opacity-1"}`}></span>
+                        <span className={`absolute h-[1px] w-9/12 bg-black dark:bg-white rounded-full transition-all duration-300 ease-linear ${navigationModal ? " translate-y-0 rotate-45" : "translate-y-[10px]"}`}></span>
+                    </button>
                 </div>
             </div>
 

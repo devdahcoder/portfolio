@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { ChangeEvent, FormEvent, useRef, useState } from 'react'
-import Container from '../container'
+import React, { useRef, useState } from 'react'
 import Input from '../input';
 import { TiLocationArrowOutline } from 'react-icons/ti';
 import emailjs from '@emailjs/browser';

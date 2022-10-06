@@ -12,9 +12,11 @@ const BackgroundGradient = (props: Props) => {
 
     const { hasPageFullyLoaded, navigationModal } = useMainContainer();
     const { className, containerClassName } = props;
-// ${ hasPageFullyLoaded ? '-z-50' : 'z-50'} ${ navigationModal ? "z-50" : ""}  
+
+    // ${ !hasPageFullyLoaded || navigationModal ? "z-50" : "-z-50"}
+
     return (
-        <div className={`flex items-center justify-center w-screen h-screen bg-white dark:bg-dark-bg fixed transition-all duration-500 ease-in-out -z-20 `}>
+        <div className={`flex items-center justify-center w-screen h-screen bg-white dark:bg-dark-bg fixed transition-all duration-700 ease-in-out ${ !hasPageFullyLoaded ? "z-10" : "-z-10"} ${className}  `}>
             <div className="flex animate-spin-slow items-center justify-center w-screen h-screen ">
                 
                 <LeftBackgroundOval className="left-bg-oval border w-full h-fit" />

@@ -25,7 +25,7 @@ const Home = () => {
                 top-[5.5rem] small-mid:top-[6rem] medium-xs:top-[7rem]  medium-sm:top-[9rem] large-xs:top-36
                 large-sm:top-52 extra-large-xs:top-[13rem] extra-large-mid:top-52`
                 : 
-                "z-50 -top-12 -left-12"}`} 
+                "z-20 -top-12 -left-12"}`} 
             />
 
             <Loading 
