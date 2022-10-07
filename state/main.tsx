@@ -11,6 +11,8 @@ type MainType = {
     loadingTextRefElement: any | React.MutableRefObject<HTMLParagraphElement>;
     navigationModal: boolean;
     toggleNavigationModal: () => void;
+    isBodyFixed: boolean;
+    toggleBodyFixed: () => void;
 }
 
 export const mainState: MainType = {
@@ -23,6 +25,8 @@ export const mainState: MainType = {
     loadingTextRefElement: '',
     navigationModal: false,
     toggleNavigationModal: () => {},
+    isBodyFixed: false,
+    toggleBodyFixed: () => {},
 }
 
 
@@ -34,6 +38,7 @@ const useMainState = (state = mainState): MainType => {
     const [index, setIndex] = useState<number>(0);
     const [isTextCompleted, setIsTextCompleted] = useState<boolean>(false);
     const [navigationModal, setNavigationModal] = useState<boolean>(false);
+    const [isBodyFixed, setIsBodyFixed] = useState<boolean>(true);
 
     const loadingTextRefElement = useRef<HTMLParagraphElement>(null) as React.MutableRefObject<HTMLParagraphElement>;
 
@@ -49,6 +54,10 @@ const useMainState = (state = mainState): MainType => {
             );
             setIsTextCompleted(true);
         }
+    }
+
+    const toggleBodyFixed = () => {
+        setIsBodyFixed(!isBodyFixed);
     }
 
     useEffect(() => {
@@ -67,6 +76,7 @@ const useMainState = (state = mainState): MainType => {
                 isTimeOutCompleted = setTimeout(() => {
                     console.log('Page has loaded and animation has completed');
                     setHasPageFullyLoaded(true);
+                    setIsBodyFixed(false);
                 }, 1000)
             }
         }
@@ -78,10 +88,33 @@ const useMainState = (state = mainState): MainType => {
     }, [isTextCompleted]);
 
     const toggleNavigationModal = () => {
-        setNavigationModal(!navigationModal)
+        setNavigationModal(!navigationModal);
+        setIsBodyFixed(!isBodyFixed);
     }
 
-    return { delayTyping, hasPageFullyLoaded, index, isTextCompleted, name, printText, loadingTextRefElement, navigationModal, toggleNavigationModal }
+    useEffect(() => {
+        if (isBodyFixed) {
+            document.body.style.position = "fixed",
+            document.body.style.overflowY = "hidden"
+            document.body.style.width = "100%"
+        } else {
+            document.body.style.position = "relative"
+        }
+    }, [isBodyFixed])
+
+    return { 
+        delayTyping, 
+        hasPageFullyLoaded, 
+        index, 
+        isTextCompleted, 
+        name, 
+        printText, 
+        loadingTextRefElement, 
+        navigationModal, 
+        toggleNavigationModal,
+        isBodyFixed,
+        toggleBodyFixed,
+    }
 }
 
 export const MainContainer = createContainer(useMainState);

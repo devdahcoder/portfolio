@@ -23,6 +23,8 @@ module.exports = {
         'work-sans': ['Work Sans', 'sans-serif'],
         'quick-sand': ['Quicksand', 'sans-serif'],
         'pencerio': ['pencerio', 'san-serif'],
+        'libre': ['Libre Baskerville', 'san-serif'],
+        'ogg': ['Ogg', 'san-serif'],
       },
       animation: {
         'spin-slow': 'spin 15s linear infinite',

@@ -9,7 +9,7 @@ import LinkNavigation from './link-navigation';
 import Logo from './logo';
 import StaticNavigationLink from './static-navigation-link';
 import ThemeToggleButton from './theme-toggle-button';
-
+import { motion } from 'framer-motion';
 
 
 type Props = {}
@@ -26,16 +26,16 @@ const Header = (props: Props) => {
                     px-2 small-xs:px-5 medium-sm:px-10 extra-large-xs:px-20 
                     py-7"
                 >
-                <div className="flex flex-row items-center">
+                <div className="z-50 flex flex-row items-center">
                     <Logo />
                 </div>
                 
-                <div 
+                {/* <div 
                     className={`absolute small-mid:left-4 small-mid:top-6 large-sm:top-6 extra-large-xs:left-5 z-50 
                     ${navigationModal ? "flex transition-all delay-[3000ms] ease-linear" : "hidden"}`}
                 >
                     <Logo logoText={"Ola"} />
-                </div>
+                </div> */}
 
                 {/* <div className="">
                     <nav>
@@ -72,13 +72,14 @@ const Header = (props: Props) => {
                     </nav>
                 </div> */}
                 <div className=" flex z-50 rounded-full">
-                    <button 
+                    <motion.button 
+                        whileTap={{ scale: 0.97 }}
                         onClick={toggleNavigationModal}
                         className="flex flex-col items-center justify-center font-inter relative h-10 w-10 rounded-full">
                         <span className={`absolute h-[1px] w-9/12 bg-black dark:bg-white rounded-full transition-all duration-300 ease-linear ${navigationModal ? " translate-y-0 -rotate-45" : "-translate-y-[10px]"}`}></span>
                         <span className={`absolute h-[1px] w-9/12 bg-black dark:bg-white rounded-full transition-all duration-300 ease-linear ${navigationModal ? "opacity-0" : "opacity-1"}`}></span>
                         <span className={`absolute h-[1px] w-9/12 bg-black dark:bg-white rounded-full transition-all duration-300 ease-linear ${navigationModal ? " translate-y-0 rotate-45" : "translate-y-[10px]"}`}></span>
-                    </button>
+                    </motion.button>
                 </div>
             </div>
 
