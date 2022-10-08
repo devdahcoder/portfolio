@@ -17,7 +17,6 @@ const MainLayout = ({title = 'This is the default title', children}: Props) => {
                 <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="icon" href="/images/himemoji.png" />
-                <link href="https://api.fontshare.com/v2/css?f[]=pencerio@50&display=swap" rel="stylesheet"></link>
             </Head>
             
             <div className="">

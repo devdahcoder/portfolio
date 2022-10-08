@@ -16,7 +16,7 @@ type Props = {}
 
 const Header = (props: Props) => {
 
-    const { navigationModal, toggleNavigationModal } = useMainContainer();
+    const { navigationModal, toggleNavigationModal, isSiteLoading } = useMainContainer();
     
     return (
         <div className={`flex border-b border-b-black dark:border-white transition-all duration-500 ease-linear w-full`}>
@@ -26,7 +26,7 @@ const Header = (props: Props) => {
                     px-2 small-xs:px-5 medium-sm:px-10 extra-large-xs:px-20 
                     py-7"
                 >
-                <div className="z-50 flex flex-row items-center">
+                <div className={`${ isSiteLoading ? "" : "z-50" } flex flex-row items-center`}>
                     <Logo />
                 </div>
                 
@@ -71,7 +71,7 @@ const Header = (props: Props) => {
                         </ul>
                     </nav>
                 </div> */}
-                <div className=" flex z-50 rounded-full">
+                <div className={`flex rounded-full ${ isSiteLoading ? "" : "z-50" }`}>
                     <motion.button 
                         whileTap={{ scale: 0.97 }}
                         onClick={toggleNavigationModal}

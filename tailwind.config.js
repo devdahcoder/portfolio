@@ -25,6 +25,7 @@ module.exports = {
         'pencerio': ['pencerio', 'san-serif'],
         'libre': ['Libre Baskerville', 'san-serif'],
         'ogg': ['Ogg', 'san-serif'],
+        'acumin-pro': ['Acumin Pro', 'san-serif'],
       },
       animation: {
         'spin-slow': 'spin 15s linear infinite',

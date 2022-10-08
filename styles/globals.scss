@@ -11,6 +11,11 @@
   src: url('../public/fonts/Ogg-Roman.otf');
 }
 
+@font-face {
+  font-family: Acumin Pro ;
+  src: url('../public/fonts/Acumin-Pro.otf');
+}
+
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -21,7 +26,7 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  font-family: Vollkorn, Inter, Work Sans, Libre Baskerville, Ogg, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: Vollkorn, Inter, Work Sans, Libre Baskerville, Ogg, Acumin Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
     &::-webkit-scrollbar {

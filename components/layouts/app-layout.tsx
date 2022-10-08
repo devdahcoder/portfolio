@@ -4,6 +4,8 @@ import { getMainLayout } from './main-layout';
 import { useMainContainer } from '../../state/main';
 import NavigationModal from '../navigation-modal';
 import BackgroundGradient from '../background-gradient';
+import TextCircle from '../text-circle';
+
 
 
 type Props = {
@@ -12,19 +14,18 @@ type Props = {
 
 const AppLayout = (props: Props) => {
 
+    const { hasPageFullyLoaded } = useMainContainer();
+
     return (
         <div className="relative">
+            <BackgroundGradient />
             <div className="">
-                <BackgroundGradient />
+                <Header />
+                <NavigationModal />
                 <div className="">
-                    <Header />
-                    <NavigationModal />
-                    <div className="w-full min-h-full">
-                        {props?.children}
-                    </div>
+                    {props?.children}
                 </div>
             </div>
-
         </div>
     )
 }

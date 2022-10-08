@@ -13,6 +13,7 @@ type MainType = {
     toggleNavigationModal: () => void;
     isBodyFixed: boolean;
     toggleBodyFixed: () => void;
+    isSiteLoading: boolean;
 }
 
 export const mainState: MainType = {
@@ -27,6 +28,7 @@ export const mainState: MainType = {
     toggleNavigationModal: () => {},
     isBodyFixed: false,
     toggleBodyFixed: () => {},
+    isSiteLoading: true,
 }
 
 
@@ -39,6 +41,7 @@ const useMainState = (state = mainState): MainType => {
     const [isTextCompleted, setIsTextCompleted] = useState<boolean>(false);
     const [navigationModal, setNavigationModal] = useState<boolean>(false);
     const [isBodyFixed, setIsBodyFixed] = useState<boolean>(false);
+    const [isSiteLoading, setIsSiteLoading] = useState<boolean>(true);
 
     const loadingTextRefElement = useRef<HTMLParagraphElement>(null) as React.MutableRefObject<HTMLParagraphElement>;
 
@@ -76,6 +79,7 @@ const useMainState = (state = mainState): MainType => {
                 isTimeOutCompleted = setTimeout(() => {
                     console.log('Page has loaded and animation has completed');
                     setHasPageFullyLoaded(true);
+                    setIsSiteLoading(false);
                 }, 1000)
             }
         }
@@ -113,6 +117,7 @@ const useMainState = (state = mainState): MainType => {
         toggleNavigationModal,
         isBodyFixed,
         toggleBodyFixed,
+        isSiteLoading,
     }
 }
 
