@@ -32,15 +32,14 @@ const NavigationModalItem = (props: Props) => {
     return (
         <motion.li 
             variants={navigationVariant}
-            // custom={index}
-            // initial="hidden"
-            // animate={ navigationModal ? "visible" : "hidden" }
-            className="border-b">
+            className="border-b flex flex-row items-center justify-start medium-xs:justify-center
+            ">
             <Link href={href}>
-                <a className="w-full flex flex-row items-center font-ogg py-5">
-                    <span className="pl-5 pr-16 w-full max-w-[8rem] text-base py-2">{id > 9 ? '' : '0'}{id}.</span> 
-                    <div className="text-transparent bg-clip-text bg-gradient-to-t from-gray-700 via-gray-900 to-black 
-                        flex flex-row items-center justify-center capitalize font-medium text-8xl">
+                <a className="w-fit flex flex-row items-center justify-center font-ogg py-5">
+                    <span className="pl-5 pr-10 text-base py-2">{id > 9 ? '' : '0'}{id}.</span> 
+                    <div className="text-transparent w-fit bg-clip-text 
+                        bg-gradient-to-t from-gray-700 via-gray-900 to-black 
+                        flex flex-row items-center justify-center flex-wrap capitalize font-medium text-4xl small-large:text-6xl medium-xs:text-7xl large-xs:text-8xl">
                         {name}.
                     </div>
                 </a>

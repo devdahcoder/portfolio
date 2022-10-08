@@ -9,9 +9,14 @@ type Props = {}
 const itemContainerVariant = {
     hidden: { opacity: 0 },
     visible: { 
-        // opacity: 1, 
-        transition: { ease: "easeInOut", delay: 1, when: "beforeChildren" },
-        // delayChildren: 5
+        opacity: 1, 
+        transition: { 
+            ease: "easeInOut", 
+            // delay: 1, 
+            // when: "beforeChildren",
+            delayChildren: 1,
+            staggerChildren: 0.3,
+        },
     },
 }
 
@@ -19,9 +24,9 @@ const TalkList = (props: Props) => {
 
     return (
         <motion.div 
-            // variants={itemContainerVariant}
-            // initial="hidden"
-            // whileInView="visible"
+            variants={itemContainerVariant}
+            initial="hidden"
+            whileInView="visible"
             className="space-y-5">
             {
                 talks.map(({ id, year, talkList }, index) => {

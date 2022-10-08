@@ -41,7 +41,7 @@ const NavigationModalList = (props: Props) => {
             initial="hidden"
             animate={ navigationModal ? "visible" : "hidden" }
         >
-            <div className="w-full mb-0 mx-auto mt-24">
+            <div className="w-full h-full mb-0 mx-auto pt-36 pb-20 border border-black overflow-y-scroll custom-sidebar">
                 <ul className="flex flex-col">
                     {
                         headerNavigation.slice(0, -1)?.map((navigation: HeaderNavigation, index: number) => {

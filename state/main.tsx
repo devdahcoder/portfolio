@@ -38,7 +38,7 @@ const useMainState = (state = mainState): MainType => {
     const [index, setIndex] = useState<number>(0);
     const [isTextCompleted, setIsTextCompleted] = useState<boolean>(false);
     const [navigationModal, setNavigationModal] = useState<boolean>(false);
-    const [isBodyFixed, setIsBodyFixed] = useState<boolean>(true);
+    const [isBodyFixed, setIsBodyFixed] = useState<boolean>(false);
 
     const loadingTextRefElement = useRef<HTMLParagraphElement>(null) as React.MutableRefObject<HTMLParagraphElement>;
 
@@ -76,7 +76,6 @@ const useMainState = (state = mainState): MainType => {
                 isTimeOutCompleted = setTimeout(() => {
                     console.log('Page has loaded and animation has completed');
                     setHasPageFullyLoaded(true);
-                    setIsBodyFixed(false);
                 }, 1000)
             }
         }

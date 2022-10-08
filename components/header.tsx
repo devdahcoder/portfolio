@@ -75,7 +75,7 @@ const Header = (props: Props) => {
                     <motion.button 
                         whileTap={{ scale: 0.97 }}
                         onClick={toggleNavigationModal}
-                        className="flex flex-col items-center justify-center font-inter relative h-10 w-10 rounded-full">
+                        className="flex flex-col items-center justify-center font-inter relative h-10 w-10 rounded-full outline-none border-none">
                         <span className={`absolute h-[1px] w-9/12 bg-black dark:bg-white rounded-full transition-all duration-300 ease-linear ${navigationModal ? " translate-y-0 -rotate-45" : "-translate-y-[10px]"}`}></span>
                         <span className={`absolute h-[1px] w-9/12 bg-black dark:bg-white rounded-full transition-all duration-300 ease-linear ${navigationModal ? "opacity-0" : "opacity-1"}`}></span>
                         <span className={`absolute h-[1px] w-9/12 bg-black dark:bg-white rounded-full transition-all duration-300 ease-linear ${navigationModal ? " translate-y-0 rotate-45" : "translate-y-[10px]"}`}></span>

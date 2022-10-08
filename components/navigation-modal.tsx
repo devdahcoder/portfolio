@@ -27,7 +27,7 @@ const NavigationModal = (props: Props) => {
             variants={modalVariant}
             initial="hidden"
             animate={navigationModal ? "visible" : "hidden"}
-            className={`overflow-y-scroll custom-sidebar fixed left-0 top-0 w-full h-full z-30 ${navigationModal ? "pointer-events-auto" : "pointer-events-none"}`}
+            className={`fixed left-0 top-0 w-full h-full z-30 ${navigationModal ? "pointer-events-auto" : "pointer-events-none"}`}
         >
 
             <NavigationGrid />

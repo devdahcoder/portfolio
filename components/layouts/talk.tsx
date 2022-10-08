@@ -22,7 +22,7 @@ const Talk = (props: Props) => {
                         
                         className="flex flex-col medium-xs:flex-row space-y-8 medium-xs:space-y-0">
                         <motion.div
-                            initial={{ x: -200, opacity: 0 }}
+                            initial={{ x: "-100%", opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{ duration: 1, ease: 'easeInOut' }}
                             className="w-full flex-grow">
@@ -31,7 +31,7 @@ const Talk = (props: Props) => {
 
 
                         <motion.div 
-                            initial={{ x: 200, opacity: 0 }}
+                            initial={{ x: "100%", opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{ duration: 1, ease: 'easeInOut' }}
                             className="font-work-sans mr-auto w-[80%] small-xs:w-full text-sm" dir="rtl">

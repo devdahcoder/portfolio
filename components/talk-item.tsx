@@ -14,24 +14,23 @@ type Props = {
 
 
 const talkItemVariant = {
-    hidden: { y: 100, opacity: 0 },
+    hidden: { 
+        y: "100%", 
+        opacity: 0 
+    },
     visible: { 
         y: 0, 
         opacity: 1,
-        transition: {
-            delay: 0.6,
-            ease: "easeInOut"
-        }
     }
 }
 const talkVariant = {
-    open: { 
+    hidden: { opacity: 0 },
+    visible: { 
         opacity: 1,
         transition: (index: number) => ({
             delay: index * 0.3
         })
     },
-    close: { opacity: 0 }
 }
 
 const TalkItem = (props: Props) => {
@@ -45,8 +44,6 @@ const TalkItem = (props: Props) => {
     return (
         <motion.div 
             variants={talkItemVariant}
-            initial="hidden"
-            whileInView="visible"
             className="">
             <div 
                 ref={refElement}
@@ -54,7 +51,7 @@ const TalkItem = (props: Props) => {
                 role={"button"} 
                 className="group flex flex-row items-center justify-between border-b py-1 cursor-pointer"
                 >
-                <div className="text-6xl font-normal opacity-60">
+                <div className="text-6xl font-normal font-ogg opacity-60">
                     <p>{year}</p>
                 </div>
 
@@ -67,10 +64,9 @@ const TalkItem = (props: Props) => {
 
             <div className={`transition-all duration-500 ease-in-out ${isAccordionOpen ? 'h-60 ' : 'overflow-y-hidden h-0'} `}>
                 <motion.div 
-                    whileInView={isAccordionOpen ? "open" : "close"}
+                    whileInView={isAccordionOpen ? "visible" : "hidden"}
                     variants={talkVariant}
                     custom={index}
-
                     className={`py-3 font-inter space-y-3 `}>
                     {
                         talkList.map(({ id, talkTitle, eventTitle, eventLink, eventDate }, index) => (
