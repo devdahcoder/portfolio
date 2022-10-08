@@ -18,7 +18,7 @@ const TextCircle = (props: Props) => {
 
     return (
         <div className={`
-            absolute capitalize rounded-full font-work-sans animate-spin-slow
+            capitalize rounded-full font-work-sans animate-spin-slow
             h-[180px] 
             w-[180px] ${className}`}>
             <p>

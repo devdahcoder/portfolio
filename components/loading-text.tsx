@@ -19,7 +19,7 @@ const subTextVariant = {
 const LoadingText: (props: Props) => JSX.Element = (props: Props) => {
     
     return (
-        <div className="text-center z-50 flex flex-col items-center justify-center text-dark-bg dark:text-white 
+        <div className="text-center z-30 flex flex-col items-center justify-center 
             transition-all duration-500 ease-in-out">
                 
             <div className="text-5xl small-xs:text-6xl medium-xs:text-7xl medium-sm:text-8xl font-seibold capitalize transition-all ease-in-out">
