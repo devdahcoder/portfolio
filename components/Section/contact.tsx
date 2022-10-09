@@ -138,7 +138,7 @@ const Contact = (props: Props) => {
                                         <div>
                                             <button 
                                                 disabled={!isValid || isSubmitting}
-                                                type="submit" className="flex flex-row items-center text-base font-semibold font-vollkorn py-2">
+                                                type="submit" className="flex flex-row items-center text-base font-semibold font-vollkorn py-2 text-black dark:text-white">
                                                 SEND <span className="ml-2">
                                                     <TiLocationArrowOutline className="align-middle w-5 h-5" />
                                                 </span>

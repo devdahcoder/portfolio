@@ -37,7 +37,7 @@ const Header = (props: Props) => {
                     <Logo logoText={"Ola"} />
                 </div> */}
 
-                <div className="">
+                {/* <div className="">
                     <nav>
                         <ul className={`flex flex-row items-center list-none font-work-sans large-sm:space-x-5`}>
                             {headerNavigation?.map(({name, href, id, type, className, style, subNavigation}, index) => (
@@ -70,8 +70,8 @@ const Header = (props: Props) => {
                             ))}
                         </ul>
                     </nav>
-                </div>
-                {/* <div className={`flex rounded-full ${ isSiteLoading ? "" : "z-50" }`}>
+                </div> */}
+                <div className={`flex rounded-full ${ isSiteLoading ? "" : "z-50" }`}>
                     <motion.button 
                         whileTap={{ scale: 0.97 }}
                         onClick={toggleNavigationModal}
@@ -80,7 +80,7 @@ const Header = (props: Props) => {
                         <span className={`absolute h-[1px] w-9/12 bg-black dark:bg-white rounded-full transition-all duration-300 ease-linear ${navigationModal ? "opacity-0" : "opacity-1"}`}></span>
                         <span className={`absolute h-[1px] w-9/12 bg-black dark:bg-white rounded-full transition-all duration-300 ease-linear ${navigationModal ? " translate-y-0 rotate-45" : "translate-y-[10px]"}`}></span>
                     </motion.button>
-                </div> */}
+                </div>
             </div>
 
             <div 

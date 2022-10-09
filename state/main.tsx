@@ -97,11 +97,9 @@ const useMainState = (state = mainState): MainType => {
 
     useEffect(() => {
         if (isBodyFixed) {
-            document.body.style.position = "fixed",
-            document.body.style.overflowY = "hidden"
-            document.body.style.width = "100%"
+            document.body.classList.add('example')
         } else {
-            document.body.style.position = "relative"
+            document.body.classList.remove('example')
         }
     }, [isBodyFixed])
 
