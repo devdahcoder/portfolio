@@ -14,7 +14,7 @@ const talkContainerVariant = {
 
 const Talk = (props: Props) => {
     return (
-        <div className="py-28">
+        <section id="talk" className="py-28">
             <ContainerLayout 
                 className="px-2 small-xs:px-5 medium-sm:px-10 extra-large-xs:px-20 space-y-14">
 
@@ -43,7 +43,7 @@ const Talk = (props: Props) => {
                         <TalkList />
                     </div>
             </ContainerLayout>
-        </div>
+        </section>
     )
 }
 

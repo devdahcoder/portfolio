@@ -57,14 +57,18 @@ const Contact = (props: Props) => {
 
 
     return (
-        <section className="
+        <section id="contact" className="
             flex flex-row large-xs:flex-row items-center medium-xs:items-start justify-center large-sm:justify-between 
             relative 
             px-4 small-large:px-5 medium-sm:px-10 extra-large-xs:px-20 
             pt-16 medium-xs:pt-24 medium-sm:pt-20 large-sm:pt-40 pb-20"
         >
             <div className="flex flex-col flex-grow space-y-28">
-                <div className="text-4xl small-large:text-5xl medium-xs:text-6xl large-xs:text-7xl font-semibold large-xs:leading-[5.5rem]"><p>Do you have any Ideas? <br />Let’s create the future</p></div>
+                <div className="text-4xl small-large:text-5xl medium-xs:text-6xl large-xs:text-7xl font-semibold large-xs:leading-[5.5rem]
+                    text-transparent bg-clip-text 
+                            bg-gradient-to-t from-gray-700 via-gray-900 to-black 
+                            dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400
+                "><p>Do you have any Ideas? <br />Let’s create the future</p></div>
 
                 <Formik 
                     initialValues={initialValues}

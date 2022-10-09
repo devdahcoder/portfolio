@@ -27,7 +27,9 @@ const Input = (props: Props) => {
 
   return (
     <div className={`${mainContainerClassName}`}>
-      <div className={`${labelClassName}`}>
+      <div className={`text-transparent bg-clip-text 
+                            bg-gradient-to-t from-gray-700 via-gray-900 to-black 
+                            dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400 ${labelClassName}`}>
           <label htmlFor={name}>{labelText}</label>
       </div>
       <div 

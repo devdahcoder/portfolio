@@ -34,7 +34,7 @@ const HomePage = (props: Props) => {
                     
                 <div className="flex flex-col w-full large-sm:grow
                     space-y-4 small-xs:space-y-5 small-mid:space-y-8
-                    select-none text-black dark:text-white transition-all ease-in-out duration-500"
+                    select-none transition-all ease-in-out duration-500"
                 >
 
                     <div className="
@@ -44,12 +44,20 @@ const HomePage = (props: Props) => {
                     >
 
                         <motion.div 
-                            className="medium-xs:flex medium-xs:flex-row medium-xs:items-center"
+                            className="medium-xs:flex medium-xs:flex-row medium-xs:items-center
+                            text-transparent bg-clip-text 
+                            bg-gradient-to-t from-gray-700 via-gray-900 to-black 
+                            dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400
+                            "
                         >
 
                             Hi, I am 
 
-                            <div className="flex flex-row w-fit relative pt-5 medium-xs:pt-0 medium-xs:ml-2 extra-large-xs:ml-4">
+                            <div className="
+                                text-transparent bg-clip-text 
+                                bg-gradient-to-t from-gray-700 via-gray-900 to-black 
+                                dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400
+                                flex flex-row w-fit relative pt-5 medium-xs:pt-0 medium-xs:ml-2 extra-large-xs:ml-4">
 
                                     {splitName && splitName.map((name, index: number) => {
                                         return (
@@ -79,9 +87,12 @@ const HomePage = (props: Props) => {
                         font-work-sans transition-all duration-500 ease-linear
                         w-full large-sm:max-w-[90%] extra-large-mid:max-w-[78%]
                         text-sm small-mid:text-base large-sm:text-lg 
-                        large-sm:pr-5"
+                        large-sm:pr-5
+                        text-transparent bg-clip-text 
+                            bg-gradient-to-t from-gray-700 via-gray-900 to-black 
+                            dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400
+                        "
                     >
-{/* text-xs small-xs:text-sm */}
                         <p>
 
                             “Hello stranger! 👋, my name is {name} and I am a frontend engineer who is

@@ -40,15 +40,16 @@ const LinkNavigation = (props: Props) => {
             initial="hidden"
             animate={hasPageFullyLoaded ? "visible" : "hidden"}
             className="hidden large-sm:flex flex-row items-center" draggable="false" >
-            <Link href={href}>
+            {/* <Link href={href}> */}
                 <a 
+                    href={href}
                     className={`relative flex flex-row items-center justify-center w-full h-full py-2 px-3
                         text-sm font-medium transition-all delay-100 ease-linear text-black dark:text-white ${className}`} 
                     style={style}
                 >
                     {name}
                 </a>
-            </Link>
+            {/* </Link> */}
         </motion.div>
     )
 }

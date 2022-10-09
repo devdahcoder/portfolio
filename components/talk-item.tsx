@@ -51,13 +51,15 @@ const TalkItem = (props: Props) => {
                 role={"button"} 
                 className="group flex flex-row items-center justify-between border-b py-1 cursor-pointer"
                 >
-                <div className="text-6xl font-normal font-ogg opacity-60">
+                <div className="text-6xl font-normal font-ogg opacity-60 text-transparent bg-clip-text 
+                            bg-gradient-to-t from-gray-700 via-gray-900 to-black 
+                            dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400">
                     <p>{year}</p>
                 </div>
 
                 <div className="flex items-center justify-center">
                     <button className=" flex items-center justify-center min-w-fit w-7 h-7">
-                        <IoIosArrowDown className="opacity-60" />
+                        <IoIosArrowDown className="opacity-60 text-black dark:text-white" />
                     </button>
                 </div>
             </div>
@@ -70,10 +72,14 @@ const TalkItem = (props: Props) => {
                     className={`py-3 font-inter space-y-3 `}>
                     {
                         talkList.map(({ id, talkTitle, eventTitle, eventLink, eventDate }, index) => (
-                            <div key={index} className="flex flex-col justify-start items-start text-sm">
-                                <div className="flex flex-row items-center flex-wrap"><p>{eventTitle}</p></div>
-                                <div className="flex flex-row items-center flex-wrap">
-                                    <div className="flex flex-row items-center flex-wrap">
+                            <div key={index} className="flex flex-col justify-start items-start text-sm ">
+                                <div className="flex flex-row items-center flex-wrap text-transparent bg-clip-text 
+                            bg-gradient-to-t from-gray-700 via-gray-900 to-black 
+                            dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400"><p>{eventTitle}</p></div>
+                                <div className="flex flex-row items-center flex-wrap ">
+                                    <div className="flex flex-row items-center flex-wrap text-transparent bg-clip-text 
+                                        bg-gradient-to-t from-gray-700 via-gray-900 to-black 
+                                        dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400">
                                         <div>
                                             <p>{talkTitle}</p>
                                         </div>
@@ -82,11 +88,13 @@ const TalkItem = (props: Props) => {
                                         </div>
                                     </div>
                                     <span className="mx-1">•</span>
-                                    <div>
+                                    <div className="text-transparent bg-clip-text 
+                                        bg-gradient-to-t from-gray-700 via-gray-900 to-black 
+                                        dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400">
                                         <p>{eventDate}</p>
                                     </div>
                                     <span className="mx-1">•</span>
-                                    <span><a className="underline" href={`http://${eventLink}`} target="_blank" rel="noopener noreferrer">See Presentation</a></span>
+                                    <span><a className="text-black dark:text-white underline" href={`http://${eventLink}`} target="_blank" rel="noopener noreferrer">See Presentation</a></span>
                                 </div>
                             </div>
                         ))

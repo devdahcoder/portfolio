@@ -5,6 +5,6 @@ export const HeaderNavigationStyle = `before:content-[''] before:absolute before
 export const linkClassName = `capitalize
                     text-xs small-xs:text-sm medium-sm:text-base
                     py-1 small-xs:py-2
-                    pr-1 small-xs:pr-3 small-large:pr-5 font-semibold `;
+                    pr-1 small-xs:pr-3 small-large:pr-5 font-semibold text-black dark:text-white`;
 
 export const linkIconContainer = `ml-1 group-hover:rotate-[45deg] transition-all ease-in-out duration-500`

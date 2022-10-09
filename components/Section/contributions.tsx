@@ -12,7 +12,7 @@ const Contributions = (props: Props) => {
     const sliderElementRef = useRef<HTMLDivElement>(null) as RefObject<HTMLDivElement>;
 
     return (
-        <section className="py-20">
+        <section id="contribution" className="py-20">
             <Slider
                 sliderElementRef={sliderElementRef}
                 contentLength={contributions?.length}
