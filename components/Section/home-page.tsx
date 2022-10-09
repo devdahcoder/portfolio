@@ -25,6 +25,11 @@ const HomePage = (props: Props) => {
         closed: { opacity: 0, x: "-200%" },
     }
 
+    const memojiVariant = {
+        hidden: { opacity: 0, scale: 0 },
+        visible: { opacity: 1, scale: 1 }
+    }
+
     return (
         <section className="pb-20">
             <ContainerLayout className="large-xs:flex-row items-center large-xs:items-start
@@ -39,7 +44,7 @@ const HomePage = (props: Props) => {
 
                     <div className="
                             group font-medium relative cursor-text 
-                            text-4xl small-xs:text-5xl small-mid:text-6xl large-sm:text-7xl extra-large-mid:text-8xl
+                            text-5xl small-xs:text-6xl medium-sm:text-[4rem] large-sm:text-7xl extra-large-mid:text-8xl
                             min-w-fit"
                     >
 
@@ -86,7 +91,7 @@ const HomePage = (props: Props) => {
                     <div className="
                         font-work-sans transition-all duration-500 ease-linear
                         w-full large-sm:max-w-[90%] extra-large-mid:max-w-[78%]
-                        text-sm small-mid:text-base large-sm:text-lg 
+                        small-xs:text-base large-sm:text-lg 
                         large-sm:pr-5
                         text-transparent bg-clip-text 
                             bg-gradient-to-t from-gray-700 via-gray-900 to-black 
@@ -137,6 +142,9 @@ const HomePage = (props: Props) => {
 
                 <div className="flex flex-col items-center transition-all ease-in-out duration-500  w-full max-w-[23rem]">
                     <motion.div
+                        variants={memojiVariant}
+                        initial="hidden"
+                        whileInView={hasPageFullyLoaded ? "visible" : "hidden"}
                         className="
                             group relative border-black bg-black dark:border-white dark:bg-white 
                             w-full max-w-[19rem]
@@ -157,7 +165,8 @@ const HomePage = (props: Props) => {
                         >
                             <p>Hi, I am Olamide</p>
                         </div>
-                        <div
+                        <motion.div
+                            
                             className=" 
                                 z-0 border-white
                                 w-[11rem] small-xs:w-[16rem] small-mid:w-[17rem] large-sm:w-[18.5rem]
@@ -171,7 +180,7 @@ const HomePage = (props: Props) => {
                                 src="./images/wave.png"
                                 alt="memoji"
                             />
-                        </div>
+                        </motion.div>
                     </motion.div>
                 </div>
             </ContainerLayout>

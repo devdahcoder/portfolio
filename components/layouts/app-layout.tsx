@@ -23,8 +23,8 @@ const AppLayout = (props: Props) => {
                 text={"design is life - design is life - design is life - "} 
                 className={`${hasPageFullyLoaded ? 
                 `!z-0 transition-all duration-500 ease-in-out absolute
-                left-[5.5rem] small-xs:left-32 medium-xs:left-[24rem] large-sm:left-[30rem] extra-large-xs:left-[32rem] extra-large-mid:left-[43.5rem]
-                top-[5.5rem] small-mid:top-[6rem] medium-xs:top-[7rem] medium-sm:top-[9rem] large-xs:top-36
+                left-[5.5rem] small-xs:left-32 medium-xs:left-[23rem] large-sm:left-[30rem] extra-large-xs:left-[32rem] extra-large-mid:left-[43.5rem]
+                top-[8rem] small-xs:top-[9rem] medium-xs:top-[8rem] large-xs:top-36
                 large-sm:top-52 extra-large-xs:top-[13rem] extra-large-mid:top-52`
                 : 
                 "z-50 -top-12 -left-12 fixed"}`} 

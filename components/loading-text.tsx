@@ -30,7 +30,7 @@ const LoadingText: (props: Props) => JSX.Element = (props: Props) => {
                 variants={subTextVariant}
                 initial="hidden"
                 animate={props?.isTextCompleted ? "display" : "hidden" }
-                className={`relative text-xs small-xs:text-sm medium-xs:text-xl
+                className={`relative text-xs small-xs:text-base medium-xs:text-xl
                 flex flex-col small-mid:flex-row items-center justify-center text-center font-inter font-medium space-x-0 small-mid:space-x-7
                 small-mid:before:contents-[] small-mid:before:absolute small-mid:before:right-32 medium-xs:before:right-44 lg:before:right-0 small-mid:before:top-1/2 small-mid:before:h-4 small-mid:before:rounded-full
                 small-mid:before:w-0.5 small-mid:before:bg-black small-mid:before:dark:bg-white small-mid:before:-translate-x-1/2 small-mid:before:-translate-y-1/2
