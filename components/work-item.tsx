@@ -83,7 +83,7 @@ const WorkItem = (props: Props) => {
             className="
                 group relative rounded-sm w-full min-w-[26rem] medium-sm:min-w-[28rem] large-xs:min-w-[30rem] h-full flex flex-col  
                 border-2 border-green-200 select-none cursor-pointer transition-all ease-linear duration-500
-                mr-5 py-5 px-5 space-y-4
+                mr-5 p-5 space-y-4
                 
                 "
             >

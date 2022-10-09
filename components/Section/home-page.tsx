@@ -145,6 +145,7 @@ const HomePage = (props: Props) => {
                         variants={memojiVariant}
                         initial="hidden"
                         whileInView={hasPageFullyLoaded ? "visible" : "hidden"}
+                        viewport={{ once: true }}
                         className="
                             group relative border-black bg-black dark:border-white dark:bg-white 
                             w-full max-w-[19rem]

@@ -33,6 +33,7 @@ export const CloseOnEventListen = (
     }, []);
 };
 
+
 export const WindowSize = () => {
 
     const [width, setWidth] = useState<number>(0);
@@ -45,7 +46,7 @@ export const WindowSize = () => {
         let isSubscribed = true;
 
         if (isSubscribed) {
-            getWindowWidth()
+            getWindowWidth();
             window.addEventListener("resize", getWindowWidth);
         }
         
@@ -57,4 +58,19 @@ export const WindowSize = () => {
 
     return width;
     
+}
+
+export const calculateWidth = (width: number, desktopBreakPoint: number, tabletBreakPoint: number, mobileBreakPoint: number) => {
+    let newWidth: number;
+    if (width >= 900) {
+        newWidth = desktopBreakPoint;
+    } 
+    else if (width >= 768) {
+        newWidth = tabletBreakPoint;
+    }
+    else {
+        newWidth = mobileBreakPoint;
+    }
+
+    return newWidth;
 }

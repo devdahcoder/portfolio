@@ -1,9 +1,8 @@
 import React, { RefObject, useRef, useId } from 'react';
-import { WindowSize } from '../hooks';
+import { calculateWidth, WindowSize } from '../hooks';
 import Container from './container';
 import SectionHeader from './section-header';
 import SliderContainer from './slider-container';
-
 
 const WorkList = (props: any) => {
 
@@ -13,7 +12,8 @@ const WorkList = (props: any) => {
 
     const width = WindowSize();
 
-    const translateX = cursor.toFixed(13) * (width >= breakpoint ? 500 : 420);
+
+    const translateX = cursor.toFixed(13) * calculateWidth(width, 500, 468, 436);
 
     return (
         <Container>
