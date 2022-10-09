@@ -6,11 +6,15 @@ import emailjs from '@emailjs/browser';
 import { Formik, Form, useField, Field } from 'formik';
 import { ContactInitValue } from '../../types';
 import * as Yup from 'yup';
+import toast, { Toaster } from 'react-hot-toast'
+import { useMainContainer } from '../../state/main';
+
 
 type Props = {}
 
 const Contact = (props: Props) => {
 
+    const { name } = useMainContainer();
     const [loading, setLoading] = useState<boolean>(false);
 
     const initialValues: ContactInitValue = {
@@ -21,25 +25,36 @@ const Contact = (props: Props) => {
 
     const formRef: React.MutableRefObject<HTMLFormElement> = useRef() as React.MutableRefObject<HTMLFormElement>;
 
-    const sendEmail = async ({ resetForm }: any) => {
+    const sendEmail = async (value: ContactInitValue,{ resetForm }: any) => {
 
         console.log('sending')
         setLoading(true);
-        await emailjs.sendForm(
-            "service_rvsyqk7", 
-            "template_zwmprdd", 
-            formRef.current, 
-            "1FY7b7f8s-PjKhDIC"
-        )
+
+        toast.promise(
+            emailjs.sendForm(
+                "service_rvsyqk7", 
+                "template_zwmprdd", 
+                formRef.current, 
+                "1FY7b7f8s-PjKhDIC"
+            )
             .then((result) => {
                 console.log(result.text);
+                console.log('sent')
                 setLoading(false);
-                resetForm();
-            }, (error) => {
+                resetForm(value);
+            })
+            .catch((error) => {
                 setLoading(false);
                 console.log(error.text);
-            });
+            }),
+            {
+                loading: `Sending Email to ${name}`,
+                success: <b>Email sent!</b>,
+                error: <b>Could not send email.</b>,
+            }
+        )
     }
+
 
     return (
         <section className="
@@ -61,14 +76,16 @@ const Contact = (props: Props) => {
                         })
                     }
                     onSubmit={sendEmail}
+                    validateOnMount
                 >
                     {
                         ({errors,
                             values,
                             handleChange,
-                            handleBlur,
-                            setFieldValue,
-                            touched,}) => {
+                            isValid,
+                            isSubmitting
+                        }) => {
+
                             return (
                                 <Form ref={formRef}>
 
@@ -115,7 +132,9 @@ const Contact = (props: Props) => {
                                         </div>
 
                                         <div>
-                                            <button type="submit" className="flex flex-row items-center text-base font-semibold font-vollkorn py-2">
+                                            <button 
+                                                disabled={!isValid || isSubmitting}
+                                                type="submit" className="flex flex-row items-center text-base font-semibold font-vollkorn py-2">
                                                 SEND <span className="ml-2">
                                                     <TiLocationArrowOutline className="align-middle w-5 h-5" />
                                                 </span>

@@ -10,6 +10,8 @@ import Works from "../components/Section/works";
 import Footer from "../components/Section/footer";
 import TextCircle from "../components/text-circle";
 import { useMainContainer } from "../state/main";
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const Home = () => {
 
@@ -27,6 +29,9 @@ const Home = () => {
 
     return (
         <div className="">
+
+            {/* <button onClick={notify}>Make me a toast</button> */}
+            <Toaster />
             <HomePage hasPageFullyLoaded={hasPageFullyLoaded} name={name} />
             <Works />
             <Talk />
