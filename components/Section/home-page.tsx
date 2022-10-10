@@ -30,6 +30,22 @@ const HomePage = (props: Props) => {
         visible: { opacity: 1, scale: 1 }
     }
 
+    const memojiIconVariant = {
+        hidden: { opacity: 0, scale: 0, y: '-100%' },
+        visible: { opacity: 1, scale: 1, y: 0, transition: { delay: 1 } }
+    }
+
+    const memojiMessageVariant = {
+        hidden: { scale: 0, y: '-100%' },
+        visible: { 
+            scale: 1, 
+            y: 0, 
+            transition: { delay: 1.2 } ,
+            rotate: [40, -30, 0],
+            type: "spring",
+        }
+    }
+
     return (
         <section className="pb-20">
             <ContainerLayout className="large-xs:flex-row items-center large-xs:items-start
@@ -38,7 +54,7 @@ const HomePage = (props: Props) => {
                 pt-16 medium-xs:pt-24 medium-sm:pt-32 large-sm:pt-40 ">
                     
                 <div className="flex flex-col w-full large-sm:grow
-                    space-y-4 small-xs:space-y-5 small-mid:space-y-8
+                    space-y-5 small-xs:space-y-8
                     select-none transition-all ease-in-out duration-500"
                 >
 
@@ -153,21 +169,26 @@ const HomePage = (props: Props) => {
                             flex items-center justify-center rounded-t-full mt-16 transition-all
                             ease-in-out duration-500"
                     >
-                        <div
+                        <motion.div
+                            variants={memojiMessageVariant}
+                            initial="hidden"
+                            whileInView={hasPageFullyLoaded ? "visible" : "hidden"}
+                            viewport={{ once: true }}
                             className="z-10 absolute 
                             -left-3 small-xs:-left-2 small-mid:left-0
                             top-48 small-xs:top-64 small-mid:top-60
                             py-2 small-xs:py-3
                             px-3 small-xs:px-5
                             border rounded-tl-full rounded-b-full text-black text-xs font-semibold 
-                            w-fit font-inter bg-white invisible opacity-0 
-                            group-hover:visible group-hover:opacity-100 transition-all duration-700
-                            ease-in-out"
+                            w-fit font-inter bg-white"
                         >
                             <p>Hi, I am Olamide</p>
-                        </div>
+                        </motion.div>
                         <motion.div
-                            
+                            variants={memojiIconVariant}
+                            initial="hidden"
+                            whileInView={hasPageFullyLoaded ? "visible" : "hidden"}
+                            viewport={{ once: true }}
                             className=" 
                                 z-0 border-white
                                 w-[11rem] small-xs:w-[16rem] small-mid:w-[17rem] large-sm:w-[18.5rem]
