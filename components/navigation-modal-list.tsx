@@ -15,12 +15,10 @@ const navigationVariant = {
             delay: 0.4,
             ease: "easeInOut",
             delayChildren: 0.4,
-            // staggerChildren: 0.1,
         }
     },
     visible: { 
         opacity: 1,
-        // scale: 1,
         transition: {
             delay: 1.5,
             ease: "easeInOut",

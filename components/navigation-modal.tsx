@@ -8,15 +8,12 @@ import BackgroundGradient from './background-gradient';
 import NavigationGrid from './navigation-grid';
 import NavigationModalList from './navigation-modal-list';
 
-
-
 type Props = {}
 
 const modalVariant = {
     hidden: { opacity: 0, transition: { delay: 2 } },
     visible: { opacity: 1 }
 }
-
 
 const NavigationModal = (props: Props) => {
 

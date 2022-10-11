@@ -16,8 +16,6 @@ const ThemeToggleButton = (props: Props) => {
 
   const whatTheme = theme === 'light' ? 'light' : 'dark';
 
-  const iconClassName = ""
-
   return (
     <div className="absolute small-mid:right-4 small-mid:top-6 large-sm:top-6 extra-large-xs:right-5 z-50">
 

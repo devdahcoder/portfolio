@@ -1,15 +1,6 @@
 
 import React, { MutableRefObject } from 'react';
-import LeftBackgroundOval from '../public/icons/left-background-oval';
-import RightBackgroundOval from '../public/icons/right-background-oval';
-import styles from '../styles/Home.module.css';
-import BackgroundIcon from '../components/background-icon';
-import TextCircle from '../components/text-circle';
-import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 import LoadingText from './loading-text';
-import ThemeToggleButton from './theme-toggle-button';
-import BackgroundGradient from './background-gradient';
-
 
 
 type Props = {

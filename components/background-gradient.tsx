@@ -10,8 +10,8 @@ type Props = {
 
 const BackgroundGradient = (props: Props) => {
 
-    const { hasPageFullyLoaded, navigationModal } = useMainContainer();
-    const { className, containerClassName } = props;
+    const { hasPageFullyLoaded } = useMainContainer();
+    const { className } = props;
 
     return (
         <div className={`flex items-center justify-center w-screen h-screen bg-white dark:bg-dark-bg fixed transition-all duration-700 ease-in-out ${ !hasPageFullyLoaded ? "z-10" : "-z-10"} ${className}  `}>

@@ -2,9 +2,7 @@ import { motion } from 'framer-motion'
 import React from 'react';
 import { useMainContainer } from '../state/main';
 
-
 type Props = {}
-
 
 const spanVariant = {
     hidden: (index: number) => ({ 
@@ -48,6 +46,5 @@ const NavigationGrid = (props: Props) => {
         </div>
     )
 }
-// before:absolute before:content-[''] before:bg-dark-bg 
-                            // before:dark:bg-[hsla(0,0%,100%,.01)] before:top before:left-0 before:w-[1px] before:h-screen
+
 export default NavigationGrid

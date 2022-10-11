@@ -3,14 +3,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useMainContainer } from '../state/main';
 
-
 type Props = {
     index: number;
     id: number;
     href: string;
     name: string;
 }
-
 
 const navigationVariant = {
     hidden: { 

@@ -10,8 +10,6 @@ const CommunityList = (props: any) => {
 
     const { cursor, ...rest } = props;
 
-    const breakpoint = 768;
-
     const width = WindowSize();
 
     const translateX = cursor.toFixed(13) * calculateWidth(width, 488, 456, 440);

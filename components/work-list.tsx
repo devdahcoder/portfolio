@@ -8,8 +8,6 @@ const WorkList = (props: any) => {
 
     const { cursor, ...rest } = props;
 
-    const breakpoint = 768;
-
     const width = WindowSize();
 
 
