@@ -12,9 +12,7 @@ const itemContainerVariant = {
         opacity: 1, 
         transition: { 
             ease: "easeInOut", 
-            // delay: 1, 
-            // when: "beforeChildren",
-            delayChildren: 1,
+            delayChildren: 0.8,
             staggerChildren: 0.3,
         },
     },

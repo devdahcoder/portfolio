@@ -64,11 +64,23 @@ import { myWork } from '../context/work';
 import SocialMediaLink from './social-media-link';
 import { BsArrowUpRight } from 'react-icons/bs';
 import { linkClassName, linkIconContainer } from '../styles/global-style';
+import { motion } from 'framer-motion';
 
 
 type Props = {
     modIndex?: number;
     index: number;
+}
+
+const workItemVariant = {
+    hidden: { 
+        x: "100%", 
+        opacity: 0 
+    },
+    visible: { 
+        x: 0, 
+        opacity: 1,
+    }
 }
 
 const WorkItem = (props: Props) => {
@@ -78,7 +90,8 @@ const WorkItem = (props: Props) => {
     const currentItem = myWork[index];
 
     return (
-        <div 
+        <motion.div 
+            variants={workItemVariant}
             key={index}
             className="
                 group relative rounded-sm w-full min-w-[26rem] medium-sm:min-w-[28rem] large-xs:min-w-[30rem] h-full flex flex-col  
@@ -124,7 +137,7 @@ const WorkItem = (props: Props) => {
                 </div>
             </div>
 
-        </div>
+        </motion.div>
     )
 }
 

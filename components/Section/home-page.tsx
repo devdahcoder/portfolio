@@ -6,7 +6,7 @@ import { BsArrowUpRight } from 'react-icons/bs';
 import { linkClassName, linkIconContainer } from '../../styles/global-style';
 import WavingMemoji from '../../public/icons/waving-memoji';
 import ContainerLayout from '../container-layout';
-import { motion } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 
 
 type Props = {
@@ -17,6 +17,8 @@ type Props = {
 const HomePage = (props: Props) => {
 
     const { hasPageFullyLoaded, name } = props;
+
+    const { scrollYProgress } = useScroll();
 
     const splitName = name && name?.split("");
 
@@ -58,7 +60,8 @@ const HomePage = (props: Props) => {
                     select-none transition-all ease-in-out duration-500"
                 >
 
-                    <div className="
+                    <motion.div
+                        className="
                             group font-medium relative cursor-text 
                             text-5xl small-xs:text-6xl medium-sm:text-[4rem] large-sm:text-7xl extra-large-mid:text-8xl
                             min-w-fit"
@@ -101,7 +104,7 @@ const HomePage = (props: Props) => {
 
                         </motion.div>
                         
-                    </div>
+                    </motion.div>
 
 
                     <div className="
