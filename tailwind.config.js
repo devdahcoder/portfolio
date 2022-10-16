@@ -26,6 +26,7 @@ module.exports = {
         'libre': ['Libre Baskerville', 'san-serif'],
         'ogg': ['Ogg', 'san-serif'],
         'acumin-pro': ['Acumin Pro', 'san-serif'],
+        'rubik': ['Rubik', 'san-serif'],
       },
       animation: {
         'spin-slow': 'spin 15s linear infinite',

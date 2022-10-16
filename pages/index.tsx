@@ -7,6 +7,7 @@ import Contact from "../components/Section/contact";
 import Contributions from "../components/Section/contributions";
 import HomePage from "../components/Section/home-page";
 import Works from "../components/Section/works";
+import About from '../components/Section/about'
 import Footer from "../components/Section/footer";
 import { useMainContainer } from "../state/main";
 import { Toaster } from 'react-hot-toast';
@@ -34,6 +35,7 @@ const Home = () => {
             <Talk />
             <Community />
             <Contributions />
+            <About />
             <Contact />
             <Footer />
         </div>
