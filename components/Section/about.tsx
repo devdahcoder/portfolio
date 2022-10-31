@@ -25,9 +25,7 @@ const About = (props: Props) => {
                         </div>
 
                         <div className="flex flex-col space-y-8">
-                            <div className="flex flex-col uppercase space-y-8 text-transparent bg-clip-text 
-                            bg-gradient-to-t from-gray-700 via-gray-900 to-black 
-                            dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-40 ">
+                            <div className="flex flex-col uppercase space-y-8 ">
                                 <div>
                                     <p>
                                         I am currently working as a Frontend Developer at Divergent Business.
@@ -41,10 +39,13 @@ const About = (props: Props) => {
                                 </div>
                                 <div>
                                     <p>MY SITES EMBODY A CLEAN AND MINIMALISTIC DESIGN, SOLVE BUSINESS ISSUES, AND ARE USER-FRIENDLY.
-                                        I HAVE 3 YEARS OF EXPERIENCE IN DESIGN IN ONE OF THE BEST COMPANIES IN MOSCOW AND NEW YORK. AMONG MY PROJECTS ARE WEBSITES FOR GERMANY, FINLAND, AUSTRIA, AND RUSSIA.</p>
+                                        I HAVE worked in some OF THE BEST COMPANIES learn&apos;t best practices and industry standards to write clean, readable and reusable codebase.
+                                    </p>
                                 </div>
                             </div>
-
+{/* text-transparent bg-clip-text 
+                            bg-gradient-to-t from-gray-700 via-gray-900 to-black 
+                            dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-40  */}
                             <div>
                                 <SocialMediaLink 
                                     text={"Contact With Me"} 
