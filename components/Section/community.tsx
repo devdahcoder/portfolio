@@ -11,7 +11,7 @@ const Community = (props: Props) => {
     const sliderElementRef = useRef<HTMLDivElement>(null) as RefObject<HTMLDivElement>;
 
     return (
-        <section className="py-20">
+        <section id="community" className="py-20">
             <Slider
                 sliderElementRef={sliderElementRef}
                 contentLength={community?.length}

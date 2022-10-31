@@ -51,7 +51,7 @@ const TalkItem = (props: Props) => {
                 role={"button"} 
                 className="group flex flex-row items-center justify-between border-b py-1 cursor-pointer"
                 >
-                <div className="text-6xl font-normal font-ogg opacity-60 text-transparent bg-clip-text 
+                <div className="text-6xl font-normal font-inter opacity-60 text-transparent bg-clip-text 
                             bg-gradient-to-t from-gray-700 via-gray-900 to-black 
                             dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400">
                     <p>{year}</p>

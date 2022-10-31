@@ -3,6 +3,10 @@ import { useMainContainer } from '../state/main';
 import Logo from './logo';
 import ThemeToggleButton from './theme-toggle-button';
 import { motion } from 'framer-motion';
+import { headerNavigation } from '../context/header-navigation';
+import LinkNavigation from './link-navigation';
+import StaticNavigationLink from './static-navigation-link';
+import { NAVIGATION_TYPE } from '../types/enums';
 
 const Header = () => {
 

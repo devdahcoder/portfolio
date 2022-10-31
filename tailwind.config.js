@@ -27,6 +27,10 @@ module.exports = {
         'ogg': ['Ogg', 'san-serif'],
         'acumin-pro': ['Acumin Pro', 'san-serif'],
         'rubik': ['Rubik', 'san-serif'],
+        'machina': ['Machina', 'sans-serif']
+      },
+      backgroundImage: {
+        'noisy-gradient': "url('/images/noisy-gradient.jpeg')",
       },
       animation: {
         'spin-slow': 'spin 15s linear infinite',

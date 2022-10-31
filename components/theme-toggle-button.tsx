@@ -23,9 +23,9 @@ const ThemeToggleButton = (props: Props) => {
             containerClassName="border rounded-full" 
             className={`p-2 small-xs:p-3 bg-black dark:bg-white transition-all duration-500 ease-linear rounded-full`} 
             icon={
-                whatTheme === 'light' ? 
-                <BsFillMoonStarsFill className={`text-white w-4 h-4 small-mid:w-5 small-mid:h-5 ${whatTheme === 'light' ? "visible opacity-100 scale-100" : "opacity-0 scale-0 invisible"} transition-all delay-300 ease-in-out`} /> : 
-                <BsSunFill className={`text-black w-4 h-4 small-mid:w-5 small-mid:h-5 ${whatTheme === 'dark' ? "visible opacity-100 scale-100" : "opacity-0 scale-0 invisible"} transition-all delay-300 ease-in-out`} />
+                theme === 'light' ? 
+                <BsFillMoonStarsFill className={`text-white w-4 h-4 small-mid:w-5 small-mid:h-5 ${theme === 'light' ? "visible opacity-100 scale-100" : "opacity-0 scale-0 invisible"} transition-all delay-300 ease-in-out`} /> : 
+                <BsSunFill className={`text-black w-4 h-4 small-mid:w-5 small-mid:h-5 ${theme === 'dark' ? "visible opacity-100 scale-100" : "opacity-0 scale-0 invisible"} transition-all delay-300 ease-in-out`} />
             } 
             handleClick={() => handleThemeToggle(theme)}
         />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { getAppLayout } from "../components/layouts/app-layout";
-import Talk from "../components/layouts/talk";
+import Talk from "../components/Section/talk";
 import Loading from "../components/loading";
 import Community from "../components/Section/community";
 import Contact from "../components/Section/contact";
@@ -31,11 +31,11 @@ const Home = () => {
         <div className="">
             <Toaster />
             <HomePage hasPageFullyLoaded={hasPageFullyLoaded} name={name} />
+            <About />
             <Works />
             <Talk />
             <Community />
             <Contributions />
-            <About />
             <Contact />
             <Footer />
         </div>

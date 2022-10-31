@@ -176,7 +176,7 @@ const HomePage = (props: Props) => {
                             variants={memojiMessageVariant}
                             initial="hidden"
                             whileInView={hasPageFullyLoaded ? "visible" : "hidden"}
-                            viewport={{ once: true }}
+                            // viewport={{ once: true }}
                             className="z-10 absolute 
                             -left-3 small-xs:-left-2 small-mid:left-0
                             top-48 small-xs:top-64 small-mid:top-60
