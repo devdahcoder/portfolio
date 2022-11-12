@@ -30,7 +30,7 @@ const Works = (props: Props) => {
             variants={workVariant}
             initial="hidden"
             whileInView="visible"
-            id="work" className="py-28">
+            id="work" className="py-32">
             <Slider
                 sliderElementRef={sliderElementRef}
                 contentLength={myWork?.length}

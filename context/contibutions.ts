@@ -4,7 +4,7 @@ export const contributions: Contribution[] = [
     {
         id: 1,
         picture: 'https://cdn.pixabay.com/photo/2017/02/12/17/35/sunbeam-2060662_960_720.jpg',
-        contributionTitle: '',
+        contributionTitle: 'Tailwind Components',
     },
     {
         id: 2,

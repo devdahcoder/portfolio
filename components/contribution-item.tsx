@@ -21,13 +21,13 @@ const ContributionItem = (props: Props) => {
         >
 
             <div className="flex flex-col items-start justify-end absolute 
-                bg-white opacity-60
+                bg-white opacity-60 
                 left-0 top-0 w-0 h-full transition-all duration-500 ease-linear group-hover:w-full">
-                <div className="fixed m-10 text-4xl font-medium w-full 
+                <div className="fixed left-0 bottom-0 m-10 text-2xl medium-sm:text-3xl large-xs:text-4xl font-medium w-full 
                     transition-all ease-linear delay-75
                     invisible group-hover:visible group-hover:transition-all 
                     group-hover:ease-linear group-hover:duration-500 group-hover:delay-200">
-                    <p>Memoji Placeholder</p>
+                    <p>{ currentItem?.contributionTitle ?? "Memoji Placeholder" }</p>
                 </div>
             </div>
 

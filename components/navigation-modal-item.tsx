@@ -32,8 +32,8 @@ const NavigationModalItem = (props: Props) => {
             variants={navigationVariant}
             className="border-b flex flex-row items-center justify-start medium-xs:justify-center
             ">
-            <Link href={href}>
-                <a onClick={toggleNavigationModal} className="w-fit flex flex-row items-center justify-center font-ogg py-5">
+            <Link href={href} >
+                <a onClick={toggleNavigationModal} target={`${href.includes('https') ? "_blank" : ""}`} className="w-fit flex flex-row items-center justify-center font-ogg py-5">
                     <span className="pl-5 pr-10 text-base py-2">{id > 9 ? '' : '0'}{id}.</span> 
                     <div className="w-fit text-transparent bg-clip-text 
                         bg-gradient-to-t from-gray-700 via-gray-900 to-black 
