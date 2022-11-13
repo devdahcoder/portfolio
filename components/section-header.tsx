@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 type Props = {
     headerText?: string;
@@ -23,7 +23,7 @@ const SectionHeader = (props: Props) => {
 
             <div className={`text-transparent bg-clip-text 
                             bg-gradient-to-t from-gray-700 via-gray-900 to-black 
-                            dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400small-large:text-xl small-large:text-1xl large-xs:text-2xl font-work-sans ${headerClassName}`}>
+                            dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400small-large:text-xl small-large:text-1xl large-xs:text-2xl font-inter ${headerClassName}`}>
                 <p>{headerText}</p>
             </div>
 

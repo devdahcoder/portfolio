@@ -35,7 +35,7 @@
 //                 {currentItem?.header}
 //             </div>
 
-//             <div className="font-work-sans text-xs small-xs:text-sm text-black dark:text-white tracking-wider pr-8 mb-14">
+//             <div className="font-inter text-xs small-xs:text-sm text-black dark:text-white tracking-wider pr-8 mb-14">
 //                 <p>
 //                     An emergency app which give users the ability to - on the spot- report emergency cases near them as happening at exact time of reporting.
 //                 </p>
@@ -59,12 +59,12 @@
 // export default WorkItem
 
 
-import React from 'react'
-import { myWork } from '../context/work';
-import SocialMediaLink from './social-media-link';
-import { BsArrowUpRight } from 'react-icons/bs';
-import { linkClassName, linkIconContainer } from '../styles/global-style';
 import { motion } from 'framer-motion';
+import React from 'react';
+import { BsArrowUpRight } from 'react-icons/bs';
+import { myWork } from '../context/work';
+import { linkClassName, linkIconContainer } from '../styles/global-style';
+import SocialMediaLink from './social-media-link';
 
 
 type Props = {

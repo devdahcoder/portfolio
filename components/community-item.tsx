@@ -34,7 +34,7 @@ const CommunityItem = (props: Props) => {
                             <img className="w-full h-full object-cover" src={currentItem.image} alt="community" />
                         </div>
 
-                        <div className="flex flex-col font-work-sans space-y-1">
+                        <div className="flex flex-col font-inter space-y-1">
                             <div className="text-3xl large-xs:text-4xl font-semibold "><p>{currentItem.communityTitle}</p></div>
                             <div className="text-lg font-medium"><p>Role: <span className="font-semibold">{currentItem.roleInCommunity}</span></p></div>
                         </div>
@@ -45,7 +45,7 @@ const CommunityItem = (props: Props) => {
                     </div>
 
                     <div className="mb-2 medium-sm:mb-10 large-xs:mb-16">
-                        <div className="font-work-sans text-sm">
+                        <div className="font-inter text-sm">
                             <p>{currentItem.description}</p>
                         </div>
                     </div>

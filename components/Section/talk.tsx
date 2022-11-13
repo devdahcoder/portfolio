@@ -1,8 +1,8 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import ContainerLayout from '../container-layout';
 import SectionHeader from '../section-header';
 import TalkList from '../talk-list';
-import { motion } from 'framer-motion';
 
 
 type Props = {}
@@ -34,7 +34,7 @@ const Talk = (props: Props) => {
                             initial={{ x: "100%", opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{ duration: 1, ease: 'easeInOut' }}
-                            className="font-work-sans mr-auto w-[80%] small-xs:w-full text-sm text-transparent bg-clip-text 
+                            className="font-inter mr-auto w-[80%] small-xs:w-full text-sm text-transparent bg-clip-text 
                             bg-gradient-to-t from-gray-700 via-gray-900 to-black 
                             dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400" dir="rtl">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id viverra praesent nisi tempor pharetra vel. Est nisl id ornare condimentum diam nunc suspendisse.</p>

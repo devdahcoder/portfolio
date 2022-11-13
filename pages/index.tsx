@@ -15,21 +15,21 @@ import { Toaster } from 'react-hot-toast';
 
 const Home = () => {
 
-    const { hasPageFullyLoaded, isTextCompleted, loadingTextRefElement, name, isSiteLoading } = useMainContainer();
+    const { hasPageFullyLoaded, isTextCompleted, loadingTextRefElement } = useMainContainer();
 
-    if (isSiteLoading) {
+    if (!hasPageFullyLoaded) {
         return (
-            <Loading 
+            <Loading
                 isTextCompleted={isTextCompleted}
                 hasPageFullyLoaded={hasPageFullyLoaded}
                 loadingTextRefElement={loadingTextRefElement}
             />
-        )
+        );
     }
 
     return (
         <div className="">
-            <Toaster />
+            {/* <Toaster />
             <HomePage hasPageFullyLoaded={hasPageFullyLoaded} name={name} />
             <About />
             <Works />
@@ -37,7 +37,7 @@ const Home = () => {
             <Community />
             <Contributions />
             <Contact />
-            <Footer />
+            <Footer /> */}
         </div>
     );
 };

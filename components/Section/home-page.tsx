@@ -1,12 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
-import NameStrike from '../../public/icons/name-strike';
-import SocialMediaLink from '../social-media-link';
-import { BsArrowUpRight } from 'react-icons/bs';
-import { linkClassName, linkIconContainer } from '../../styles/global-style';
-import WavingMemoji from '../../public/icons/waving-memoji';
-import ContainerLayout from '../container-layout';
 import { motion, useScroll } from 'framer-motion';
+import React from 'react';
+import { BsArrowUpRight } from 'react-icons/bs';
+import NameStrike from '../../public/icons/name-strike';
+import WavingMemoji from '../../public/icons/waving-memoji';
+import { linkClassName, linkIconContainer } from '../../styles/global-style';
+import ContainerLayout from '../container-layout';
+import SocialMediaLink from '../social-media-link';
 
 
 type Props = {
@@ -108,7 +108,7 @@ const HomePage = (props: Props) => {
 
 
                     <div className="
-                        font-work-sans transition-all duration-500 ease-linear
+                        font-inter transition-all duration-500 ease-linear
                         w-full large-sm:max-w-[90%] extra-large-mid:max-w-[78%]
                         small-xs:text-base large-sm:text-lg 
                         large-sm:pr-5

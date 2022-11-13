@@ -20,7 +20,6 @@ module.exports = {
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
         'vollkorn': ['Vollkorn', 'serif'],
-        'work-sans': ['Work Sans', 'sans-serif'],
         'quick-sand': ['Quicksand', 'sans-serif'],
         'pencerio': ['pencerio', 'san-serif'],
         'libre': ['Libre Baskerville', 'san-serif'],

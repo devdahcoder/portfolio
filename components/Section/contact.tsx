@@ -1,13 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useRef, useState } from 'react'
-import Input from '../input';
-import { TiLocationArrowOutline } from 'react-icons/ti';
 import emailjs from '@emailjs/browser';
-import { Formik, Form, useField, Field } from 'formik';
-import { ContactInitValue } from '../../types';
+import { Field, Form, Formik, useField } from 'formik';
+import React, { useRef, useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
+import { TiLocationArrowOutline } from 'react-icons/ti';
 import * as Yup from 'yup';
-import toast, { Toaster } from 'react-hot-toast'
 import { useMainContainer } from '../../state/main';
+import { ContactInitValue } from '../../types';
+import Input from '../input';
 
 
 type Props = {}
@@ -93,7 +93,7 @@ const Contact = (props: Props) => {
                             return (
                                 <Form ref={formRef}>
 
-                                    <div className="flex flex-col space-y-7 font-work-sans">
+                                    <div className="flex flex-col space-y-7 font-inter">
                                         
                                         <div>
                                             <Input 
