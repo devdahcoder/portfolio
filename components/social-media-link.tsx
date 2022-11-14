@@ -23,7 +23,8 @@ const SocialMediaLink = (props: Props) => {
                 target="_blank" 
                 rel="noopener noreferrer"
             >
-                {props?.text} <span className={`${props?.iconContainerClassName}`}>
+                {props?.text}
+                <span className={`${props?.iconContainerClassName}`}>
                     {props?.icon}
                 </span>
             </a>

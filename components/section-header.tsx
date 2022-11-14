@@ -21,9 +21,8 @@ const SectionHeader = (props: Props) => {
                 <h1>{sectionTitle}</h1>
             </div>
 
-            <div className={`text-transparent bg-clip-text 
-                            bg-gradient-to-t from-gray-700 via-gray-900 to-black 
-                            dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400small-large:text-xl small-large:text-1xl large-xs:text-2xl font-inter ${headerClassName}`}>
+            <div className={`text-transparent bg-clip-text bg-gradient-to-t from-gray-700 via-gray-900 to-black 
+                    dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400small-large:text-xl small-large:text-1xl large-xs:text-2xl font-inter ${headerClassName}`}>
                 <p>{headerText}</p>
             </div>
 

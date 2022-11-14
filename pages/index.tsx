@@ -15,7 +15,7 @@ import { Toaster } from 'react-hot-toast';
 
 const Home = () => {
 
-    const { hasPageFullyLoaded, isTextCompleted, loadingTextRefElement } = useMainContainer();
+    const { hasPageFullyLoaded, isTextCompleted, loadingTextRefElement, name } = useMainContainer();
 
     if (!hasPageFullyLoaded) {
         return (
@@ -29,15 +29,15 @@ const Home = () => {
 
     return (
         <div className="">
-            {/* <Toaster />
+            <Toaster />
             <HomePage hasPageFullyLoaded={hasPageFullyLoaded} name={name} />
             <About />
             <Works />
-            <Talk />
+            {/* <Talk /> */}
             <Community />
             <Contributions />
             <Contact />
-            <Footer /> */}
+            <Footer />
         </div>
     );
 };

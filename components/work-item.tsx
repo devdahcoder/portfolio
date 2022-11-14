@@ -104,23 +104,23 @@ const WorkItem = (props: Props) => {
             <div className="flex flex-row items-center justify-between text-transparent bg-clip-text 
                             bg-gradient-to-t from-gray-700 via-gray-900 to-black 
                             dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400">
-                <div className="font-medium text-2xl">
+                <div className="font-machina font-semibold text-2xl">
                     <p>KaseFile</p>
                 </div>
 
-                <div className="font-inter text-sm">
+                <div className="font-machina text-sm">
                     <p>NG</p>
                 </div>
             </div>
 
-            <div className="font-inter w-[95%] text-sm pb-11 text-transparent bg-clip-text 
+            <div className="font-inter tracking-wider text-base pb-11 text-transparent bg-clip-text 
                             bg-gradient-to-t from-gray-700 via-gray-900 to-black 
                             dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400">
                 <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint illum ab tempore iste, eos distinctio enim perferendis dignissimos, incidunt eius rem ipsam quia at aperiam facere officia nihil? Mollitia, quod.</p>
             </div>
 
             <div className="flex flex-row items-center justify-between">
-                <div className="text-transparent bg-clip-text 
+                <div className="font-machina text-transparent bg-clip-text 
                             bg-gradient-to-t from-gray-700 via-gray-900 to-black 
                             dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400">
                     <p>20/20/2011</p>
@@ -130,9 +130,9 @@ const WorkItem = (props: Props) => {
                     <SocialMediaLink 
                         text={"Website Link"} 
                         href={`https://twitter.com/devdahcoder`} 
-                        linkClassName={linkClassName} 
+                        linkClassName={`font-machina ${linkClassName}`} 
                         icon={<BsArrowUpRight />}
-                        iconContainerClassName={linkIconContainer}
+                        iconContainerClassName={`${linkIconContainer}`}
                     />
                 </div>
             </div>
