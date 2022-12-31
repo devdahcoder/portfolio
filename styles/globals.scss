@@ -1,85 +1,141 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Vollkorn:wght@400;500;600;700;800&family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Vollkorn:wght@400;500;600;700;800&family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
-  font-family: Ogg;
-  src: url('../public/fonts/Ogg-Roman.otf');
+	font-family: Ogg;
+	src: url("../public/fonts/Ogg-Roman.otf");
 }
 
 @font-face {
-  font-family: Machina;
-  src: url('../public/fonts/machina/NeueMachina-Regular.otf');
+	font-family: Machina;
+	src: url("../public/fonts/machina/NeueMachina-Regular.otf");
 }
 
 * {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-  font-family: Vollkorn, Inter, Ogg, Machina, -apple-system, sans-serif;
+	padding: 0;
+	margin: 0;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+	font-family: Vollkorn, Inter, Ogg, Machina, -apple-system, sans-serif;
 
-    &::-webkit-scrollbar {
-      width: 0.5rem;
-    }
+	&::-webkit-scrollbar {
+		width: 0.5rem;
+	}
 
-    &::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.3);
-    }
+	&::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.3);
+	}
 
-    &::-webkit-scrollbar-thumb {
-      background-color: hsl(225, 14%, 89%);
-      border-radius: 20px;
-      color: hsl(0, 0%, 96%);
-    }
+	&::-webkit-scrollbar-thumb {
+		background-color: hsl(225, 14%, 89%);
+		border-radius: 20px;
+		color: hsl(0, 0%, 96%);
+	}
 
-    
-  .left-bg-oval {
-    background: #1ED291;
-    filter: blur(150px);
-    transform: matrix(-0.36, -0.93, 0.93, -0.36, 0, 0);
-  }
+	.left-bg-oval {
+		background: #1ed291;
+		filter: blur(150px);
+		transform: matrix(-0.36, -0.93, 0.93, -0.36, 0, 0);
+	}
 
-  .right-bg-oval {
-    background: #00754B;
-    filter: blur(150px);
-    transform: matrix(0.62, -0.78, 0.78, 0.62, 0, 0);
-  }
+	.right-bg-oval {
+		background: #00754b;
+		filter: blur(150px);
+		transform: matrix(0.62, -0.78, 0.78, 0.62, 0, 0);
+	}
 }
 
 .custom-sidebar {
-  &::-webkit-scrollbar {
-      width: 0.5rem;
-    }
+	&::-webkit-scrollbar {
+		width: 0.5rem;
+	}
 
-    &::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.3);
-    }
+	&::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.3);
+	}
 
-    &::-webkit-scrollbar-thumb {
-      background-color: hsl(225, 14%, 89%);
-      border-radius: 20px;
-      color: hsl(0, 0%, 96%);
-    }
+	&::-webkit-scrollbar-thumb {
+		background-color: hsl(225, 14%, 89%);
+		border-radius: 20px;
+		color: hsl(0, 0%, 96%);
+	}
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .example::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .example {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
+	-ms-overflow-style: none;
+	/* IE and Edge */
+	scrollbar-width: none;
+	/* Firefox */
+}
+.experience--li {
+	-webkit-text-size-adjust: 100%;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	font-kerning: auto;
+	cursor: pointer;
+	transform-style: preserve-3d;
+
+	.experience--li--container {
+		// transform: rotateY(-45deg) translateZ(0) scale(1);
+		transform-origin: right center;
+		transform-style: preserve-3d;
+		will-change: transform;
+		transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+		transform: perspective(1900px) rotateY(-40deg);
+		&:hover {
+			// transform: rotateY(-35deg) translateZ(0) scale(1);
+			transform: rotateY(-35deg) translateZ(0);
+			// transition-duration: 1s;
+			// transform: perspective(1200px) rotateY(-40deg);
+			// transition: 0.45s;
+			// transform-origin: right center;
+			transform-style: preserve-3d;
+			will-change: transform;
+		}
+
+		p {
+			--transform-y: 0%;
+			font-style: normal;
+			font-stretch: normal;
+			display: block;
+			text-align: right;
+			text-transform: uppercase;
+			font-weight: 900;
+			font-size: 9vw;
+			letter-spacing: 0.02em;
+			line-height: 0.9em;
+			transform-origin: right center;
+			transition: color 0.2s ease-in-out, transform 0.5s;
+			-webkit-text-stroke: 2px #000;
+			color: #000;
+			// transform: rotateY(0deg) translateZ(0);
+			position: relative;
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0.23em;
+				left: -0.3em;
+				width: 2px;
+				height: 0.85em;
+				background-color: #000;
+				transform: rotate(25deg);
+				pointer-events: none;
+			}
+		}
+	}
 }

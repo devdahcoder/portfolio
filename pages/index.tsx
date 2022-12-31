@@ -1,16 +1,17 @@
 import React from 'react';
 import { getAppLayout } from "../components/layouts/app-layout";
-import Talk from "../components/Section/talk";
+import Talk from "../components/section/talk";
 import Loading from "../components/loading";
-import Community from "../components/Section/community";
-import Contact from "../components/Section/contact";
-import Contributions from "../components/Section/contributions";
-import HomePage from "../components/Section/home-page";
-import Works from "../components/Section/works";
-import About from '../components/Section/about'
-import Footer from "../components/Section/footer";
+import Community from "../components/section/community";
+import Contact from "../components/section/contact";
+import Contributions from "../components/section/contributions";
+import HomePage from "../components/section/home-page";
+import Works from "../components/section/works";
+import About from '../components/section/about'
+import Footer from "../components/section/footer";
 import { useMainContainer } from "../state/main";
 import { Toaster } from 'react-hot-toast';
+import Experience from '../components/section/experience';
 
 
 const Home = () => {
@@ -28,18 +29,20 @@ const Home = () => {
     }
 
     return (
-        <div className="">
-            <Toaster />
-            <HomePage hasPageFullyLoaded={hasPageFullyLoaded} name={name} />
-            <About />
-            <Works />
-            {/* <Talk /> */}
-            <Community />
-            <Contributions />
-            <Contact />
-            <Footer />
-        </div>
-    );
+		<div className="">
+			<Toaster />
+			<HomePage hasPageFullyLoaded={hasPageFullyLoaded} name={name} />
+			<About />
+			<Experience />
+			<Works />
+			{/* turn talks to experience */}
+			<Talk />
+			<Community />
+			<Contributions />
+			<Contact />
+			<Footer />
+		</div>
+	);
 };
 
 Home.getLayout = getAppLayout;

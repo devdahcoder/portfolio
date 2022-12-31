@@ -30,6 +30,7 @@ const Works = (props: Props) => {
 			variants={workVariant}
 			initial="hidden"
 			whileInView="visible"
+			viewport={{ once: true }}
 			id="work"
 			className="py-36"
 		>
