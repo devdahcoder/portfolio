@@ -1,42 +1,41 @@
-import React from 'react';
+import React from "react";
+import { Toaster } from "react-hot-toast";
 import { getAppLayout } from "../components/layouts/app-layout";
-import Talk from "../components/section/talk";
 import Loading from "../components/loading";
+import About from "../components/section/about";
 import Community from "../components/section/community";
 import Contact from "../components/section/contact";
 import Contributions from "../components/section/contributions";
-import HomePage from "../components/section/home-page";
-import Works from "../components/section/works";
-import About from '../components/section/about'
+import Experience from "../components/section/experience";
 import Footer from "../components/section/footer";
+import HomePage from "../components/section/home-page";
+import Talk from "../components/section/talk";
+import Works from "../components/section/works";
 import { useMainContainer } from "../state/main";
-import { Toaster } from 'react-hot-toast';
-import Experience from '../components/section/experience';
-
 
 const Home = () => {
+	const { hasPageFullyLoaded, isTextCompleted, loadingTextRefElement, name } =
+		useMainContainer();
 
-    const { hasPageFullyLoaded, isTextCompleted, loadingTextRefElement, name } = useMainContainer();
+	if (!hasPageFullyLoaded) {
+		return (
+			<Loading
+				isTextCompleted={isTextCompleted}
+				hasPageFullyLoaded={hasPageFullyLoaded}
+				loadingTextRefElement={loadingTextRefElement}
+			/>
+		);
+	}
 
-    if (!hasPageFullyLoaded) {
-        return (
-            <Loading
-                isTextCompleted={isTextCompleted}
-                hasPageFullyLoaded={hasPageFullyLoaded}
-                loadingTextRefElement={loadingTextRefElement}
-            />
-        );
-    }
-
-    return (
+	return (
 		<div className="">
 			<Toaster />
 			<HomePage hasPageFullyLoaded={hasPageFullyLoaded} name={name} />
-			<About />
-			<Experience />
+			{/* <About /> */}
+			{/* <Experience /> */}
 			<Works />
-			{/* turn talks to experience */}
-			<Talk />
+			{/* Coming soon */}
+			{/* <Talk /> */}
 			<Community />
 			<Contributions />
 			<Contact />

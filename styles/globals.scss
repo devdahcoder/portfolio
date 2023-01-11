@@ -88,26 +88,45 @@ body {
 	font-kerning: auto;
 	cursor: pointer;
 	transform-style: preserve-3d;
+	border: 1px solid red;
 
 	.experience--li--container {
-		// transform: rotateY(-45deg) translateZ(0) scale(1);
+		transform: rotateY(-45deg) translateZ(0) scale(1);
 		transform-origin: right center;
 		transform-style: preserve-3d;
 		will-change: transform;
 		transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-		transform: perspective(1900px) rotateY(-40deg);
-		&:hover {
-			// transform: rotateY(-35deg) translateZ(0) scale(1);
-			transform: rotateY(-35deg) translateZ(0);
-			// transition-duration: 1s;
-			// transform: perspective(1200px) rotateY(-40deg);
-			// transition: 0.45s;
-			// transform-origin: right center;
-			transform-style: preserve-3d;
-			will-change: transform;
-		}
+		line-height: 1.15;
+		font-size: 14px;
+		font-weight: 400;
+		-webkit-text-size-adjust: 100%;
+		color: #f2f2f2;
+		visibility: visible;
+		list-style: none;
+		cursor: pointer;
+		box-sizing: inherit;
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
+		font-kerning: auto;
+		transform-origin: right center;
+		transform-style: preserve-3d;
+		will-change: transform;
+		border: 1px solid white;
+		// transform: perspective(1200px) rotateY(-45deg) translateZ(0) scale(1);
+		// rotateX(7deg)
+		// &:hover {
+		// 	// transform: rotateY(-35deg) translateZ(0) scale(1);
+		// 	transform: rotateY(-35deg) translateZ(0);
+		// 	// transition-duration: 1s;
+		// 	// transform: perspective(1200px) rotateY(-40deg);
+		// 	// transition: 0.45s;
+		// 	// transform-origin: right center;
+		// 	transform-style: preserve-3d;
+		// 	will-change: transform;
+		// }
 
-		p {
+		a {
+			// transform: perspective(1200px) rotateY(-45deg) translateZ(0) scale(1);
 			--transform-y: 0%;
 			font-style: normal;
 			font-stretch: normal;
@@ -115,7 +134,7 @@ body {
 			text-align: right;
 			text-transform: uppercase;
 			font-weight: 900;
-			font-size: 9vw;
+			font-size: 11vw;
 			letter-spacing: 0.02em;
 			line-height: 0.9em;
 			transform-origin: right center;
@@ -125,17 +144,34 @@ body {
 			// transform: rotateY(0deg) translateZ(0);
 			position: relative;
 
-			&::after {
-				content: "";
-				position: absolute;
-				top: 0.23em;
-				left: -0.3em;
-				width: 2px;
-				height: 0.85em;
-				background-color: #000;
-				transform: rotate(25deg);
-				pointer-events: none;
-			}
+			// &::before {
+			// 	content: '2022';
+			// 	white-space: pre;
+			// 	position: absolute;
+			// 	top: 3.7em;
+			// 	left: -250px;
+			// 	width: 200px;
+			// 	text-align: right;
+			// 	font-size: 0.7vw;
+			// 	font-weight: 500;
+			// 	letter-spacing: 0;
+			// 	line-height: 1em;
+			// 	color: #000 !important;
+			// 	pointer-events: none;
+			// 	transition: none;
+			// }
+
+			// &::after {
+			// 	content: "";
+			// 	position: absolute;
+			// 	top: 0.23em;
+			// 	left: -0.3em;
+			// 	width: 2px;
+			// 	height: 0.85em;
+			// 	background-color: #000;
+			// 	transform: rotate(25deg);
+			// 	pointer-events: none;
+			// }
 		}
 	}
 }

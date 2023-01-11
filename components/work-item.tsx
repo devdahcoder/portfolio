@@ -31,19 +31,29 @@ const WorkItem = (props: Props) => {
 			variants={workItemVariant}
 			key={index}
 			className="
-                group relative rounded-sm w-full min-w-[26rem] medium-sm:min-w-[28rem] large-xs:min-w-[30rem] h-full flex flex-col  
+                group overflow-hidden relative rounded-sm w-full min-w-[26rem] medium-sm:min-w-[28rem] large-xs:min-w-[30rem] h-full flex flex-col  
                 border-2 border-green-200 select-none cursor-pointer transition-all ease-linear duration-500
                 mr-5 p-5 space-y-4
                 
                 "
 		>
+			{currentItem?.image && (
+				<div className="absolute w-full h-full top-0 left-0 -z-30 opacity-30 ">
+					<img
+						className="w-full h-full object-cover group-hover:scale-125 transition-all duration-500 ease-in-out"
+						src={`${currentItem?.image}`}
+						alt=""
+					/>
+				</div>
+			)}
+
 			<div
 				className="flex flex-row items-center justify-between text-transparent bg-clip-text 
                             bg-gradient-to-t from-gray-700 via-gray-900 to-black 
                             dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400"
 			>
 				<div className="font-machina font-semibold text-2xl">
-					<p>KaseFile</p>
+					<p>{currentItem?.header}</p>
 				</div>
 
 				<div className="font-machina text-sm">
@@ -51,18 +61,8 @@ const WorkItem = (props: Props) => {
 				</div>
 			</div>
 
-			<div
-				className="font-inter tracking-wider text-base pb-11 text-transparent bg-clip-text 
-                            bg-gradient-to-t from-gray-700 via-gray-900 to-black 
-                            dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400"
-			>
-				<p>
-					{" "}
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Sint illum ab tempore iste, eos distinctio enim perferendis
-					dignissimos, incidunt eius rem ipsam quia at aperiam facere
-					officia nihil? Mollitia, quod.
-				</p>
+			<div className="font-inter tracking-wider text-base pb-11 text-transparent text-black dark:text-white">
+				<p>{currentItem?.description}</p>
 			</div>
 
 			<div className="flex flex-row items-center justify-between">
@@ -77,7 +77,7 @@ const WorkItem = (props: Props) => {
 				<div>
 					<SocialMediaLink
 						text={"Website Link"}
-						href={`https://twitter.com/devdahcoder`}
+						href={`${currentItem?.href}`}
 						linkClassName={`font-machina ${linkClassName}`}
 						icon={<RightTailedArrow className={`-rotate-45`} />}
 						iconContainerClassName={`${linkIconContainer}`}

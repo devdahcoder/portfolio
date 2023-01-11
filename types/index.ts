@@ -55,3 +55,11 @@ export type ContactInitValue = {
     email: string;
     message: string;
 }
+
+export type Experience = {
+    id?: number;
+    companyName?: string;
+    year?: string;
+    className?: string;
+    containerClassName?: string;
+}

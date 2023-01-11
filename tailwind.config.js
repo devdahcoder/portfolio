@@ -20,12 +20,7 @@ module.exports = {
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
         'vollkorn': ['Vollkorn', 'serif'],
-        'quick-sand': ['Quicksand', 'sans-serif'],
-        'pencerio': ['pencerio', 'san-serif'],
-        'libre': ['Libre Baskerville', 'san-serif'],
         'ogg': ['Ogg', 'san-serif'],
-        'acumin-pro': ['Acumin Pro', 'san-serif'],
-        'rubik': ['Rubik', 'san-serif'],
         'machina': ['Machina', 'sans-serif']
       },
       backgroundImage: {
