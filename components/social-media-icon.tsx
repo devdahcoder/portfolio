@@ -11,7 +11,7 @@ const SocialMediaIcon = (props: Props) => {
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
         >
-            <a style={style} className={`border border-black dark:border-white rounded-md p-3 flex flex-col items-center justify-center ${className}`} role="button" href={`http://${href}`} target="_blank" rel="noopener noreferrer">
+            <a style={style} className={`rounded-md p-2 flex flex-col items-center justify-center ${className}`} role="button" href={`http://${href}`} target="_blank" rel="noopener noreferrer">
                 <Icon />
             </a>
         </motion.div>

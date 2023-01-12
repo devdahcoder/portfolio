@@ -42,7 +42,6 @@ module.exports = {
         },
         'slow-bounce': {
           '0% 100%': { transform: 'translateY(0)'},
-          // '30%': { transform: 'translateY(-20px)'},
           '50%': { transform: 'translateY(-100px)'}
         }
       },

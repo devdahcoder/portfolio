@@ -21,7 +21,7 @@ const Header = () => {
 			<div className="flex flex-row items-center justify-between grow px-2 small-xs:px-5 medium-sm:px-10 extra-large-xs:px-20 py-7">
 				<div
 					className={`${
-						hasPageFullyLoaded ? "z-50" : ""
+						hasPageFullyLoaded ? "z-50" : "-z-50"
 					} flex flex-row items-center`}
 				>
 					<Logo />

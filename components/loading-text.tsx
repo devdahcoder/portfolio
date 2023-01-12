@@ -22,7 +22,7 @@ const LoadingText: (props: Props) => JSX.Element = (props: Props) => {
         <div className="text-center z-30 flex flex-col items-center justify-center 
             transition-all duration-500 ease-in-out">
                 
-            <div className="text-5xl small-xs:text-6xl medium-xs:text-7xl medium-sm:text-8xl capitalize transition-all ease-in-out">
+            <div className="text-6xl medium-xs:text-7xl medium-sm:text-8xl capitalize transition-all ease-in-out">
                 <p className={`${!props?.isTextCompleted && 'animate-blinker'} text-transparent bg-clip-text 
                             bg-gradient-to-t from-gray-700 via-gray-900 to-black 
                             dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400 transition-all ease-in-out`} ref={props?.loadingTextRefElement}></p>
@@ -33,7 +33,7 @@ const LoadingText: (props: Props) => JSX.Element = (props: Props) => {
                 initial="hidden"
                 animate={props?.isTextCompleted ? "visible" : "hidden" }
                 className={`
-                    relative text-xs small-xs:text-base medium-xs:text-xl flex flex-col small-mid:flex-row items-center 
+                    relative text-base medium-xs:text-xl flex flex-col small-mid:flex-row items-center 
                     text-transparent bg-clip-text 
                             bg-gradient-to-t from-gray-700 via-gray-900 to-black 
                             dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400
