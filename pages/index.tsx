@@ -16,17 +16,7 @@ import { useMainContainer } from "../state/main";
 const Home = () => {
 	const { hasPageFullyLoaded, isTextCompleted, loadingTextRefElement, name } =
 		useMainContainer();
-
-	// if (!hasPageFullyLoaded) {
-	// 	return (
-	// 		<Loading
-	// 			isTextCompleted={isTextCompleted}
-	// 			hasPageFullyLoaded={hasPageFullyLoaded}
-	// 			loadingTextRefElement={loadingTextRefElement}
-	// 		/>
-	// 	);
-	// }
-
+	
 	return (
 		<div className="">
 			<Loading
@@ -39,13 +29,13 @@ const Home = () => {
 				hasPageFullyLoaded={hasPageFullyLoaded}
 				name={name}
 			/>
-			{/* <About /> */}
+			<About />
 			<Works />
 			{/* <Experience /> */}
 			{/* Coming soon */}
 			{/* <Talk /> */}
-			{/* <Community />
-			<Contributions /> */}
+			<Community />
+			<Contributions />
 			<Contact />
 			<Footer />
 		</div>

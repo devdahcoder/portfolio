@@ -7,6 +7,7 @@ import WavingEmoji from "../../public/icons/waving-emoji";
 import { linkClassName, linkIconContainer } from "../../styles/global-style";
 import ContainerLayout from "../container-layout";
 import SocialMediaLink from "../social-media-link";
+import { WindowSize } from "../../hooks";
 
 type Props = {
 	name: string;
@@ -23,6 +24,7 @@ const HomePage = (props: Props) => {
 	const { scrollYProgress } = useScroll({ target: ref });
 	const y = useParallax(scrollYProgress, 50);
 	const splitName = name && name?.split("");
+	const width = WindowSize();
 
 	const emojiVariant = {
 		hidden: { opacity: 0, scale: 0 },
@@ -65,20 +67,19 @@ const HomePage = (props: Props) => {
                             min-w-fit"
 					>
 						<motion.div
-							ref={ref}
 							className="medium-xs:flex medium-xs:flex-row medium-xs:items-center
-                            text-transparent bg-clip-text 
-                            bg-gradient-to-t from-gray-700 via-gray-900 to-black 
-                            dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400
+                            text-transparent text-black dark:text-white
                             "
-							style={{ y }}
 						>
-							Hi, I am
+							<motion.div ref={ref} style={{ y: useParallax(scrollYProgress, 50) }} className="">
+								Hi, I am
+							</motion.div>
+
 							<motion.div
+								ref={ref}
+								style={{ y: useParallax(scrollYProgress, (width < 600 ? 25 : 50)) }}
 								className="
-                                text-transparent bg-clip-text 
-                                bg-gradient-to-t from-gray-700 via-gray-900 to-black 
-                                dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400
+                                text-transparent text-black dark:text-white
                                 flex flex-row w-fit relative pt-5 medium-xs:pt-0 medium-xs:ml-2 extra-large-xs:ml-4"
 							>
 								{splitName &&
@@ -108,9 +109,7 @@ const HomePage = (props: Props) => {
                         w-full large-sm:max-w-[90%] extra-large-mid:max-w-[78%]
                         small-xs:text-base large-sm:text-lg 
                         large-sm:pr-5
-                        text-transparent bg-clip-text 
-                            bg-gradient-to-t from-gray-700 via-gray-900 to-black 
-                            dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400
+                        text-transparent text-black dark:text-white
                         "
 					>
 						<p>

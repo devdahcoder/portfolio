@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import React from "react";
 import { BsArrowUpRight } from "react-icons/bs";
+import SectionHeader from "../section-header";
 import SocialMediaLink from "../social-media-link";
 
 type Props = {};
@@ -9,10 +11,15 @@ const About = (props: Props) => {
 	return (
 		<section
 			id="about"
-			className="border-t border-b border-black  px-2 small-xs:px-5 medium-sm:px-10 extra-large-xs:px-20 font-inter "
+			className="mt-20 mb-16 flex flex-col gap-y-8 px-2 small-xs:px-5 medium-sm:px-10 extra-large-xs:px-20 "
 		>
+			<SectionHeader
+				headerText={"Selected Projects"}
+				sectionTitle={"About Me"}
+			/>
+
 			<div className="flex flex-col justify-between large-xs:flex-row text-center large-xs:text-start space-y-8 large-xs:space-y-0 bg-noisy-gradient bg-cover">
-				<div className="w-full border-l border-r border-black py-16">
+				<div className="w-full py-16">
 					<div className="flex flex-col space-y-10 w-10/12 my-0 mx-auto">
 						<div
 							className="text-4xl font-machina font-semibold space-y-1 text-transparent bg-clip-text 
@@ -28,7 +35,7 @@ const About = (props: Props) => {
 							</div>
 						</div>
 
-						<div className="flex flex-col space-y-8">
+						<div className="flex flex-col space-y-8 font-inter ">
 							<div className="flex flex-col uppercase space-y-8 ">
 								<div>
 									<p>
@@ -75,12 +82,16 @@ const About = (props: Props) => {
 					</div>
 				</div>
 
-				<div className="group block w-full border-r border-black">
+				<div className="group block w-full">
 					<div className="relative block pb-[100%] overflow-hidden w-full h-full opacity-30">
-						<img
-							className="group-hover:scale-125 absolute top-0 left-0 select-none w-full h-full object-cover will-change-transform transition-all duration-500 ease-in-out"
+						<Image
+							className="group-hover:scale-125 absolute top-0 left-0 select-none w-full h-full object-cover will-change-transform transition-all duration-500 ease-in-out bg-fixed bg-center bg-cover bg-image"
 							src="/images/photo.jpg"
 							alt=""
+							layout="fill"
+							objectFit="cover"
+							quality={70}
+							priority={true}
 						/>
 					</div>
 				</div>
