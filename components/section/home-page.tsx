@@ -1,10 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import { motion, useScroll } from "framer-motion";
-import React from "react";
-import { BsArrowUpRight } from "react-icons/bs";
+import { MotionValue, motion, useScroll, useTransform, useViewportScroll } from "framer-motion";
+import React, { useRef } from "react";
 import RightTailedArrow from "../../icon/right-tailed-arrow";
 import NameStrike from "../../public/icons/name-strike";
-import WavingMemoji from "../../public/icons/waving-memoji";
+import WavingEmoji from "../../public/icons/waving-emoji";
 import { linkClassName, linkIconContainer } from "../../styles/global-style";
 import ContainerLayout from "../container-layout";
 import SocialMediaLink from "../social-media-link";
@@ -14,29 +13,28 @@ type Props = {
 	hasPageFullyLoaded: boolean;
 };
 
+function useParallax(value: MotionValue<number>, distance: number) {
+	return useTransform(value, [0, 0.9], [-distance, distance]);
+}
+
 const HomePage = (props: Props) => {
 	const { hasPageFullyLoaded, name } = props;
-
-	const { scrollYProgress } = useScroll();
-
+	const ref = useRef<HTMLDivElement>(null) as React.MutableRefObject<HTMLDivElement>;
+	const { scrollYProgress } = useScroll({ target: ref });
+	const y = useParallax(scrollYProgress, 50);
 	const splitName = name && name?.split("");
 
-	const variants = {
-		open: { opacity: 1, x: 0 },
-		closed: { opacity: 0, x: "-200%" },
-	};
-
-	const memojiVariant = {
+	const emojiVariant = {
 		hidden: { opacity: 0, scale: 0 },
 		visible: { opacity: 1, scale: 1 },
 	};
 
-	const memojiIconVariant = {
+	const emojiIconVariant = {
 		hidden: { opacity: 0, scale: 0, y: "-100%" },
 		visible: { opacity: 1, scale: 1, y: 0, transition: { delay: 1 } },
 	};
 
-	const memojiMessageVariant = {
+	const emojiMessageVariant = {
 		hidden: { scale: 0, y: "-100%" },
 		visible: {
 			scale: 1,
@@ -67,14 +65,16 @@ const HomePage = (props: Props) => {
                             min-w-fit"
 					>
 						<motion.div
+							ref={ref}
 							className="medium-xs:flex medium-xs:flex-row medium-xs:items-center
                             text-transparent bg-clip-text 
                             bg-gradient-to-t from-gray-700 via-gray-900 to-black 
                             dark:bg-radial-at-l dark:from-white dark:via-slate-200 dark:to-gray-400
                             "
+							style={{ y }}
 						>
 							Hi, I am
-							<div
+							<motion.div
 								className="
                                 text-transparent bg-clip-text 
                                 bg-gradient-to-t from-gray-700 via-gray-900 to-black 
@@ -98,7 +98,7 @@ const HomePage = (props: Props) => {
                                         absolute -bottom-1 right-0 z-0 opacity-0 w-full group-hover:opacity-100 
                                         group-hover:z-10 transition-all ease-in-out duration-700"
 								/>
-							</div>
+							</motion.div>
 						</motion.div>
 					</motion.div>
 
@@ -152,7 +152,7 @@ const HomePage = (props: Props) => {
 
 				<div className="flex flex-col items-center transition-all ease-in-out duration-500  w-full max-w-[23rem]">
 					<motion.div
-						variants={memojiVariant}
+						variants={emojiVariant}
 						initial="hidden"
 						whileInView={hasPageFullyLoaded ? "visible" : "hidden"}
 						viewport={{ once: true }}
@@ -164,7 +164,7 @@ const HomePage = (props: Props) => {
                             ease-in-out duration-500"
 					>
 						<motion.div
-							variants={memojiMessageVariant}
+							variants={emojiMessageVariant}
 							initial="hidden"
 							whileInView={
 								hasPageFullyLoaded ? "visible" : "hidden"
@@ -181,7 +181,7 @@ const HomePage = (props: Props) => {
 							<p>Hi, I am Olamide</p>
 						</motion.div>
 						<motion.div
-							variants={memojiIconVariant}
+							variants={emojiIconVariant}
 							initial="hidden"
 							whileInView={
 								hasPageFullyLoaded ? "visible" : "hidden"
@@ -198,7 +198,7 @@ const HomePage = (props: Props) => {
 							<img
 								className="w-full h-full object-contain"
 								src="./images/wave.png"
-								alt="memoji"
+								alt="waving-emoji"
 							/>
 						</motion.div>
 					</motion.div>

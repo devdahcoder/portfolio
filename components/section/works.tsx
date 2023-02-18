@@ -32,7 +32,7 @@ const Works = (props: Props) => {
 			whileInView="visible"
 			viewport={{ once: true }}
 			id="work"
-			className="py-36"
+			className="pb-36 py-24"
 		>
 			<Slider
 				sliderElementRef={sliderElementRef}

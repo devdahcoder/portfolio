@@ -17,27 +17,35 @@ const Home = () => {
 	const { hasPageFullyLoaded, isTextCompleted, loadingTextRefElement, name } =
 		useMainContainer();
 
-	if (!hasPageFullyLoaded) {
-		return (
+	// if (!hasPageFullyLoaded) {
+	// 	return (
+	// 		<Loading
+	// 			isTextCompleted={isTextCompleted}
+	// 			hasPageFullyLoaded={hasPageFullyLoaded}
+	// 			loadingTextRefElement={loadingTextRefElement}
+	// 		/>
+	// 	);
+	// }
+
+	return (
+		<div className="">
 			<Loading
 				isTextCompleted={isTextCompleted}
 				hasPageFullyLoaded={hasPageFullyLoaded}
 				loadingTextRefElement={loadingTextRefElement}
 			/>
-		);
-	}
-
-	return (
-		<div className="">
 			<Toaster />
-			<HomePage hasPageFullyLoaded={hasPageFullyLoaded} name={name} />
+			<HomePage
+				hasPageFullyLoaded={hasPageFullyLoaded}
+				name={name}
+			/>
 			{/* <About /> */}
-			{/* <Experience /> */}
 			<Works />
+			{/* <Experience /> */}
 			{/* Coming soon */}
 			{/* <Talk /> */}
-			<Community />
-			<Contributions />
+			{/* <Community />
+			<Contributions /> */}
 			<Contact />
 			<Footer />
 		</div>

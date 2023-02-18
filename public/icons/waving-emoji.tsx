@@ -6,7 +6,7 @@ type Props = {
     height?: string;
 }
 
-const WavingMemoji = ({className, width, height }: Props) => {
+const WavingEmoji = ({className, width, height }: Props) => {
 
     const svgStyle = className ?? '';
     const svgWidth = width ?? '421';
@@ -42,4 +42,4 @@ const WavingMemoji = ({className, width, height }: Props) => {
         </svg>
     )
 }
-export default WavingMemoji
+export default WavingEmoji;

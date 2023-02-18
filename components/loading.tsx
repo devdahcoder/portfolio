@@ -1,7 +1,5 @@
-
 import React, { MutableRefObject } from 'react';
 import LoadingText from './loading-text';
-
 
 type Props = {
     hasPageFullyLoaded: boolean;
